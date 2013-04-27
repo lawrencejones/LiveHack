@@ -1,4 +1,7 @@
-set :haml, :format =&gt; :html5
+require 'sinatra'
+require 'heroku'
+require 'coffee-script'
+require 'less'
 
 get "/" do
 	haml :index	
