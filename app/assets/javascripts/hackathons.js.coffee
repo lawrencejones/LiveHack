@@ -89,6 +89,22 @@ window.update_buddy_data = (callback) ->
 			if callback? then callback()
 
 
+window.update_git = (callback) ->
+	window.git_commits = []
+	for gd in window.git_data
+		lastCommitTime = gd.time if gd.time > lastCommitTime
+		$.getJSON "https://api.github.com/repos/" + gd.user + "/" + gd.repo + "/" + "commits", (commits) ->
+			for c in commits
+				time = Date.parse(c.commit.author.date)
+				window.git_commits.push 
+					name: c.commit.author.name
+					comment: c.commit.message
+					time: time
+	window.git_commits.sort (a,b) ->
+		b.time - a.time
+
+
+
 #///////////////////////////////////////////////////////////////////
 # Utilities
 #///////////////////////////////////////////////////////////////////
@@ -123,7 +139,18 @@ populate_buddy_tables = ->
 					height : '0px'
 				}, { duration : 300 }
 			if reopen then finished $('#'+$(this).attr('fb_row'))
-			
-
 		if o.isIdea then $('#ideas').append(row, fb) else $('#skills').append(row, fb)
+
+populate_git_table = ->
+	for commit in window.git_commits
+		row = $('<tr/>')
+		name = $('<td/>').html commit.name
+		comment = $('<td/>').html commit.comment
+		time = $('<td/>').html commit.time.toString()
+		row.append name, comment, time
+		$('#git_table_body').append row
+
+start_git_process = ->
+	setInterval -> \
+		window.update_git_data window.update_git(populate_git_table)
 

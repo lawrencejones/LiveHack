@@ -18,5 +18,4 @@
 //= require timeline
 //= require fb.js
 //= require facebook_comments
-//= require gitcommits
 
