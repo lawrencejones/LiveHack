@@ -59469,3 +59469,141 @@ Processing by HackathonsController#index as JS
   Rendered hackathons/_new_hack_modal.html.haml (3.8ms)
   Rendered hackathons/index.html.haml within layouts/application (4.6ms)
 Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hackathons/2" for 127.0.0.1 at 2013-04-28 20:45:12 +0100
+Processing by HackathonsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mHackathon Load (0.2ms)[0m  SELECT "hackathons".* FROM "hackathons" WHERE "hackathons"."id" = $1 LIMIT 1  [["id", "2"]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Hackathon with id=2):
+  app/controllers/hackathons_controller.rb:17:in `show'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.7ms)
+
+
+Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2013-04-28 20:45:16 +0100
+Served asset /jquery.min.map - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_form.html.haml (3.7ms)
+  Rendered hackathons/_new_hack_modal.html.haml (4.5ms)
+  Rendered hackathons/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/clock.css?body=1" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Served asset /clock.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathon_index.css?body=1" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Served asset /hackathon_index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buddy_data.css?body=1" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Served asset /buddy_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/schedule_items.css?body=1" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Served asset /schedule_items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/timeline.css?body=1" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Served asset /timeline.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Served asset /hackathons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Served asset /clock.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/timeline.js?body=1" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Served asset /timeline.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/schedule.js?body=1" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Served asset /schedule.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fb.js?body=1" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Served asset /fb.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebook_comments.js?body=1" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Served asset /facebook_comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 20:45:26 +0100
+Processing by HackathonsController#index as JS
+  [1m[35mHackathon Load (0.2ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_form.html.haml (2.5ms)
+  Rendered hackathons/_new_hack_modal.html.haml (17.1ms)
+  Rendered hackathons/index.html.haml within layouts/application (17.8ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/hackathons.json" for 127.0.0.1 at 2013-04-28 20:45:29 +0100
+Processing by HackathonsController#index as JSON
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hackathons/2" for 127.0.0.1 at 2013-04-28 20:45:39 +0100
+Processing by HackathonsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mHackathon Load (0.2ms)[0m  SELECT "hackathons".* FROM "hackathons" WHERE "hackathons"."id" = $1 LIMIT 1  [["id", "2"]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Hackathon with id=2):
+  app/controllers/hackathons_controller.rb:17:in `show'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.7ms)
