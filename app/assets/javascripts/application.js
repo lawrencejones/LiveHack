@@ -17,3 +17,5 @@
 //= require schedule
 //= require timeline
 //= require gitcommits
+//= require buddy
+
