@@ -16,3 +16,4 @@
 //= require clock
 //= require schedule
 //= require timeline
+//= require gitcommits
