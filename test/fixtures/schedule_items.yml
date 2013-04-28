@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  iconUrl: MyString
+  time: MyString
+  isMajor: false
+
+two:
+  name: MyString
+  iconUrl: MyString
+  time: MyString
+  isMajor: false

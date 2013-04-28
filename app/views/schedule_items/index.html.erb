@@ -1,0 +1,29 @@
+<h1>Listing schedule_items</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Iconurl</th>
+    <th>Time</th>
+    <th>Ismajor</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @schedule_items.each do |schedule_item| %>
+  <tr>
+    <td><%= schedule_item.name %></td>
+    <td><%= schedule_item.iconUrl %></td>
+    <td><%= schedule_item.time %></td>
+    <td><%= schedule_item.isMajor %></td>
+    <td><%= link_to 'Show', schedule_item %></td>
+    <td><%= link_to 'Edit', edit_schedule_item_path(schedule_item) %></td>
+    <td><%= link_to 'Destroy', schedule_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Schedule item', new_schedule_item_path %>

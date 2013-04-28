@@ -5233,3 +5233,160 @@ Served asset /application.js - 200 OK (4ms)
 
 Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-04-28 03:42:59 +0100
 Served asset /hackathons.js - 200 OK (1ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:50:45 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.2ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (0.1ms)
+Compiled hackathons.js  (122ms)  (pid 3634)
+Compiled application.js  (3ms)  (pid 3634)
+Completed 200 OK in 159ms (Views: 146.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 03:50:45 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 03:50:45 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 03:50:45 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathon_index.css?body=1" for 127.0.0.1 at 2013-04-28 03:50:45 +0100
+Served asset /hackathon_index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 03:50:45 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 03:50:45 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:50:45 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:50:45 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-04-28 03:50:45 +0100
+Served asset /hackathons.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 03:50:45 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 03:52:00 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (0.2ms)
+Compiled hackathons.js  (126ms)  (pid 3634)
+Compiled application.js  (3ms)  (pid 3634)
+Completed 200 OK in 152ms (Views: 150.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 03:52:00 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 03:52:00 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathon_index.css?body=1" for 127.0.0.1 at 2013-04-28 03:52:00 +0100
+Served asset /hackathon_index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 03:52:00 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 03:52:00 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 03:52:00 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:52:00 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:52:00 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-04-28 03:52:00 +0100
+Served asset /hackathons.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 03:52:00 +0100
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 03:52:02 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.4ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 03:52:02 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 03:52:02 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 03:52:02 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 03:52:02 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathon_index.css?body=1" for 127.0.0.1 at 2013-04-28 03:52:02 +0100
+Served asset /hackathon_index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 03:52:02 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:52:02 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:52:02 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-04-28 03:52:02 +0100
+Served asset /hackathons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 03:52:02 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateAttendees (20130427204153)
+Migrating to CreateGitData (20130428002557)
+Migrating to CreateHackathons (20130428012606)
+Migrating to CreateScheduleItems (20130428025310)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (4.6ms)[0m  [1mCREATE TABLE "schedule_items" ("id" serial primary key, "name" character varying(255), "iconUrl" character varying(255), "time" character varying(255), "isMajor" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130428025310')
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 

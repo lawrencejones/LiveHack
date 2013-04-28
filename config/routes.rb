@@ -1,4 +1,7 @@
 LiveHack::Application.routes.draw do
+  resources :schedule_items
+
+
   resources :hackathons
 
 
