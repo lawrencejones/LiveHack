@@ -4,13 +4,13 @@
 	$(document).ready(function () {
 		setInterval(function() {
 			timeLeft = new Date(finishTime - (new Date()).getTime());
-            $("#year_header").html(timeLeft);
 			var yearDifference = timeLeft.getFullYear() - 1970;
 			var monthDifference = timeLeft.getMonth()-1;
 			var dayDifference = timeLeft.getDate()-1;
             var hourDifference = timeLeft.getHours();
 			var minuteDifference = timeLeft.getMinutes();
 			var secondDifference = timeLeft.getSeconds();
+			
 			var timeCase = 0;
           //  $("#year_header").html(currentTime);  
             //$("#year").html(finishTime.getSeconds());        
@@ -42,9 +42,9 @@
 				case 1:
 					$("#minute_header").html("minutes");
 					$("#minute").html(minuteDifference);
-				default:
+				case 0:
 					$("#second_header").html("seconds");
-					$("#seconds").html(secondDifference);
+					$("#second").html(secondDifference);
             }
 		}, 1000);
 	});
