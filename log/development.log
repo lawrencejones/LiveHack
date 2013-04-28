@@ -2599,3 +2599,2637 @@ Served asset /jquery.min.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 172.17.61.80 at 2013-04-28 01:32:53 +0100
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:08:41 +0100
+Connecting to database specified by database.yml
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (2.2ms)
+Compiled bootstrap.min.css  (0ms)  (pid 3597)
+Compiled application.css  (1ms)  (pid 3597)
+Completed 200 OK in 47ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/attendees.css?body=1" for 127.0.0.1 at 2013-04-28 02:08:41 +0100
+Served asset /attendees.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-28 02:08:41 +0100
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:08:41 +0100
+Served asset /git_data.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:08:41 +0100
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:08:41 +0100
+Served asset /bootstrap.min.css - 200 OK (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:08:41 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:08:41 +0100
+Served asset /jquery.min.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:08:41 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:08:41 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:09:59 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.1ms)
+Compiled bootstrap.min.css  (0ms)  (pid 3597)
+Compiled application.css  (2ms)  (pid 3597)
+Completed 200 OK in 23ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:09:59 +0100
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/attendees.css?body=1" for 127.0.0.1 at 2013-04-28 02:09:59 +0100
+Served asset /attendees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-28 02:09:59 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:09:59 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:09:59 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:09:59 +0100
+Served asset /bootstrap.min.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:09:59 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:09:59 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:09:59 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:11:45 +0100
+Connecting to database specified by database.yml
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:11:45 +0100
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/attendees.css?body=1" for 127.0.0.1 at 2013-04-28 02:11:45 +0100
+Served asset /attendees.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:11:45 +0100
+Served asset /git_data.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-28 02:11:45 +0100
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:11:45 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:11:45 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:11:45 +0100
+Served asset /jquery.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:11:45 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:11:45 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:11:47 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:11:47 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:11:47 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/attendees.css?body=1" for 127.0.0.1 at 2013-04-28 02:11:47 +0100
+Served asset /attendees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-28 02:11:47 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:11:47 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:11:47 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:11:47 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:11:47 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:11:47 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:31:55 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (Inconsistent indentation: "\t\t  " used for indentation, but the rest of the document was indented using 1 tab.):
+    7: 		%a{:href => "/hackathon/new"} here
+    8: 		%tbody.table-hover.table-bordered
+    9: 		<% @hackathons.each do |hackathon| %>
+    10: 		  %tr
+    11: 		    %td<%= hackathon.name %></td>
+    12: 		    %td<td><%= hackathon.desc %></td>
+    13: 		    %td<%= hackathon.location %></td>
+  app/views/home/index.html.haml:10
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:32:06 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (Inconsistent indentation: "\t\t\t  " used for indentation, but the rest of the document was indented using 1 tab.):
+    7: 		%a{:href => "/hackathon/new"} here
+    8: 		%tbody.table-hover.table-bordered
+    9: 			<% @hackathons.each do |hackathon| %>
+    10: 			  %tr
+    11: 			    %td<%= hackathon.name %></td>
+    12: 			    %td<td><%= hackathon.desc %></td>
+    13: 			    %td<%= hackathon.location %></td>
+  app/views/home/index.html.haml:10
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:33:02 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (Inconsistent indentation: "\t\t\t  " used for indentation, but the rest of the document was indented using 1 tab.):
+    7: 		%a{:href => "/hackathon/new"} here
+    8: 		%tbody.table-hover.table-bordered
+    9: 			= @hackathons.each do |hackathon|
+    10: 			  %tr
+    11: 			    %td<%= hackathon.name %></td>
+    12: 			    %td<td><%= hackathon.desc %></td>
+    13: 			    %td<%= hackathon.location %></td>
+  app/views/home/index.html.haml:10
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:34:33 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (Inconsistent indentation: "\t\t\t  " used for indentation, but the rest of the document was indented using 1 tab.):
+    7: 		%a{:href => "/hackathon/new"} here
+    8: 		%tbody.table-hover.table-bordered
+    9: 			- @hackathons.each do |hackathon|
+    10: 			  %tr
+    11: 			    %td #{hackathon.name}
+    12: 			    %td #{hackathon.desc}
+    13: 			    %td #{hackathon.location}
+  app/views/home/index.html.haml:10
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:34:34 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (Inconsistent indentation: "\t\t\t  " used for indentation, but the rest of the document was indented using 1 tab.):
+    7: 		%a{:href => "/hackathon/new"} here
+    8: 		%tbody.table-hover.table-bordered
+    9: 			- @hackathons.each do |hackathon|
+    10: 			  %tr
+    11: 			    %td #{hackathon.name}
+    12: 			    %td #{hackathon.desc}
+    13: 			    %td #{hackathon.location}
+  app/views/home/index.html.haml:10
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:36:47 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (Inconsistent indentation: "\t\t\t  " used for indentation, but the rest of the document was indented using 1 tab.):
+    7: 		%a{:href => "/hackathon/new"} here
+    8: 		%tbody.table-hover.table-bordered
+    9: 			- @hackathons.each do |hackathon|
+    10: 			  %tr
+    11: 			    %td hackathon.name
+    12: 			    %td hackathon.desc
+    13: 			    %td hackathon.location
+  app/views/home/index.html.haml:10
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:37:09 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    6:     %p Access your hackathon below, or create a new hackathon
+    7:     %a{:href => "/hackathon/new"} here
+    8:     %tbody.table-hover.table-bordered
+    9:       - @hackathons.each do |hackathon|
+    10:         %tr
+    11:           %td hackathon.name
+    12:           %td hackathon.desc
+  app/views/home/index.html.haml:9:in `_app_views_home_index_html_haml__1228984712388429647_70363309509600'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:38:17 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    6:     %p Access your hackathon below, or create a new hackathon
+    7:     %a{:href => "/hackathon/new"} here
+    8:     %tbody.table-hover.table-bordered
+    9:       - @hackathons.each do |hackathon|
+    10:         %tr
+    11:           %td hackathon.name
+    12:           %td hackathon.desc
+  app/views/home/index.html.haml:9:in `_app_views_home_index_html_haml__1228984712388429647_70363310111180'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:38:17 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    6:     %p Access your hackathon below, or create a new hackathon
+    7:     %a{:href => "/hackathon/new"} here
+    8:     %tbody.table-hover.table-bordered
+    9:       - @hackathons.each do |hackathon|
+    10:         %tr
+    11:           %td hackathon.name
+    12:           %td hackathon.desc
+  app/views/home/index.html.haml:9:in `_app_views_home_index_html_haml__1228984712388429647_70363310111180'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateAttendees (20130427204153)
+Migrating to CreateGitData (20130428002557)
+Migrating to CreateHackathons (20130428012606)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "hackathons" ("id" serial primary key, "name" character varying(255), "desc" character varying(255), "start" character varying(255), "end" character varying(255), "location" character varying(255), "scheduleItems" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130428012606')
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:42:04 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    6:     %p Access your hackathon below, or create a new hackathon
+    7:     %a{:href => "/hackathon/new"} here
+    8:     %tbody.table-hover.table-bordered
+    9:       - @hackathons.each do |hackathon|
+    10:         %tr
+    11:           %td hackathon.name
+    12:           %td hackathon.desc
+  app/views/home/index.html.haml:9:in `_app_views_home_index_html_haml__1228984712388429647_70363310111180'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:43:04 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (3.0ms)
+Compiled hackathons.css  (10ms)  (pid 3634)
+Compiled application.css  (20ms)  (pid 3634)
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:43:04 +0100
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:43:04 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:43:04 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-28 02:43:04 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:43:04 +0100
+Served asset /hackathons.css - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:43:04 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:43:04 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:43:04 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:43:05 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:43:13 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:43:13 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:43:13 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:43:13 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-28 02:43:13 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:43:13 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:43:13 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:43:13 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:43:13 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:43:13 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:44:21 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (22.7ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %p and nested within it.):
+    4:     %h2 00:00
+    5:   .span9
+    6:     %p Access your hackathon below, or create a new hackathon 
+    7:       = link_to 'Back', hackathons_path
+  app/views/home/index.html.haml:7
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:44:25 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:44:25 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:44:25 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:44:25 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-28 02:44:25 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:44:26 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:44:26 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:44:26 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:44:26 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:44:26 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:44:46 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %p and nested within it.):
+    4:     %h2 00:00
+    5:   .span9
+    6:     %p Access your hackathon below, or create a new hackathon 
+    7:       %a{:href => 'hackathons'} here
+  app/views/home/index.html.haml:7
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:44:49 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:44:49 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:44:49 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:44:49 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:44:49 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-28 02:44:49 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:44:49 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:44:49 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:44:49 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:44:49 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:45:04 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 7ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:45:04 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:45:04 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:45:04 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:45:04 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:45:04 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-28 02:45:04 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:45:04 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:45:04 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:45:04 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:45:41 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %p and nested within it.):
+    4:     %h2 00:00
+    5:   .span9
+    6:     %p Access your hackathon below, or create a new hackathon 
+    7:       %a{:href => 'hackathons', :style => "display:inline"} here
+  app/views/home/index.html.haml:7
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:46:09 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %p and nested within it.):
+    4:     %h2 00:00
+    5:   .span9
+    6:     %p Access your hackathon below, or create a new hackathon <
+    7:       %a{:href => 'hackathons', :style => "display:inline"} here
+  app/views/home/index.html.haml:7
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 02:46:43 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:46:43 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-28 02:46:43 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:46:43 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:46:43 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:46:43 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:46:43 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:46:43 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:46:43 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:46:43 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:46:46 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 26ms (Views: 6.1ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:46:46 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:46:46 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-28 02:46:46 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:46:46 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:46:46 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:46:46 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:46:46 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:46:46 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:46:46 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:48:01 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.2ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (2.0ms)
+Compiled application.css  (2ms)  (pid 3634)
+Completed 200 OK in 48ms (Views: 32.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:48:01 +0100
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:48:01 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:48:01 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:48:01 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:48:01 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:48:01 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:48:01 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:48:01 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:48:35 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:48:35 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:48:35 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:48:35 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:48:35 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:48:35 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:48:35 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:48:35 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:48:35 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:48:59 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:48:59 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:48:59 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:48:59 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:48:59 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:48:59 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:48:59 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:48:59 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:48:59 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:49:09 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.4ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:49:09 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:49:09 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:49:09 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:49:09 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:49:09 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:49:09 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:49:09 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:49:09 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:49:21 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:49:21 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:49:21 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:49:21 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:49:21 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:49:21 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:49:21 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:49:21 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:49:21 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:49:36 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:49:36 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:49:36 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:49:36 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:49:36 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:49:36 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:49:36 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:49:36 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:49:36 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:50:47 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:50:47 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:50:47 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:50:47 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:50:47 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:50:47 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:50:47 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:50:47 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:50:47 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:51:09 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:51:09 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:51:09 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:51:09 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:51:09 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:51:09 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:51:09 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:51:09 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:51:09 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:51:59 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:51:59 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:51:59 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:51:59 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:51:59 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:51:59 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:51:59 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:51:59 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:51:59 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:52:07 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.2ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:52:07 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:52:07 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:52:07 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:52:07 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:52:07 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:52:07 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:52:07 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:52:07 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:52:19 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:52:19 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:52:19 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:52:19 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:52:19 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:52:19 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:52:19 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:52:19 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:52:19 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons/new" for 127.0.0.1 at 2013-04-28 02:52:33 +0100
+Processing by HackathonsController#new as HTML
+  Rendered hackathons/_form.html.erb (7.5ms)
+  Rendered hackathons/new.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 37ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:52:33 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:52:33 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:52:33 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:52:33 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:52:33 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:52:33 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:52:33 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:52:33 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started POST "/hackathons" for 127.0.0.1 at 2013-04-28 02:55:40 +0100
+Processing by HackathonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9SgLYiSUTTaZokcxVHeMHc62VPeSN0fTOy1rawUQ8cQ=", "hackathon"=>{"name"=>"Facebook", "desc"=>"An awesomely cool hackathon!", "start"=>"1367078033740", "end"=>"1367063658404", "location"=>"Covent Garden HQ", "scheduleItems"=>"1,3,4,5,6,7"}, "commit"=>"Create Hackathon"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.9ms)[0m  INSERT INTO "hackathons" ("created_at", "desc", "end", "location", "name", "scheduleItems", "start", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Sun, 28 Apr 2013 01:55:40 UTC +00:00], ["desc", "An awesomely cool hackathon!"], ["end", "1367063658404"], ["location", "Covent Garden HQ"], ["name", "Facebook"], ["scheduleItems", "1,3,4,5,6,7"], ["start", "1367078033740"], ["updated_at", Sun, 28 Apr 2013 01:55:40 UTC +00:00]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:4567/hackathons/1
+Completed 302 Found in 26ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/hackathons/1" for 127.0.0.1 at 2013-04-28 02:55:40 +0100
+Processing by HackathonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mHackathon Load (0.6ms)[0m  SELECT "hackathons".* FROM "hackathons" WHERE "hackathons"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered hackathons/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:55:40 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:55:40 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:55:40 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:55:40 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:55:40 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:55:40 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:55:40 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:55:40 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:56:41 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:56:41 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:56:41 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:56:41 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:56:41 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:56:41 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:56:41 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:56:41 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:56:41 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:56:54 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:56:54 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:56:54 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:56:54 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:56:54 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:56:54 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:56:54 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:56:54 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:56:54 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:56:59 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:56:59 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:56:59 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:56:59 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:56:59 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:56:59 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:56:59 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:56:59 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:56:59 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:57:05 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:57:05 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:57:05 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:57:05 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:57:05 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:57:06 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:57:06 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:57:06 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:57:06 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:57:12 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:57:12 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:57:12 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:57:12 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:57:13 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:57:13 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:57:13 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:57:13 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:57:13 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:58:12 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.4ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:58:12 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:58:12 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:58:12 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:58:12 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:58:12 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:58:12 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:58:12 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:58:12 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:58:52 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:58:52 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:58:52 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:58:52 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:58:52 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:58:52 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:58:52 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:58:52 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:58:52 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:59:18 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:18 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:18 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:18 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:18 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:18 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:59:18 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:59:18 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:59:18 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:59:24 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (19.4ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:24 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:24 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:59:24 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:24 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:24 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:24 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:59:24 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:59:24 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:59:31 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:31 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:31 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:31 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:31 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:31 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:59:31 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:59:31 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:59:31 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:59:37 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:37 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:37 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:37 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:37 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:37 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:59:37 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:59:37 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:59:37 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 02:59:57 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:57 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:57 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:57 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:57 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:59:57 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 02:59:57 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 02:59:57 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 02:59:57 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:00:12 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.4ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 03:00:12 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 03:00:12 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 03:00:12 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 03:00:12 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:00:13 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 03:00:13 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:00:13 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 03:00:13 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:00:13 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 03:00:13 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 03:00:13 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 03:00:13 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 03:00:13 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 03:00:13 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:00:13 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 03:00:13 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:00:13 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:00:34 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.7ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+ERROR: compiling _app_views_hackathons_index_html_haml__3071571434042422679_70363309479580 RAISED /Users/lawrencejones/Sites/Projects/LiveHack/app/views/hackathons/index.html.haml:21: syntax error, unexpected keyword_ensure, expecting keyword_end
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/Users/lawrencejones/Sites/Projects/LiveHack/app/views/hackathons/index.html.haml:24: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_hackathons_index_html_haml__3071571434042422679_70363309479580(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "hackathons/index";_old_output_buffer = @output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :preserve=>["textarea", "pre", "code"], :attr_wrapper=>"'", :ugly=>false, :format=>:html5, :encoding=>"UTF-8", :escape_html=>true, :escape_attrs=>true, :hyphenate_data_attrs=>true, :cdata=>false});_erbout = _hamlout.buffer;@output_buffer = output_buffer ||= ActionView::OutputBuffer.new rescue nil;;_hamlout.push_text("<div class='container'>\n  <div class='jumbotron'>\n    <h1>LiveHack!</h1>\n    <h2>00:00</h2>\n    <p>Access your hackathon below, or create a new hackathon <a href=\"/hackathons\">here</a>.</p>\n  </div>\n  <div class='span12'>\n    <table class='table-hover table-bordered' style='width:100%'>\n      <tbody>\n        <tr>\n          <th>Name</th>\n          <th>Description</th>\n          <th>Location</th>\n        </tr>\n", 4, false);
+
+
+
+
+
+
+
+
+
+
+
+ @hackathons.each do |hackathon|
+_hamlout.push_text("        <tr>\n          <td>\n            #{_hamlout.adjust_tabs(2); 
+
+_hamlout.format_script_false_false_false_true_false_true_false(( hackathon.name
+));}\n          </td>\n          <td>\n            #{
+_hamlout.format_script_false_false_false_true_false_true_false(( hackathon.desc
+));}\n          </td>\n          <td>\n            #{
+_hamlout.format_script_false_false_false_true_false_true_false(( hackathon.location
+));}\n          </td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n", -6, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:297:in `module_eval'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:297:in `compile'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:232:in `compile!'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:144:in `block in render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications.rb:125:in `instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:143:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/lawrencejones/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activerecord-3.2.12/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/Users/lawrencejones/Sites/Projects/LiveHack/app/controllers/hackathons_controller.rb:7:in `index'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:414:in `_run__3595800511140922390__process_action__2220730410448496699__callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activerecord-3.2.12/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/base.rb:121:in `process'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal.rb:203:in `dispatch'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal.rb:246:in `block in action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activerecord-3.2.12/lib/active_record/query_cache.rb:64:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activerecord-3.2.12/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `_run__396722934114989470__call__1982173110041048528__callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+/Users/lawrencejones/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/Users/lawrencejones/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/Users/lawrencejones/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered hackathons/index.html.haml within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (/Users/lawrencejones/Sites/Projects/LiveHack/app/views/hackathons/index.html.haml:21: syntax error, unexpected keyword_ensure, expecting keyword_end
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/Users/lawrencejones/Sites/Projects/LiveHack/app/views/hackathons/index.html.haml:24: syntax error, unexpected $end, expecting keyword_end):
+    18:             = hackathon.desc
+    19:           %td 
+    20:             = hackathon.location
+  app/controllers/hackathons_controller.rb:7:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:00:38 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.4ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (16.6ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 03:00:38 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 03:00:38 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 03:00:38 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 03:00:38 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 03:00:38 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:00:38 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:00:38 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 03:00:38 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:01:06 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 03:01:06 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 03:01:06 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 03:01:06 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 03:01:06 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 03:01:06 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:01:06 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:01:07 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 03:01:07 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:01:47 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 03:01:47 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 03:01:47 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 03:01:47 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 03:01:47 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 03:01:47 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:01:47 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 03:01:47 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:01:47 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:02:07 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 03:02:07 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 03:02:07 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 03:02:07 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 03:02:07 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 03:02:07 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:02:07 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 03:02:07 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:02:07 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:19:41 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 03:19:41 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 03:19:41 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 03:19:41 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 03:19:42 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 03:19:42 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:19:42 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:19:42 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 03:19:42 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:23:33 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (couldn't find file 'hackathon_index'
+  (in /Users/lawrencejones/Sites/Projects/LiveHack/app/assets/stylesheets/hackathons.css.scss:5)):
+    2: <html>
+    3: <head>
+    4:   <title>LiveHack!</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1889400417750185822_70363310644140'
+  app/controllers/hackathons_controller.rb:7:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.4ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:23:47 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (couldn't find file 'hackathon_index'
+  (in /Users/lawrencejones/Sites/Projects/LiveHack/app/assets/stylesheets/hackathons.css.scss:5)):
+    2: <html>
+    3: <head>
+    4:   <title>LiveHack!</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1889400417750185822_70363310644140'
+  app/controllers/hackathons_controller.rb:7:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.1ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:24:27 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.4ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (couldn't find file 'hackathon_index.css.scss'
+  (in /Users/lawrencejones/Sites/Projects/LiveHack/app/assets/stylesheets/hackathons.css.scss:5)):
+    2: <html>
+    3: <head>
+    4:   <title>LiveHack!</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1889400417750185822_70363310644140'
+  app/controllers/hackathons_controller.rb:7:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.9ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:26:02 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (0.1ms)
+Compiled hackathons.css  (1ms)  (pid 3634)
+Compiled hackathon_index.css  (5ms)  (pid 3634)
+Compiled application.css  (30ms)  (pid 3634)
+Completed 200 OK in 56ms (Views: 55.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 03:26:02 +0100
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 03:26:02 +0100
+Served asset /hackathons.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 03:26:02 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 03:26:02 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathon_index.css?body=1" for 127.0.0.1 at 2013-04-28 03:26:02 +0100
+Served asset /hackathon_index.css - 200 OK (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 03:26:02 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:26:03 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:26:03 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 03:26:03 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:26:18 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 03:26:19 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 03:26:19 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 03:26:19 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathon_index.css?body=1" for 127.0.0.1 at 2013-04-28 03:26:19 +0100
+Served asset /hackathon_index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 03:26:19 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 03:26:19 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 03:26:19 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:26:19 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:26:19 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:32:26 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 3.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 03:32:26 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathon_index.css?body=1" for 127.0.0.1 at 2013-04-28 03:32:26 +0100
+Served asset /hackathon_index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 03:32:26 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 03:32:26 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 03:32:26 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 03:32:26 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:32:26 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 03:32:26 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:32:26 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:32:32 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 03:32:32 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 03:32:32 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathon_index.css?body=1" for 127.0.0.1 at 2013-04-28 03:32:32 +0100
+Served asset /hackathon_index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 03:32:32 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 03:32:32 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 03:32:32 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:32:32 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 03:32:32 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:32:32 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:33:28 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (0.3ms)
+Compiled hackathon_index.css  (3ms)  (pid 3634)
+Compiled application.css  (2ms)  (pid 3634)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 03:33:28 +0100
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 03:33:28 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathon_index.css?body=1" for 127.0.0.1 at 2013-04-28 03:33:28 +0100
+Served asset /hackathon_index.css - 200 OK (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 03:33:28 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 03:33:28 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 03:33:28 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:33:28 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:33:28 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 03:33:28 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:35:41 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (Illegal element: classes and ids must have values.):
+    13:         - i = 0
+    14:         - @hackathons.each do |hackathon|
+    15:           - i++
+    16:           %tr.#{i}
+    17:             %td.hackathon_name
+    18:               = hackathon.name
+    19:             %td.hackathon_desc
+  app/views/hackathons/index.html.haml:16
+  app/controllers/hackathons_controller.rb:7:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.8ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:40:46 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (Illegal element: classes and ids must have values.):
+    13:         - i = 0
+    14:         - @hackathons.each do |hackathon|
+    15:           - i++
+    16:           %tr.#{i}
+    17:             %td.hackathon_name
+    18:               = hackathon.name
+    19:             %td.hackathon_desc
+  app/views/hackathons/index.html.haml:16
+  app/controllers/hackathons_controller.rb:7:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.6ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:41:13 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (Illegal element: classes and ids must have values.):
+    11:           %th Description
+    12:           %th Location
+    13:         - @hackathons.each do |hackathon|
+    14:           %tr.#{i}
+    15:             %td.hackathon_name
+    16:               = hackathon.name
+    17:             %td.hackathon_desc
+  app/views/hackathons/index.html.haml:14
+  app/controllers/hackathons_controller.rb:7:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.1ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:41:19 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/index.html.haml within layouts/application (18.2ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 03:41:19 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 03:41:19 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathon_index.css?body=1" for 127.0.0.1 at 2013-04-28 03:41:19 +0100
+Served asset /hackathon_index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 03:41:19 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 03:41:19 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 03:41:19 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:41:19 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 03:41:19 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:41:19 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/hackathons" for 127.0.0.1 at 2013-04-28 03:42:59 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/index.html.haml within layouts/application (0.1ms)
+Compiled hackathons.js  (156ms)  (pid 3634)
+Compiled application.js  (166ms)  (pid 3634)
+Completed 200 OK in 188ms (Views: 186.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 03:42:59 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-28 03:42:59 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathon_index.css?body=1" for 127.0.0.1 at 2013-04-28 03:42:59 +0100
+Served asset /hackathon_index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-28 03:42:59 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/git_data.css?body=1" for 127.0.0.1 at 2013-04-28 03:42:59 +0100
+Served asset /git_data.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-28 03:42:59 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:42:59 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-28 03:42:59 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 03:42:59 +0100
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-04-28 03:42:59 +0100
+Served asset /hackathons.js - 200 OK (1ms)

@@ -1,0 +1,20 @@
+.container
+  .jumbotron
+    %h1 LiveHack!
+    %h2 00:00
+    %p Access your hackathon below, or create a new hackathon <a href="/hackathons">here</a>.
+  .span12
+    %table.table.table-hover.table-striped.table-bordered{:style => 'width:100%'}
+      %tbody
+        %tr
+          %th Name
+          %th Description
+          %th Location
+        - @hackathons.each do |hackathon|
+          %tr
+            %td.hackathon_name
+              = hackathon.name
+            %td.hackathon_desc
+              = hackathon.desc
+            %td.hackathon_location
+              = hackathon.location

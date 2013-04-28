@@ -1,8 +1,11 @@
 LiveHack::Application.routes.draw do
-  resources :git_data
-  resources :attendees
+  resources :hackathons
 
-  root :to => "home#index"
+
+  resources :git_data
+
+
+  root :to => "hackathons#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
