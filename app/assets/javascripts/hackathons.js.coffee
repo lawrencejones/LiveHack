@@ -14,8 +14,7 @@ $ ->
 process_home = () ->
 	window.initialise_clock(1367161200000)
 	console.log 'Initialised clock!'
-	$('#new_hack').click ->
-
+	$.rails.handleRemote $('#sub-new-hack')
 	for row,i in $('#hackathon_list tr')
 		if i != 0
 			$(row).attr('hack_id',i)

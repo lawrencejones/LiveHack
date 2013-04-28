@@ -11,6 +11,7 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery.min
+//= require jquery_ujs
 //= require bootstrap.min
 //= require hackathons
 //= require clock
