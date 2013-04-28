@@ -7,6 +7,8 @@ LiveHack::Application.routes.draw do
 
   resources :git_data
 
+  resources :shared
+
 
   root :to => "hackathons#index"
   # The priority is based upon order of creation:
