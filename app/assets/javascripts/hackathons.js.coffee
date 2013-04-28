@@ -34,6 +34,7 @@ process_hackathon = (id) ->
 	update_git_data()
 
 
+
 #///////////////////////////////////////////////////////////////////
 # Data getters
 #///////////////////////////////////////////////////////////////////
@@ -94,7 +95,7 @@ window.update_buddy_data = (callback) ->
 
 populate_buddy_tables = ->
 	for o,i in window.buddy_data
-		row = $('<tr/>')
+		row = $("<tr/ fb_row=\"buddy#{i}\">")
 		row.append $("<td>#{o.name}</td>")
 		colspan = 2
 		if o.isIdea 
@@ -102,25 +103,27 @@ populate_buddy_tables = ->
 			colspan = 3
 		skills = $('<td/>')
 		for skill in o.skills.split(',')
-			skills.append $('<span/ class="badge badge-info>').html(skill)
+			skills.append $('<span/>').addClass('badge badge-info').html(skill)
 		row.append skills
 		fb = $("<tr class=\"fb_row\" id=\"buddy#{i}\"/>").append $("<td/ colspan=\"#{colspan}\">")
-			.append('<div/ class="fb-comments">') 
+		fb.append('<div/ class="fb-comments">') 
 			.attr('data-href',"http://livehack-facebook.herokuapp.com/buddy#{i}")
 			.attr('data-num-posts','3')
-			.appendTo row
-			.css 'height', 0
-		row.data('fb',fb).click ->
-			alert()
-			active_row = $('.fb_row').find('.active:eq(0)')
-			$('.fb_row').find('.active').removeClass 'active'
+			.css 'height', '0px'
+		row.click ->
 			finished = (fb_row) ->
-				fb_row.animate {
+				console.log 'finished...'
+				fb_row.addClass('active').animate {
 					height : '500px'
-				}, {duration : 400}
-			if active_row?
-				active_row.animate {
-					height : 0
-				}, { duration : 300, complete : -> finished $(this).data('fb') }
-		if o.isIdea then $('#ideas').append(row, fb) else row.appendTo($('#skills'))
+				}, {duration : 400 }
+			reopen = !$('#'+$(this).attr('fb_row')).hasClass('active')
+			$('.active.fb_row')
+				.removeClass('active')
+				.animate {
+					height : '0px'
+				}, { duration : 300 }
+			if reopen then finished $('#'+$(this).attr('fb_row'))
+			
+
+		if o.isIdea then $('#ideas').append(row, fb) else $('#skills').append(row, fb)
 
