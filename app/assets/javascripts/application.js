@@ -14,3 +14,5 @@
 //= require bootstrap.min
 //= require hackathons
 //= require clock
+//= require schedule
+//= require timeline

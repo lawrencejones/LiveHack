@@ -26,6 +26,8 @@ process_hackathon = (id) ->
 	update_hackathon_data ->
 		update_schedule_data ->
 			initialise_clock(window.hackathon.end)
+			console.log "Initialising schedule"
+			initialise_schedule()
 	update_git_data()
 
 
@@ -69,4 +71,5 @@ window.update_schedule_data = (callback) ->
 				for j in specificItems
 					if j == item.id.toString() then window.scheduleItems.push item
 			console.log "Updated schedule items."
+			console.log window.scheduleItems
 			if callback? then callback()
