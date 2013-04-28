@@ -73,3 +73,24 @@ window.update_schedule_data = (callback) ->
 			console.log "Updated schedule items."
 			console.log window.scheduleItems
 			if callback? then callback()
+
+#///////////////////////////////////////////////////////////////////
+# Utilities
+#///////////////////////////////////////////////////////////////////
+
+produce_schedule = ->
+	make_schedule = () ->
+		for item in window.scheduleItems
+			make_circle(30,'#F0F0F0',true).appendTo('#my_sch')
+
+make_circle = (r, c, shadow) ->
+  shadow ?= true   # Default to true
+  s = '0 0 1px black'
+  circle = $('<div/ class="circle">').css
+      background : c, height : r, width : r
+      'border-radius' : r
+      '-moz-border-radius' : r, '-webkit-border-radius' : r
+      marginTop : -r/2, marginLeft : -r/2
+  if shadow then circle.css
+      '-webkit-box-shadow': s, '-moz-box-shadow': s, 'box-shadow' : s
+  return circle

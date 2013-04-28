@@ -16,3 +16,5 @@
 //= require clock
 //= require schedule
 //= require timeline
+//= require fb.js
+//= require facebook_comments

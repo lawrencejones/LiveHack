@@ -1,0 +1,9 @@
+#new-hack-modal.modal.hide.fade
+  .modal-header#new-hack-modal-header 
+    %button{:type => "button", :class => "close", :"data-dismiss" => "modal", :"aria-hidden" => "true"} &times
+    %h3 New Hackathon
+  .modal-body#new-hack-modal-body= render :partial => 'form'
+  .modal-footer
+    %a.btn{:href => '#', :style => 'margin-right:10px'} Close
+    .actions{:style => 'display:inline'}
+      %input.btn.btn-primary{:name => 'commit', :type => 'submit', :style => 'color:white, display:inline'}

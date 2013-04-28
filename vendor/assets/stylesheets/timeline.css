@@ -1,11 +1,11 @@
 div.timeline-frame {
-    border: 1px solid #BEBEBE;
+    border: none;
     overflow: hidden;
 }
 
 div.timeline-axis {
     border-color: #BEBEBE;
-    border-width: 1px;
+    border-width: 2px;
     border-top-style: solid;
 }
 div.timeline-axis-grid {
@@ -13,6 +13,8 @@ div.timeline-axis-grid {
     border-width: 1px;
 }
 div.timeline-axis-grid-minor {
+    top : 20px;
+    max-height : 45px !important;
     border-color: #e5e5e5;
 }
 div.timeline-axis-grid-major {
@@ -107,14 +109,21 @@ div.timeline-groups-text {
 }
 
 div.timeline-currenttime {
-    background-color: #FF7F6E;
-    width: 2px;
+    border-color: red;
+    max-height : 0px !important;
+    border-style: solid;
+    border-width: 7px;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    margin-top : 20px;
 }
 
 div.timeline-customtime {
     background-color: #6E94FF;
-    width: 2px;
-    cursor: move;
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
 }
 
 div.timeline-navigation {

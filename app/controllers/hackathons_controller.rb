@@ -3,6 +3,7 @@ class HackathonsController < ApplicationController
   # GET /hackathons.json
   def index
     @hackathons = Hackathon.all
+    @hackathon = Hackathon.new
 
     respond_to do |format|
       format.html # index.html.erb
