@@ -1,4 +1,7 @@
 LiveHack::Application.routes.draw do
+  resources :buddy_data
+
+
   resources :schedule_items
 
 

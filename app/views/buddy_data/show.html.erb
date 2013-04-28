@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @buddy_datum.name %>
+</p>
+
+<p>
+  <b>Idea:</b>
+  <%= @buddy_datum.idea %>
+</p>
+
+<p>
+  <b>Skills:</b>
+  <%= @buddy_datum.skills %>
+</p>
+
+<p>
+  <b>Isidea:</b>
+  <%= @buddy_datum.isIdea %>
+</p>
+
+
+<%= link_to 'Edit', edit_buddy_datum_path(@buddy_datum) %> |
+<%= link_to 'Back', buddy_data_path %>

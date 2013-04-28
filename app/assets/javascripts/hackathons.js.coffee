@@ -13,7 +13,9 @@ $ ->
 
 process_home = () ->
 	window.initialise_clock(1367161200000)
-	console.log 'Initialised!'
+	console.log 'Initialised clock!'
+	$('#new_hack').click ->
+
 	for row,i in $('#hackathon_list tr')
 		if i != 0
 			$(row).attr('hack_id',i)
@@ -28,6 +30,7 @@ process_hackathon = (id) ->
 			initialise_clock(window.hackathon.end)
 			console.log "Initialising schedule"
 			initialise_schedule()
+			update_buddy_data(populate_buddy_tables)
 	update_git_data()
 
 
@@ -74,23 +77,50 @@ window.update_schedule_data = (callback) ->
 			console.log window.scheduleItems
 			if callback? then callback()
 
+window.update_buddy_data = (callback) ->
+	$.ajax
+		type: 'GET'
+		url: window.location.origin + '/buddy_data.json'
+		dataType: 'json'
+		success: (data) ->
+			window.buddy_data = data
+			console.log "Updated buddy data."
+			if callback? then callback()
+
+
 #///////////////////////////////////////////////////////////////////
 # Utilities
 #///////////////////////////////////////////////////////////////////
 
-produce_schedule = ->
-	make_schedule = () ->
-		for item in window.scheduleItems
-			make_circle(30,'#F0F0F0',true).appendTo('#my_sch')
+populate_buddy_tables = ->
+	for o,i in window.buddy_data
+		row = $('<tr/>')
+		row.append $("<td>#{o.name}</td>")
+		colspan = 2
+		if o.isIdea 
+			row.append $("<td>#{o.idea}</td>")
+			colspan = 3
+		skills = $('<td/>')
+		for skill in o.skills.split(',')
+			skills.append $('<span/ class="badge badge-info>').html(skill)
+		row.append skills
+		fb = $("<tr class=\"fb_row\" id=\"buddy#{i}\"/>").append $("<td/ colspan=\"#{colspan}\">")
+			.append('<div/ class="fb-comments">') 
+			.attr('data-href',"http://livehack-facebook.herokuapp.com/buddy#{i}")
+			.attr('data-num-posts','3')
+			.appendTo row
+			.css 'height', 0
+		row.data('fb',fb).click ->
+			alert()
+			active_row = $('.fb_row').find('.active:eq(0)')
+			$('.fb_row').find('.active').removeClass 'active'
+			finished = (fb_row) ->
+				fb_row.animate {
+					height : '500px'
+				}, {duration : 400}
+			if active_row?
+				active_row.animate {
+					height : 0
+				}, { duration : 300, complete : -> finished $(this).data('fb') }
+		if o.isIdea then $('#ideas').append(row, fb) else row.appendTo($('#skills'))
 
-make_circle = (r, c, shadow) ->
-  shadow ?= true   # Default to true
-  s = '0 0 1px black'
-  circle = $('<div/ class="circle">').css
-      background : c, height : r, width : r
-      'border-radius' : r
-      '-moz-border-radius' : r, '-webkit-border-radius' : r
-      marginTop : -r/2, marginLeft : -r/2
-  if shadow then circle.css
-      '-webkit-box-shadow': s, '-moz-box-shadow': s, 'box-shadow' : s
-  return circle

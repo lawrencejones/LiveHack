@@ -1,0 +1,33 @@
+<%= form_for(@buddy_datum) do |f| %>
+  <% if @buddy_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@buddy_datum.errors.count, "error") %> prohibited this buddy_datum from being saved:</h2>
+
+      <ul>
+      <% @buddy_datum.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :idea %><br />
+    <%= f.text_field :idea %>
+  </div>
+  <div class="field">
+    <%= f.label :skills %><br />
+    <%= f.text_field :skills %>
+  </div>
+  <div class="field">
+    <%= f.label :isIdea %><br />
+    <%= f.check_box :isIdea %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
