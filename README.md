@@ -11,3 +11,9 @@ Features
 
 Below are the aims for this project. I'll keep them up-to-date as I add or
 otherwise change the current build.
+
+- [ ] Facebook sign in
+- [ ] Collate all your subscribed hackathons
+- [ ] Automatically manage users by adding an attendee list from the Facebook event
+- [ ] Create interface with which you can customize your own skill tags and user details
+- [ ] Pair project proposals with the developers
