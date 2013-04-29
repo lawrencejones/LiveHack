@@ -12,11 +12,8 @@
 //
 //= require jquery.min
 //= require jquery_ujs
+//= require fb
+//= require fb_init
 //= require bootstrap.min
 //= require hackathons
 //= require clock
-//= require schedule
-//= require timeline
-//= require fb.js
-//= require facebook_comments
-

@@ -1,19 +1,14 @@
 LiveHack::Application.routes.draw do
-  resources :buddy_data
 
-
-  resources :schedule_items
-
+  get "user/index"
+  get "user/new"
 
   resources :hackathons
-
-
-  resources :git_data
-
+  resources :users
   resources :shared
 
-
   root :to => "hackathons#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

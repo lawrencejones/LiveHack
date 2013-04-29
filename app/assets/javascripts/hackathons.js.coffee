@@ -3,24 +3,46 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $ ->
+	window.fbAsyncInit routes
+
+routes = ->
 	p = window.location.pathname
 	if p == '/hackathons' or p == '/'
 		process_home()
-	if /\/hackathons\/+/.test(p)
+	else if /\/hackathons\/+/.test(p)
 		[first..., id] = p.split('/')
 		process_hackathon(id)
-		
+	else if p == '/user/new'
+		process_new_user()
 
-process_home = () ->
-	window.initialise_clock(1367161200000)
-	console.log 'Initialised clock!'
+process_home = ->
+	deal_with_login = ->
+		$('#login-btn').click ->
+			FB.login (response) ->
+				if response.authResponse
+					console.log 'Login succeeded'
+					FB.api('/me', (r) -> console.log 'Welcome ' + r.name)
+					logged_in()
+				else console.log 'Login failed'
+
+		FB.getLoginStatus (response) ->
+    if response.status is "connected"
+      console.log "Connected to facebook"
+      logged_in()
+    else 
+      $('#login-btn').css 'visibility', 'visible'
+      if response.status is "not_authorized"
+        console.log "Not fb authed"
+      else
+        console.log "Not fb logged in"
+	
+  # Initialise new hackathon button with rails remote
 	$.rails.handleRemote $('#sub-new-hack')
-	for row,i in $('#hackathon_list tr')
-		if i != 0
-			$(row).attr('hack_id',i)
-			$(row).click ->
-				id = $(this).attr('hack_id')
-				window.location.pathname = "/hackathons/#{id}"
+	# Initialise hackathon row functionality
+	$('#hackathon_list tr').click ->
+		segue_to_hackathon $(this).attr('id')
+	# Deal with the login
+	deal_with_login()
 
 process_hackathon = (id) ->
 	$('body').data('id',id)
@@ -32,7 +54,17 @@ process_hackathon = (id) ->
 			update_buddy_data(populate_buddy_tables)
 	update_git_data()
 
-
+process_new_user = ->
+	$('button[type="submit"]').click ->
+		alerted = false
+		data = {}
+		for field in $('.field').find('input')
+			if $(field).val() == ''
+				alert("Fields are left blank") if not alerted
+				alerted = true
+			else
+				data[$(field).attr('id').split('_')[1]]
+		console.log data
 
 #///////////////////////////////////////////////////////////////////
 # Data getters
@@ -108,48 +140,6 @@ window.update_git = (callback) ->
 # Utilities
 #///////////////////////////////////////////////////////////////////
 
-populate_buddy_tables = ->
-	for o,i in window.buddy_data
-		row = $("<tr/ fb_row=\"buddy#{i}\">")
-		row.append $("<td>#{o.name}</td>")
-		colspan = 2
-		if o.isIdea 
-			row.append $("<td>#{o.idea}</td>")
-			colspan = 3
-		skills = $('<td/>')
-		for skill in o.skills.split(',')
-			skills.append $('<span/>').addClass('badge badge-info').html(skill)
-		row.append skills
-		fb = $("<tr class=\"fb_row\" id=\"buddy#{i}\"/>").append $("<td/ colspan=\"#{colspan}\">")
-		fb.append('<div/ class="fb-comments">') 
-			.attr('data-href',"http://livehack-facebook.herokuapp.com/buddy#{i}")
-			.attr('data-num-posts','3')
-			.css 'height', '0px'
-		row.click ->
-			finished = (fb_row) ->
-				console.log 'finished...'
-				fb_row.addClass('active').animate {
-					height : '500px'
-				}, {duration : 400 }
-			reopen = !$('#'+$(this).attr('fb_row')).hasClass('active')
-			$('.active.fb_row')
-				.removeClass('active')
-				.animate {
-					height : '0px'
-				}, { duration : 300 }
-			if reopen then finished $('#'+$(this).attr('fb_row'))
-		if o.isIdea then $('#ideas').append(row, fb) else $('#skills').append(row, fb)
-
-populate_git_table = ->
-	for commit in window.git_commits
-		row = $('<tr/>')
-		name = $('<td/>').html commit.name
-		comment = $('<td/>').html commit.comment
-		time = $('<td/>').html commit.time.toString()
-		row.append name, comment, time
-		$('#git_table_body').append row
-
-start_git_process = ->
-	setInterval -> \
-		window.update_git_data window.update_git(populate_git_table)
+logged_in = ->
+	$('#login-btn').hide()
 

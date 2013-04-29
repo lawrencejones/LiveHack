@@ -1,1 +1,0 @@
-/Users/lawrencejones/Dropbox/hack/schedule.js
