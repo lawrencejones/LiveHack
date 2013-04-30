@@ -12,6 +12,7 @@
  *= require_tree .
  *= require bootstrap.min
  *= require datetimepicker
+ *= require font-awesome
  */
 
 .fb_iframe_widget,
