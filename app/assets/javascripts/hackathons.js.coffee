@@ -16,25 +16,30 @@ routes = ->
 		process_new_user()
 
 process_home = ->
-	deal_with_login = ->
-		$('#login-btn').click ->
-			FB.login (response) ->
-				if response.authResponse
-					console.log 'Login succeeded'
-					FB.api('/me', (r) -> console.log 'Welcome ' + r.name)
-					logged_in()
-				else console.log 'Login failed'
 
-		FB.getLoginStatus (response) ->
+	check_login_result = (response) -> 
+		if response.authResponse
+			console.log 'Login succeeded'
+			FB.api('/me', (r) -> console.log 'Welcome ' + r.name)
+			logged_in()
+		else alert 'Login failed'
+
+	initiate_login = ->
+		$('#login-btn').click ->
+			FB.login \
+				check_login_result,
+				{scope : 'email,read_friendlists,create_event,rsvp_event'}
+
+
+	FB.getLoginStatus (response) ->
     if response.status is "connected"
       console.log "Connected to facebook"
       logged_in()
-    else 
+    else  # if we're not in, provide button
       $('#login-btn').css 'visibility', 'visible'
       if response.status is "not_authorized"
         console.log "Not fb authed"
-      else
-        console.log "Not fb logged in"
+      else console.log "Not fb logged in"
 	
   # Initialise new hackathon button with rails remote
 	$.rails.handleRemote $('#sub-new-hack')
@@ -42,7 +47,7 @@ process_home = ->
 	$('#hackathon_list tr').click ->
 		segue_to_hackathon $(this).attr('id')
 	# Deal with the login
-	deal_with_login()
+	initiate_login()
 
 process_hackathon = (id) ->
 	$('body').data('id',id)
@@ -141,5 +146,44 @@ window.update_git = (callback) ->
 #///////////////////////////////////////////////////////////////////
 
 logged_in = ->
+	# Hide the login button, no longer needed
 	$('#login-btn').hide()
+	# Add the user if they are not already in the system
+	FB.api user_details, (array) -> 
+		add_user array[0], generate_hackathon_table
+
+generate_hackathon_table = ->
+	console.log 'Generating hackathon table'
+	# Current username
+	username = window.user.username
+	$.ajax \
+		type: "POST",
+		url: "hackathons/subscribed_to",
+		data: {username : username},
+		success: (data) ->
+			$('#hackathon-table').hide().append(data).slideDown()
+			console.log 'Appended table'
+
+#///////////////////////////////////////////////////////////////////
+# Facebook Queries
+#///////////////////////////////////////////////////////////////////
+
+user_details =
+	method : 'fql.query'
+	query : 'SELECT name, email, username FROM user WHERE uid=me()'
+
+
+#///////////////////////////////////////////////////////////////////
+# Rails Posting
+#///////////////////////////////////////////////////////////////////
+
+add_user = (user,callback) ->
+	$.ajax \
+		type: "POST",
+		url: '/users.json',
+		data: { user : user },
+		success: ->
+			window.user = user
+			console.log 'Posted user'
+			if callback? then callback()
 

@@ -28,6 +28,7 @@
 #login-btn {
 	padding : 8px 20px 8px 20px;
 	font-size : 15pt;
+	visibility : hidden;
 }
 
 .table {

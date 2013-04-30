@@ -1,26 +1,5 @@
 .container
-  .jumbotron
-    %h1 LiveHack!
-    %p#initial-subheading
-      The countdown begins. Login with facebook to get going.
-    %p.hide#logged-in-subheading
-      Access your hackathon below, or create a new hackathon 
-      <a href="#new-hack-modal" role="button" data-toggle="modal">here</a>.
-    %button.btn.btn-primary#login-btn Login
-  .span12{:style => 'margin-left:0'}
-    %table.hide.table.table-hover.table-striped.table-bordered{:style => 'width:100%'}
-      %tbody#hackathon_list
-        %tr
-          %th Name
-          %th Description
-          %th Location
-        - @hackathons.each do |hackathon|
-          %tr.minor
-            %td.hackathon_name
-              = hackathon.name
-            %td.hackathon_desc
-              = hackathon.desc
-            %td.hackathon_location
-              = hackathon.location
+  = render 'jumbotron'
+  #hackathon-table.span12{:style => 'margin-left:0'}
 
 = render 'new_hack_modal'

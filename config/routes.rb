@@ -1,10 +1,12 @@
 LiveHack::Application.routes.draw do
 
-  get "user/index"
-  get "user/new"
+  resources :hackathons do
+    post 'subscribed_to', :on => :collection, :action => 'subscribed_to'
+  end
 
-  resources :hackathons
-  resources :users
+  resources :users  do
+    get 'delete_all', :on => :collection
+  end
   resources :shared
 
   root :to => "hackathons#index"

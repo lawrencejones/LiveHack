@@ -70,6 +70,11 @@ class HackathonsController < ApplicationController
     end
   end
 
+  # GET /subscribed_to/username
+  def subscribed_to 
+    render :partial => 'hackathon_table'
+  end
+
   # DELETE /hackathons/1
   # DELETE /hackathons/1.json
   def destroy
