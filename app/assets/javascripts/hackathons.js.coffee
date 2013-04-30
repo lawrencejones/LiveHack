@@ -88,9 +88,12 @@ setup_new_modal_link = ->
           if $(this).html() == "Yes" then 1 else 0.3
         clear_inputs()
         if $(this).html() == "No" 
+          $('.stage1in').removeAttr('disabled')
           $('#stage1submit').text('Create Event')
         else
+          $('.stage1in').attr('disabled','disabled')
           $('#stage1submit').text('Select Current Hackathon')
+      .trigger 'click'
 
 
   start_live_validation = () ->

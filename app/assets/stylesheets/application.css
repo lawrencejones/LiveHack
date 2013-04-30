@@ -23,6 +23,10 @@
 	margin : 0px 0px 0px 0px;
 }
 
+.stage1in {
+	cursor : default !important;
+}
+
 .time-in {
 	max-width: 120px;
 	cursor: default;

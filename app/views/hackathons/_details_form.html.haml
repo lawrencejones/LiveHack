@@ -2,16 +2,16 @@
 	Either create a Facebook event for your hackathon below,
 	or select it from the left if it already exists.
 %label Hackathon Name
-%input#name{:type => :text, :placeholder => 'The best damn hackathon ever'}
+%input.stage1in#name{:type => :text, :placeholder => 'The best damn hackathon ever'}
 %form.form-inline
 	%label Start
-	%input#start.time-in{:size => '16', :type => :text, :value => '2013-01-01 00:00', :'readonly' => :''}
+	%input.stage1in#start.time-in{:size => '16', :type => :text, :value => '2013-01-01 00:00', :'readonly' => :''}
 	%label End
-	%input#end.time-in{:size => '16', :type => :text, :value => '2013-01-01 00:00', :'readonly' => :''}
+	%input.stage1in#end.time-in{:size => '16', :type => :text, :value => '2013-01-01 00:00', :'readonly' => :''}
 %label Location
-%input#location{:type => :text, :placeholder => 'California, Venice Beach'}
+%input.stage1in#location{:type => :text, :placeholder => 'California, Venice Beach'}
 %label Description
-%textarea#desc-in{:rows => '6'}
+%textarea.stage1in#desc-in{:rows => '6'}
 %button.btn.btn-primary#stage1submit.disabled Select Current Hackathon
 
 // Needs fields start_time, end_time, location, name, description
