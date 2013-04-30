@@ -34,4 +34,5 @@ LiveHack::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+  config.app_id = "604278122915853"
 end

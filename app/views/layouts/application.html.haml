@@ -1,6 +1,6 @@
 !!!
 %html
-  %head
+  %head{:'data-app-id' => Rails.application.config.app_id}
     %title LiveHack!
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"

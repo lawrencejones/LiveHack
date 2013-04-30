@@ -96056,3 +96056,1769 @@ Started GET "/hackathons/new" for 127.0.0.1 at 2013-04-30 07:33:01 +0100
 Processing by HackathonsController#new as */*
   Rendered hackathons/_new_hack_modal.html.haml (0.3ms)
 Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:42:16 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.2ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.1ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-30 07:42:16 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/clock.css?body=1" for 127.0.0.1 at 2013-04-30 07:42:16 +0100
+Served asset /clock.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-30 07:42:16 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-30 07:42:16 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-30 07:42:16 +0100
+Served asset /user.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-30 07:42:16 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:42:16 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-30 07:42:16 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fb.js?body=1" for 127.0.0.1 at 2013-04-30 07:42:16 +0100
+Served asset /fb.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/fb_init.js?body=1" for 127.0.0.1 at 2013-04-30 07:42:16 +0100
+Served asset /fb_init.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:42:16 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-04-30 07:42:16 +0100
+Served asset /hackathons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-04-30 07:42:16 +0100
+Served asset /clock.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-30 07:42:16 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:42:16 +0100
+Processing by HackathonsController#index as JS
+  [1m[35mHackathon Load (0.2ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.1ms)
+  Rendered hackathons/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2013-04-30 07:42:22 +0100
+Served asset /jquery.min.map - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:42:34 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_jumbotron.html.haml (0.0ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-30 07:42:34 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-30 07:42:34 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-30 07:42:34 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-30 07:42:34 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.css?body=1" for 127.0.0.1 at 2013-04-30 07:42:34 +0100
+Served asset /clock.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-30 07:42:34 +0100
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:42:34 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-30 07:42:34 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fb.js?body=1" for 127.0.0.1 at 2013-04-30 07:42:34 +0100
+Served asset /fb.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/fb_init.js?body=1" for 127.0.0.1 at 2013-04-30 07:42:34 +0100
+Served asset /fb_init.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:42:34 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-04-30 07:42:34 +0100
+Served asset /hackathons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-04-30 07:42:34 +0100
+Served asset /clock.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-30 07:42:34 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2013-04-30 07:42:34 +0100
+Served asset /jquery.min.map - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:42:34 +0100
+Processing by HackathonsController#index as JS
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.1ms)
+  Rendered hackathons/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:43:17 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.2ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.1ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-30 07:43:18 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/clock.css?body=1" for 127.0.0.1 at 2013-04-30 07:43:18 +0100
+Served asset /clock.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-30 07:43:18 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-30 07:43:18 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-30 07:43:18 +0100
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-30 07:43:18 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:43:18 +0100
+Served asset /jquery.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-30 07:43:18 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fb.js?body=1" for 127.0.0.1 at 2013-04-30 07:43:18 +0100
+Served asset /fb.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/fb_init.js?body=1" for 127.0.0.1 at 2013-04-30 07:43:18 +0100
+Served asset /fb_init.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:43:18 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-04-30 07:43:18 +0100
+Served asset /hackathons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-04-30 07:43:18 +0100
+Served asset /clock.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-30 07:43:18 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2013-04-30 07:43:18 +0100
+Served asset /jquery.min.map - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:43:18 +0100
+Processing by HackathonsController#index as JS
+  [1m[35mHackathon Load (0.2ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.1ms)
+  Rendered hackathons/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:44:18 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `version' for nil:NilClass):
+    1: !!!
+    2: %html
+    3:   %head
+    4:     %title{:id => config.assets.version} LiveHack!
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+  app/views/layouts/application.html.haml:4:in `_app_views_layouts_application_html_haml__4073451545387744362_70362476007780'
+  app/controllers/hackathons_controller.rb:8:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:44:42 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (Inconsistent indentation: "  \t" used for indentation, but the rest of the document was indented using 2 spaces.):
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:   	= config.assets.version
+    10:     #fb-root
+    11:     = yield
+  app/views/layouts/application.html.haml:9
+  app/controllers/hackathons_controller.rb:8:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:44:58 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_jumbotron.html.haml (0.0ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `version' for nil:NilClass):
+    8:   %body
+    9:     #fb-root
+    10:     = yield
+    11:     = config.assets.version
+  app/views/layouts/application.html.haml:11:in `_app_views_layouts_application_html_haml__4073451545387744362_70362489726300'
+  app/controllers/hackathons_controller.rb:8:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:45:05 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.2ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_jumbotron.html.haml (0.0ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-30 07:45:05 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-30 07:45:05 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-30 07:45:05 +0100
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.css?body=1" for 127.0.0.1 at 2013-04-30 07:45:05 +0100
+Served asset /clock.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-30 07:45:05 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-30 07:45:05 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:05 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:05 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fb.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:05 +0100
+Served asset /fb.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fb_init.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:05 +0100
+Served asset /fb_init.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:05 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:05 +0100
+Served asset /hackathons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:05 +0100
+Served asset /clock.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:05 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2013-04-30 07:45:05 +0100
+Served asset /jquery.min.map - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:45:05 +0100
+Processing by HackathonsController#index as JS
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.1ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:45:18 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_jumbotron.html.haml (0.0ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (Inconsistent indentation: "    \t" used for indentation, but the rest of the document was indented using 2 spaces.):
+    9:     #fb-root
+    10:     = yield
+    11:     %p
+    12:     	= config.app_id
+  app/views/layouts/application.html.haml:12
+  app/controllers/hackathons_controller.rb:8:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:45:23 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.2ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-30 07:45:23 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/clock.css?body=1" for 127.0.0.1 at 2013-04-30 07:45:23 +0100
+Served asset /clock.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-30 07:45:23 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-30 07:45:23 +0100
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-30 07:45:23 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-30 07:45:23 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:23 +0100
+Served asset /jquery.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:23 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fb.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:23 +0100
+Served asset /fb.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/fb_init.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:23 +0100
+Served asset /fb_init.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:23 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:23 +0100
+Served asset /hackathons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:23 +0100
+Served asset /clock.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:23 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2013-04-30 07:45:23 +0100
+Served asset /jquery.min.map - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:45:23 +0100
+Processing by HackathonsController#index as JS
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.1ms)
+  Rendered hackathons/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:45:33 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.2ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.1ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-30 07:45:33 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.css?body=1" for 127.0.0.1 at 2013-04-30 07:45:33 +0100
+Served asset /clock.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-30 07:45:33 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-30 07:45:33 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-30 07:45:33 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-30 07:45:33 +0100
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:33 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:33 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fb.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:33 +0100
+Served asset /fb.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/fb_init.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:33 +0100
+Served asset /fb_init.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:33 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:33 +0100
+Served asset /hackathons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:33 +0100
+Served asset /clock.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-30 07:45:33 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2013-04-30 07:45:33 +0100
+Served asset /jquery.min.map - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:45:33 +0100
+Processing by HackathonsController#index as JS
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.1ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:47:45 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_jumbotron.html.haml (0.0ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-30 07:47:45 +0100
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/clock.css?body=1" for 127.0.0.1 at 2013-04-30 07:47:45 +0100
+Served asset /clock.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-30 07:47:45 +0100
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-30 07:47:45 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-30 07:47:45 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-30 07:47:45 +0100
+Served asset /hackathons.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:47:45 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-30 07:47:45 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/fb.js?body=1" for 127.0.0.1 at 2013-04-30 07:47:45 +0100
+Served asset /fb.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/fb_init.js?body=1" for 127.0.0.1 at 2013-04-30 07:47:45 +0100
+Served asset /fb_init.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:47:45 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-04-30 07:47:45 +0100
+Served asset /hackathons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-04-30 07:47:45 +0100
+Served asset /clock.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-30 07:47:45 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2013-04-30 07:47:45 +0100
+Served asset /jquery.min.map - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:47:45 +0100
+Processing by HackathonsController#index as JS
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.1ms)
+  Rendered hackathons/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:49:11 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.2ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_jumbotron.html.haml (0.0ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `app_id' for #<Rails::Application::Configuration:0x007ffd14d83330>):
+    8:   %body
+    9:     #fb-root
+    10:     = yield
+    11:     %p= LiveHack::Application.config.app_id
+  app/views/layouts/application.html.haml:11:in `_app_views_layouts_application_html_haml__4073451545387744362_70362486485960'
+  app/controllers/hackathons_controller.rb:8:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:49:19 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.4ms)
+ERROR: compiling _app_views_layouts_application_html_haml__4073451545387744362_70362487799040 RAISED /Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:11: syntax error, unexpected tASSOC, expecting ')'
+...LiveHack::Application.config => :app_id
+...                               ^
+Function body:           def _app_views_layouts_application_html_haml__4073451545387744362_70362487799040(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :preserve=>["textarea", "pre", "code"], :attr_wrapper=>"'", :ugly=>false, :format=>:html5, :encoding=>"UTF-8", :escape_html=>true, :escape_attrs=>true, :hyphenate_data_attrs=>true, :cdata=>false});_erbout = _hamlout.buffer;@output_buffer = output_buffer ||= ActionView::OutputBuffer.new rescue nil;;_hamlout.push_text("<!DOCTYPE html>\n<html>\n  <head>\n    <title>LiveHack!</title>\n    #{_hamlout.adjust_tabs(2); 
+
+
+
+_hamlout.format_script_false_false_false_true_false_true_false(( stylesheet_link_tag    "application", :media => "all"
+));}\n    #{_hamlout.format_script_false_false_false_true_false_true_false(( javascript_include_tag "application"
+));}\n    #{_hamlout.format_script_false_false_false_true_false_true_false(( csrf_meta_tags
+));}\n  </head>\n  <body>\n    <div id='fb-root'></div>\n    #{
+
+_hamlout.format_script_false_false_false_true_false_true_false(( yield
+));}\n    <p>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false((LiveHack::Application.config => :app_id
+));}</p>\n  </body>\n</html>\n", -2, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:297:in `module_eval'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:297:in `compile'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:232:in `compile!'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:144:in `block in render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications.rb:125:in `instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:143:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/lawrencejones/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activerecord-3.2.12/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/Users/lawrencejones/Sites/Projects/LiveHack/app/controllers/hackathons_controller.rb:8:in `index'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:414:in `_run__32254729829127273__process_action__1540007675634952548__callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activerecord-3.2.12/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/base.rb:121:in `process'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal.rb:203:in `dispatch'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal.rb:246:in `block in action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activerecord-3.2.12/lib/active_record/query_cache.rb:64:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activerecord-3.2.12/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `_run__3312142476169324924__call__4090800795571075784__callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+/Users/lawrencejones/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/Users/lawrencejones/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/Users/lawrencejones/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (/Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:11: syntax error, unexpected tASSOC, expecting ')'
+...LiveHack::Application.config => :app_id
+...                               ^):
+    8:   %body
+    9:     #fb-root
+    10:     = yield
+    11:     %p= LiveHack::Application.config => :app_id
+  app/controllers/hackathons_controller.rb:8:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (12.2ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:49:37 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.2ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (Inconsistent indentation: "    \t" used for indentation, but the rest of the document was indented using 2 spaces.):
+    9:     #fb-root
+    10:     = yield
+    11:     %p
+    12:     	= LiveHack::Application.config.app_id
+  app/views/layouts/application.html.haml:12
+  app/controllers/hackathons_controller.rb:8:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:49:52 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.2ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_jumbotron.html.haml (0.0ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `app_id' for #<Rails::Application::Configuration:0x007ffd14d83330>):
+    9:     #fb-root
+    10:     = yield
+    11:     %p
+    12:       = LiveHack::Application.config.app_id
+  app/views/layouts/application.html.haml:12:in `_app_views_layouts_application_html_haml__4073451545387744362_70362486829900'
+  app/controllers/hackathons_controller.rb:8:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:50:07 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.2ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_jumbotron.html.haml (0.0ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.1ms)
+ERROR: compiling _app_views_layouts_application_html_haml__4073451545387744362_70362486367420 RAISED /Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:12: syntax error, unexpected tASSOC, expecting ')'
+...LiveHack::Application.config => :app_id
+...                               ^
+Function body:           def _app_views_layouts_application_html_haml__4073451545387744362_70362486367420(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :preserve=>["textarea", "pre", "code"], :attr_wrapper=>"'", :ugly=>false, :format=>:html5, :encoding=>"UTF-8", :escape_html=>true, :escape_attrs=>true, :hyphenate_data_attrs=>true, :cdata=>false});_erbout = _hamlout.buffer;@output_buffer = output_buffer ||= ActionView::OutputBuffer.new rescue nil;;_hamlout.push_text("<!DOCTYPE html>\n<html>\n  <head>\n    <title>LiveHack!</title>\n    #{_hamlout.adjust_tabs(2); 
+
+
+
+_hamlout.format_script_false_false_false_true_false_true_false(( stylesheet_link_tag    "application", :media => "all"
+));}\n    #{_hamlout.format_script_false_false_false_true_false_true_false(( javascript_include_tag "application"
+));}\n    #{_hamlout.format_script_false_false_false_true_false_true_false(( csrf_meta_tags
+));}\n  </head>\n  <body>\n    <div id='fb-root'></div>\n    #{
+
+_hamlout.format_script_false_false_false_true_false_true_false(( yield
+));}\n    <p>\n      #{_hamlout.adjust_tabs(1); 
+_hamlout.format_script_false_false_false_true_false_true_false(( LiveHack::Application.config => :app_id
+));}\n    </p>\n  </body>\n</html>\n", -3, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:297:in `module_eval'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:297:in `compile'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:232:in `compile!'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:144:in `block in render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications.rb:125:in `instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:143:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/lawrencejones/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activerecord-3.2.12/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/Users/lawrencejones/Sites/Projects/LiveHack/app/controllers/hackathons_controller.rb:8:in `index'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:414:in `_run__32254729829127273__process_action__1540007675634952548__callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activerecord-3.2.12/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/base.rb:121:in `process'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal.rb:203:in `dispatch'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal.rb:246:in `block in action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activerecord-3.2.12/lib/active_record/query_cache.rb:64:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activerecord-3.2.12/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `_run__3312142476169324924__call__4090800795571075784__callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+/Users/lawrencejones/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/Users/lawrencejones/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/Users/lawrencejones/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (/Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:12: syntax error, unexpected tASSOC, expecting ')'
+...LiveHack::Application.config => :app_id
+...                               ^):
+    9:     #fb-root
+    10:     = yield
+    11:     %p
+    12:       = LiveHack::Application.config => :app_id
+  app/controllers/hackathons_controller.rb:8:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:51:20 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.2ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_jumbotron.html.haml (0.0ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `app_id' for #<Rails::Application::Configuration:0x007ffd14d83330>):
+    9:     #fb-root
+    10:     = yield
+    11:     %p
+    12:       = Rails.application.config.app_id
+  app/views/layouts/application.html.haml:12:in `_app_views_layouts_application_html_haml__4073451545387744362_70362486932980'
+  app/controllers/hackathons_controller.rb:8:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:51:39 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `app_id' for #<Rails::Application::Configuration:0x007ffd14d83330>):
+    9:     #fb-root
+    10:     = yield
+    11:     %p
+    12:       = Rails.application.config.app_id
+  app/views/layouts/application.html.haml:12:in `_app_views_layouts_application_html_haml__4073451545387744362_70362488250380'
+  app/controllers/hackathons_controller.rb:8:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (12.1ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:52:17 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.2ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_jumbotron.html.haml (0.0ms)
+  Rendered hackathons/_event_row.html.haml (0.1ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `app_id' for #<Rails::Application::Configuration:0x007ffd14d83330>):
+    9:     #fb-root
+    10:     = yield
+    11:     %p
+    12:       = Rails.application.config.app_id
+  app/views/layouts/application.html.haml:12:in `_app_views_layouts_application_html_haml__4073451545387744362_70362488250380'
+  app/controllers/hackathons_controller.rb:8:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:53:30 +0100
+Connecting to database specified by database.yml
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_jumbotron.html.haml (1.3ms)
+  Rendered hackathons/_event_row.html.haml (0.9ms)
+  Rendered hackathons/index.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 84ms (Views: 59.6ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-30 07:53:30 +0100
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/clock.css?body=1" for 127.0.0.1 at 2013-04-30 07:53:30 +0100
+Served asset /clock.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-30 07:53:30 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-30 07:53:30 +0100
+Served asset /hackathons.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-30 07:53:30 +0100
+Served asset /user.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-30 07:53:30 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:53:30 +0100
+Served asset /jquery.min.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-30 07:53:30 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/fb.js?body=1" for 127.0.0.1 at 2013-04-30 07:53:30 +0100
+Served asset /fb.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/fb_init.js?body=1" for 127.0.0.1 at 2013-04-30 07:53:30 +0100
+Served asset /fb_init.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:53:30 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-04-30 07:53:30 +0100
+Served asset /hackathons.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-04-30 07:53:30 +0100
+Served asset /clock.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-30 07:53:30 +0100
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2013-04-30 07:53:30 +0100
+Served asset /jquery.min.map - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:53:30 +0100
+Processing by HackathonsController#index as JS
+  [1m[35mHackathon Load (0.4ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.1ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:55:46 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.1ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_jumbotron.html.haml (0.0ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.0ms)
+ERROR: compiling _app_views_layouts_application_html_haml___1565420216191159183_70105588570740 RAISED /Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:8: unknown regexp options - had
+/Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:8: syntax error, unexpected $undefined
+));}\n  </head>\n  <body>\n    <div id='fb-root'></div>\n    #{
+                ^
+/Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:8: syntax error, unexpected $undefined
+));}\n  </head>\n  <body>\n    <div id='fb-root'></div>\n    #{
+                          ^
+/Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:8: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+));}\n  </head>\n  <body>\n    <div id='fb-root'></div>\n    #{
+                                      ^
+/Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:8: syntax error, unexpected '<'
+));}\n  </head>\n  <body>\n    <div id='fb-root'></div>\n    #{
+                                                  ^
+/Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:11: unknown regexp options - bdy
+/Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:11: syntax error, unexpected $undefined
+));}\n  </body>\n</html>\n", -2, false);::Ham...
+                ^
+/Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:11: unterminated regexp meets end of file
+/Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:11: syntax error, unexpected $end, expecting '}'
+Function body:           def _app_views_layouts_application_html_haml___1565420216191159183_70105588570740(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :preserve=>["textarea", "pre", "code"], :attr_wrapper=>"'", :ugly=>false, :format=>:html5, :encoding=>"UTF-8", :escape_html=>true, :escape_attrs=>true, :hyphenate_data_attrs=>true, :cdata=>false});_erbout = _hamlout.buffer;@output_buffer = output_buffer ||= ActionView::OutputBuffer.new rescue nil;;_hamlout.push_text("<!DOCTYPE html>\n<html>\n  <head#{_hamlout.adjust_tabs(1); 
+
+_hamlout.attributes({}, nil, :'data-app-id' => = Rails.application.config.app_id)}>\n    <title>LiveHack!</title>\n    #{_hamlout.adjust_tabs(1); 
+
+_hamlout.format_script_false_false_false_true_false_true_false(( stylesheet_link_tag    "application", :media => "all"
+));}\n    #{_hamlout.format_script_false_false_false_true_false_true_false(( javascript_include_tag "application"
+));}\n    #{_hamlout.format_script_false_false_false_true_false_true_false(( csrf_meta_tags
+));}\n  </head>\n  <body>\n    <div id='fb-root'></div>\n    #{
+
+_hamlout.format_script_false_false_false_true_false_true_false(( yield
+));}\n  </body>\n</html>\n", -2, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:297:in `module_eval'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:297:in `compile'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:232:in `compile!'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:144:in `block in render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications.rb:125:in `instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:143:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/lawrencejones/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activerecord-3.2.12/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/Users/lawrencejones/Sites/Projects/LiveHack/app/controllers/hackathons_controller.rb:8:in `index'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:414:in `_run__2963461207573322573__process_action__3992800281567585407__callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `instrument'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activerecord-3.2.12/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/base.rb:121:in `process'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal.rb:203:in `dispatch'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal.rb:246:in `block in action'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activerecord-3.2.12/lib/active_record/query_cache.rb:64:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activerecord-3.2.12/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `_run__4591822409830114179__call__949735516047629628__callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+/Users/lawrencejones/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/Users/lawrencejones/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/Users/lawrencejones/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+Completed 500 Internal Server Error in 37ms
+
+ActionView::Template::Error (/Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:8: unknown regexp options - had
+/Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:8: syntax error, unexpected $undefined
+));}\n  </head>\n  <body>\n    <div id='fb-root'></div>\n    #{
+                ^
+/Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:8: syntax error, unexpected $undefined
+));}\n  </head>\n  <body>\n    <div id='fb-root'></div>\n    #{
+                          ^
+/Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:8: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+));}\n  </head>\n  <body>\n    <div id='fb-root'></div>\n    #{
+                                      ^
+/Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:8: syntax error, unexpected '<'
+));}\n  </head>\n  <body>\n    <div id='fb-root'></div>\n    #{
+                                                  ^
+/Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:11: unknown regexp options - bdy
+/Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:11: syntax error, unexpected $undefined
+));}\n  </body>\n</html>\n", -2, false);::Ham...
+                ^
+/Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:11: unterminated regexp meets end of file
+/Users/lawrencejones/Sites/Projects/LiveHack/app/views/layouts/application.html.haml:11: syntax error, unexpected $end, expecting '}'):
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     #fb-root
+    10:     = yield
+  app/controllers/hackathons_controller.rb:8:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:56:01 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-30 07:56:01 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-30 07:56:01 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.css?body=1" for 127.0.0.1 at 2013-04-30 07:56:01 +0100
+Served asset /clock.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-30 07:56:01 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-30 07:56:01 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-30 07:56:01 +0100
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:56:01 +0100
+Served asset /jquery.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-30 07:56:01 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fb.js?body=1" for 127.0.0.1 at 2013-04-30 07:56:01 +0100
+Served asset /fb.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/fb_init.js?body=1" for 127.0.0.1 at 2013-04-30 07:56:01 +0100
+Served asset /fb_init.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:56:01 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-04-30 07:56:01 +0100
+Served asset /hackathons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-04-30 07:56:01 +0100
+Served asset /clock.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-30 07:56:01 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2013-04-30 07:56:01 +0100
+Served asset /jquery.min.map - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:56:01 +0100
+Processing by HackathonsController#index as JS
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.1ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:57:01 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.2ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.1ms)
+Compiled fb_init.js  (129ms)  (pid 34992)
+Compiled application.js  (5ms)  (pid 34992)
+Completed 200 OK in 181ms (Views: 179.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-30 07:57:01 +0100
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-30 07:57:02 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-30 07:57:02 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-30 07:57:02 +0100
+Served asset /user.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/clock.css?body=1" for 127.0.0.1 at 2013-04-30 07:57:02 +0100
+Served asset /clock.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-30 07:57:02 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:57:02 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-30 07:57:02 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fb.js?body=1" for 127.0.0.1 at 2013-04-30 07:57:02 +0100
+Served asset /fb.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fb_init.js?body=1" for 127.0.0.1 at 2013-04-30 07:57:02 +0100
+Served asset /fb_init.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:57:02 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-04-30 07:57:02 +0100
+Served asset /hackathons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-04-30 07:57:02 +0100
+Served asset /clock.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-30 07:57:02 +0100
+Served asset /application.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2013-04-30 07:57:02 +0100
+Served asset /jquery.min.map - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:57:24 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.2ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_jumbotron.html.haml (0.0ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.1ms)
+Compiled fb_init.js  (126ms)  (pid 34992)
+Compiled application.js  (4ms)  (pid 34992)
+Completed 200 OK in 176ms (Views: 175.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-30 07:57:24 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/clock.css?body=1" for 127.0.0.1 at 2013-04-30 07:57:24 +0100
+Served asset /clock.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-30 07:57:24 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-30 07:57:24 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-30 07:57:24 +0100
+Served asset /user.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-30 07:57:24 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:57:24 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-30 07:57:24 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fb.js?body=1" for 127.0.0.1 at 2013-04-30 07:57:24 +0100
+Served asset /fb.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fb_init.js?body=1" for 127.0.0.1 at 2013-04-30 07:57:24 +0100
+Served asset /fb_init.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:57:24 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-04-30 07:57:24 +0100
+Served asset /hackathons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-04-30 07:57:24 +0100
+Served asset /clock.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-30 07:57:24 +0100
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2013-04-30 07:57:24 +0100
+Served asset /jquery.min.map - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:57:24 +0100
+Processing by HackathonsController#index as JS
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.1ms)
+  Rendered hackathons/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:57:40 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.2ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 162ms
+
+ActionView::Template::Error (SyntaxError: unexpected INDENT
+  (in /Users/lawrencejones/Sites/Projects/LiveHack/app/assets/javascripts/fb_init.coffee)):
+    3:   %head{:'data-app-id' => Rails.application.config.app_id}
+    4:     %title LiveHack!
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     #fb-root
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___1565420216191159183_70105588985420'
+  app/controllers/hackathons_controller.rb:8:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:57:47 +0100
+Processing by HackathonsController#index as HTML
+  [1m[35mHackathon Load (0.3ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 137ms
+
+ActionView::Template::Error (SyntaxError: unexpected INDENT
+  (in /Users/lawrencejones/Sites/Projects/LiveHack/app/assets/javascripts/fb_init.coffee)):
+    3:   %head{:'data-app-id' => Rails.application.config.app_id}
+    4:     %title LiveHack!
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     #fb-root
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___1565420216191159183_70105588985420'
+  app/controllers/hackathons_controller.rb:8:in `index'
+
+
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/lawrencejones/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:58:20 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.3ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.2ms)
+Compiled fb_init.js  (145ms)  (pid 34992)
+Compiled application.js  (5ms)  (pid 34992)
+Completed 200 OK in 182ms (Views: 180.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-30 07:58:20 +0100
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/clock.css?body=1" for 127.0.0.1 at 2013-04-30 07:58:20 +0100
+Served asset /clock.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-30 07:58:20 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-30 07:58:20 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-30 07:58:20 +0100
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-30 07:58:20 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:58:20 +0100
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-30 07:58:20 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fb.js?body=1" for 127.0.0.1 at 2013-04-30 07:58:20 +0100
+Served asset /fb.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/fb_init.js?body=1" for 127.0.0.1 at 2013-04-30 07:58:20 +0100
+Served asset /fb_init.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:58:20 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-04-30 07:58:20 +0100
+Served asset /hackathons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-04-30 07:58:20 +0100
+Served asset /clock.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-30 07:58:20 +0100
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2013-04-30 07:58:20 +0100
+Served asset /jquery.min.map - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:58:20 +0100
+Processing by HackathonsController#index as JS
+  [1m[35mHackathon Load (0.5ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_jumbotron.html.haml (0.0ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:58:33 +0100
+Processing by HackathonsController#index as HTML
+  [1m[36mHackathon Load (0.2ms)[0m  [1mSELECT "hackathons".* FROM "hackathons" [0m
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.0ms)
+  Rendered hackathons/index.html.haml within layouts/application (1.3ms)
+Compiled fb_init.js  (126ms)  (pid 34992)
+Compiled application.js  (4ms)  (pid 34992)
+Completed 200 OK in 159ms (Views: 157.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-30 07:58:33 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-04-30 07:58:33 +0100
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.css?body=1" for 127.0.0.1 at 2013-04-30 07:58:33 +0100
+Served asset /clock.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-30 07:58:33 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-30 07:58:33 +0100
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-30 07:58:33 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:58:33 +0100
+Served asset /jquery.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-30 07:58:33 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fb.js?body=1" for 127.0.0.1 at 2013-04-30 07:58:33 +0100
+Served asset /fb.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/fb_init.js?body=1" for 127.0.0.1 at 2013-04-30 07:58:33 +0100
+Served asset /fb_init.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-30 07:58:33 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-04-30 07:58:33 +0100
+Served asset /hackathons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-04-30 07:58:33 +0100
+Served asset /clock.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-30 07:58:33 +0100
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2013-04-30 07:58:33 +0100
+Served asset /jquery.min.map - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 07:58:33 +0100
+Processing by HackathonsController#index as JS
+  [1m[35mHackathon Load (0.2ms)[0m  SELECT "hackathons".* FROM "hackathons" 
+  Rendered hackathons/_jumbotron.html.haml (0.1ms)
+  Rendered hackathons/_event_row.html.haml (0.1ms)
+  Rendered hackathons/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users.json" for 127.0.0.1 at 2013-04-30 07:58:46 +0100
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Lawrence Jones", "email"=>"lawrencelaptop@gmail.com", "username"=>"lawrence.jones.353"}}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = 'lawrence.jones.353' LIMIT 1[0m
+Completed 200 OK in 26ms (Views: 1.9ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/hackathons/subscribed_to" for 127.0.0.1 at 2013-04-30 07:58:46 +0100
+Processing by HackathonsController#subscribed_to as */*
+  Parameters: {"username"=>"lawrence.jones.353"}
+  [1m[35mHackathon Load (0.6ms)[0m  SELECT "hackathons".* FROM "hackathons" WHERE ("hackathons"."id" >= 0) ORDER BY "hackathons"."id" ASC LIMIT 1000
+  Rendered hackathons/_hackathon_table.html.haml (4.0ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.6ms)

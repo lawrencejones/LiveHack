@@ -8,7 +8,7 @@
 window.fbAsyncInit = (callback) ->
   if callback?
     FB.init
-      appId: "128923490635546"
+      appId: $('head').attr('data-app-id')
       channelUrl: "/channel.html"
       status: true
       cookie: true

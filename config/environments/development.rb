@@ -34,4 +34,6 @@ LiveHack::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.app_id = "604278122915853"
 end
