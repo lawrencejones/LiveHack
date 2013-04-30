@@ -17,14 +17,47 @@ routes = ->
 		process_new_user()
 
 setup_new_modal_link = ->
+
 	sort_btns = () ->
 		$('#fbevent-select .btn')
 			.click ->
 				$(this).parent().find('.btn').removeClass('btn-primary')
 				$(this).addClass('btn-primary')
+
+	expand_logic = () ->
+		content = $(this).data('content')
+		if content.hasClass('active')
+			content.removeClass('active').hide()
+		else 
+			content.addClass('active').show()
+		$('.no').css('height',$('.yes').height())
 	
 	populate_event_table = () ->
-		FB.api(all_attending_events, (r) -> console.log r)
+		FB.api all_attending_events, (r) ->
+			for e in r
+				console.log e
+				top  = $('#event-row tr:eq(0)').clone()
+				pic  = format_event_avatar(e.pic_square)
+
+				name = $('<h5/ class="event-header">') \
+					.addClass('push-up').html e.name
+				start = format_date(new Date(e.start_time))
+				console.log e.description
+				sub  = $('<h5/>') \
+					.addClass('event-header loc')
+					.html (e.location + ' - ' + start)
+				top.append pic, name, sub
+
+				bottom = $('#event-row tr:eq(1)').clone()
+				bottom.hide()
+				bottom.find('.info').html(e.description.replace(/\n/g, "<br/>"))
+				name.data('content',bottom).click expand_logic
+				sub.data('content',bottom).click expand_logic
+				bottom.data('content',bottom).dblclick expand_logic
+					
+				$('#event-table').append top, bottom
+				$('.no').css('height',$('.yes').height())
+
 
 	$('#new-hack-modal').click (e) ->
 		e.preventDefault()
@@ -191,6 +224,14 @@ generate_hackathon_table = ->
 			$('#hackathon-table').hide().append(data).fadeIn()
 			console.log 'Appended table'
 
+format_event_avatar = (url) ->
+   $("<img/ src=\"#{url}\">").addClass('event-img')
+
+format_date = (d) ->
+  pad = (a,b) ->
+    (1e15+a+"").slice(-b)
+  pad(d.getDate(),2) + '/' + pad(d.getMonth()+1,2) + '/' + d.getFullYear()
+
 #///////////////////////////////////////////////////////////////////
 # Facebook Queries
 #///////////////////////////////////////////////////////////////////
@@ -201,7 +242,7 @@ user_details =
 
 all_attending_events = 
 	method : 'fql.query'
-	query : ('SELECT name, venue, location, start_time ' + 
+	query : ('SELECT name, description, pic_square, venue, location, start_time, end_time ' + 
 					'FROM event WHERE eid IN (' +
 					'SELECT eid FROM event_member ' +
 					'WHERE uid = me() and rsvp_status="attending")')

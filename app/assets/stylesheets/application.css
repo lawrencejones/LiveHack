@@ -21,6 +21,41 @@
 	margin : 0px 0px 0px 0px;
 }
 
+.event-img {
+	width : 60px; height : 60px; 
+	min-width: 60px; min-height: 60px;
+	margin-right : 5px; float : left;
+	padding-top : 5px;
+	/*border : solid 1px #333333;*/
+}
+
+tr.title {
+	text-align : left;
+}
+
+h5.event-header {
+	margin :0px;
+	cursor : pointer;
+}
+.push-up {
+	padding-top : 5px;
+}
+
+td.info {
+	text-align: justify !important;
+	max-height : 50px;
+}
+
+h5.loc {
+	margin-top : 0;
+	color : rgb(0, 136, 204);
+}
+
+#event-table {
+	margin-left: -30px;
+	margin-top : 20px;
+}
+
 .row-buffer {
 	height : 65px;
 }
