@@ -1,4 +1,4 @@
-%table.hide.table.table-hover.table-striped.table-bordered{:style => 'width:100%'}
+%table.table.table-hover.table-striped.table-bordered{:style => 'width:100%'}
   %tbody#hackathon_list
     %tr
       %th Name
@@ -6,11 +6,11 @@
       %th Location
     - Hackathon.find_each do |hack|
       - @user = hack.users.find_by_username(params[:username])
-      - if !@user.blank?
-        %tr.minor
-          %td.hackathon_name
-            = hack.name
-          %td.hackathon_desc
-            = hack.desc
-          %td.hackathon_location
-            = hack.location
+      - @klass = @user.blank ? '.hide' : '.user'
+      %tr.minor{:class => @klass}
+        %td.hackathon_name
+          = hack.name
+        %td.hackathon_desc
+          = hack.desc
+        %td.hackathon_location
+          = hack.location

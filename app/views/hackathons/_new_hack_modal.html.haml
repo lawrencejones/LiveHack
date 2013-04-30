@@ -1,5 +1,26 @@
-#new-hack-modal.modal.hide.fade
-  .modal-header#new-hack-modal-header 
-    %button{:type => "button", :class => "close", :"data-dismiss" => "modal", :"aria-hidden" => "true"} &times
-    %h3 New Hackathon
-  = render 'form'
+.tabbable
+  %ul.nav.nav-tabs
+    %li.active
+      %a{:href => "#fbevent-tab", :'data-toggle' => 'tab'}
+        Facebook
+    %li
+      %a{:href => "#details-tab", :'data-toggle' => 'tab'}
+        Hackathon Details
+    %li
+      %a{:href => "#schedule-tab", :'data-toggle' => 'tab'}
+        Schedule
+  .tab-content.text-center
+    .tab-pane.active{:id => "fbevent-tab"}
+      .row
+        .span8.offset2
+          %h3 Have you already setup a Facebook Event?
+          .btn-group#fbevent-select
+            %button.btn.padded Yes
+            %button.btn.padded No
+      .row
+        .offset1.span5.yes
+          %table.table.table-hover#event-table
+        .span5.no
+          %h5 Event Details
+    .tab-pane{:id => "details-tab"}
+    .tab-pane{:id => "schedule-tab"}

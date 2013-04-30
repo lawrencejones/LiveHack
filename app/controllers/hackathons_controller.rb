@@ -28,7 +28,7 @@ class HackathonsController < ApplicationController
     @hackathon = Hackathon.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :partial => 'new_hack_modal'}
       format.json { render json: @hackathon }
     end
   end
@@ -86,4 +86,10 @@ class HackathonsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def delete_all
+    Hackathon.delete_all
+    render :nothing => true
+  end
+  
 end

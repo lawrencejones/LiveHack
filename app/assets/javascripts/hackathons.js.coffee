@@ -3,6 +3,7 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $ ->
+	setup_new_modal_link()
 	window.fbAsyncInit routes
 
 routes = ->
@@ -14,6 +15,30 @@ routes = ->
 		process_hackathon(id)
 	else if p == '/user/new'
 		process_new_user()
+
+setup_new_modal_link = ->
+	sort_btns = () ->
+		$('#fbevent-select .btn')
+			.click ->
+				$(this).parent().find('.btn').removeClass('btn-primary')
+				$(this).addClass('btn-primary')
+	
+	populate_event_table = () ->
+		FB.api(all_attending_events, (r) -> console.log r)
+
+	$('#new-hack-modal').click (e) ->
+		e.preventDefault()
+		if $('#new-hack-container').length == 0
+			$('#hackathon-table').fadeOut 200, ->
+				$.ajax \
+					type: "GET",
+					url: "/hackathons/new",
+					success: (data) ->
+						$('.container').append(data)
+						sort_btns()
+						populate_event_table()
+						window.new_hack = null
+						console.log 'Appended hack setup'
 
 process_home = ->
 
@@ -28,7 +53,7 @@ process_home = ->
 		$('#login-btn').click ->
 			FB.login \
 				check_login_result,
-				{scope : 'email,read_friendlists,create_event,rsvp_event'}
+				{scope : 'user_events,email,read_friendlists,create_event,rsvp_event'}
 
 
 	FB.getLoginStatus (response) ->
@@ -148,6 +173,8 @@ window.update_git = (callback) ->
 logged_in = ->
 	# Hide the login button, no longer needed
 	$('#login-btn').hide()
+	$('#initial-subheading').hide()
+	$('#logged-in-subheading').show()
 	# Add the user if they are not already in the system
 	FB.api user_details, (array) -> 
 		add_user array[0], generate_hackathon_table
@@ -161,7 +188,7 @@ generate_hackathon_table = ->
 		url: "hackathons/subscribed_to",
 		data: {username : username},
 		success: (data) ->
-			$('#hackathon-table').hide().append(data).slideDown()
+			$('#hackathon-table').hide().append(data).fadeIn()
 			console.log 'Appended table'
 
 #///////////////////////////////////////////////////////////////////
@@ -171,6 +198,13 @@ generate_hackathon_table = ->
 user_details =
 	method : 'fql.query'
 	query : 'SELECT name, email, username FROM user WHERE uid=me()'
+
+all_attending_events = 
+	method : 'fql.query'
+	query : ('SELECT name, venue, location, start_time ' + 
+					'FROM event WHERE eid IN (' +
+					'SELECT eid FROM event_member ' +
+					'WHERE uid = me() and rsvp_status="attending")')
 
 
 #///////////////////////////////////////////////////////////////////

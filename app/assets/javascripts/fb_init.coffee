@@ -8,7 +8,7 @@
 window.fbAsyncInit = (callback) ->
   if callback?
     FB.init
-      appId: "490022274396930"
+      appId: "128923490635546"
       channelUrl: "/channel.html"
       status: true
       cookie: true
