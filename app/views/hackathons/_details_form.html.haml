@@ -1,0 +1,17 @@
+%p.user-instructions 
+	Either create a Facebook event for your hackathon below,
+	or select it from the left if it already exists.
+%label Hackathon Name
+%input#name{:type => :text, :placeholder => 'The best damn hackathon ever'}
+%form.form-inline
+	%label Start
+	%input#start.time-in{:size => '16', :type => :text, :value => '2013-01-01 00:00', :'readonly' => :''}
+	%label End
+	%input#end.time-in{:size => '16', :type => :text, :value => '2013-01-01 00:00', :'readonly' => :''}
+%label Location
+%input#location{:type => :text, :placeholder => 'California, Venice Beach'}
+%label Description
+%textarea#desc-in{:rows => '6'}
+
+// Needs fields start_time, end_time, location, name, description
+// and privacy = "OPEN" || "CLOSED"

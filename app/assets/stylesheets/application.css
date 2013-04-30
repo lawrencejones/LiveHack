@@ -22,12 +22,25 @@
 	margin : 0px 0px 0px 0px;
 }
 
+.time-in {
+	max-width: 120px;
+	cursor: default;
+}
+
+.user-instructions {
+	margin-top : 20px;
+}
+
 .event-img {
 	width : 60px; height : 60px; 
 	min-width: 60px; min-height: 60px;
 	margin-right : 5px; float : left;
 	padding-top : 5px;
 	/*border : solid 1px #333333;*/
+}
+
+a {
+	cursor : pointer;
 }
 
 tr.title {
@@ -57,8 +70,16 @@ h5.loc {
 	margin-top : 20px;
 }
 
+#name, #location {
+	text-align: right;
+}
+
 .row-buffer {
 	height : 65px;
+}
+
+#desc-in {
+	width : 85%;
 }
 
 #login-btn {
@@ -98,4 +119,5 @@ h5.loc {
 	border-left: 1px solid #e3e3e3;
 	margin-left: 10px !important;
 	min-height: 300px !important;
+	text-align : right;
 }
