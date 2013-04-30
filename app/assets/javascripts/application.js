@@ -17,3 +17,4 @@
 //= require bootstrap.min
 //= require hackathons
 //= require clock
+//= require bootstrap-datetimepicker

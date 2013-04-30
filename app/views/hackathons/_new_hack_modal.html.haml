@@ -1,5 +1,5 @@
 .tabbable
-  %ul.nav.nav-tabs
+  %ul.nav.nav-tabs#form-tabs
     %li.active
       %a{:href => "#fbevent-tab", :'data-toggle' => 'tab'}
         Facebook
@@ -15,12 +15,12 @@
         .span8.offset2
           %h3 Have you already setup a Facebook Event?
           .btn-group#fbevent-select
-            %button.btn.padded Yes
+            %button.btn.btn-primary.padded Yes
             %button.btn.padded No
       .row
         .offset1.span5.yes
           %table.table.table-hover#event-table
         .span5.no
-          %h5 Event Details
+          = render 'details_form'
     .tab-pane{:id => "details-tab"}
     .tab-pane{:id => "schedule-tab"}

@@ -18,11 +18,20 @@ routes = ->
 
 setup_new_modal_link = ->
 
+	prevent_illegal_tabbing = () ->
+		$('#form-tabs').click (e) ->
+			console.log('click')
+			if $(this).find('i[class="icon-check"]').length != 1
+				return false
+
 	sort_btns = () ->
 		$('#fbevent-select .btn')
 			.click ->
 				$(this).parent().find('.btn').removeClass('btn-primary')
 				$(this).addClass('btn-primary')
+				
+				$('#event-table').css 'opacity', \
+					if $(this).html() == "Yes" then 1 else 0.3
 
 	expand_logic = () ->
 		content = $(this).data('content')
@@ -42,7 +51,6 @@ setup_new_modal_link = ->
 				name = $('<h5/ class="event-header">') \
 					.addClass('push-up').html e.name
 				start = format_date(new Date(e.start_time))
-				console.log e.description
 				sub  = $('<h5/>') \
 					.addClass('event-header loc')
 					.html (e.location + ' - ' + start)
@@ -58,20 +66,26 @@ setup_new_modal_link = ->
 				$('#event-table').append top, bottom
 				$('.no').css('height',$('.yes').height())
 
+	get_partial = (callback) ->
+		$('#new-hack-modal').click (e) ->
+			e.preventDefault()
+			if $('#new-hack-container').length == 0
+				$('#hackathon-table').fadeOut 200, ->
+					$.ajax \
+						type: "GET",
+						url: "/hackathons/new",
+						success: (data) ->
+							$('.container').append(data)
+							console.log 'Appended hack setup'
+							callback()
 
-	$('#new-hack-modal').click (e) ->
-		e.preventDefault()
-		if $('#new-hack-container').length == 0
-			$('#hackathon-table').fadeOut 200, ->
-				$.ajax \
-					type: "GET",
-					url: "/hackathons/new",
-					success: (data) ->
-						$('.container').append(data)
-						sort_btns()
-						populate_event_table()
-						window.new_hack = null
-						console.log 'Appended hack setup'
+	once_appended = ->
+		sort_btns()
+		populate_event_table()
+		window.new_hack = null
+		prevent_illegal_tabbing()
+
+	get_partial(once_appended)
 
 process_home = ->
 
@@ -233,7 +247,7 @@ format_date = (d) ->
   pad(d.getDate(),2) + '/' + pad(d.getMonth()+1,2) + '/' + d.getFullYear()
 
 #///////////////////////////////////////////////////////////////////
-# Facebook Queries
+# Facebook 
 #///////////////////////////////////////////////////////////////////
 
 user_details =
@@ -246,6 +260,14 @@ all_attending_events =
 					'FROM event WHERE eid IN (' +
 					'SELECT eid FROM event_member ' +
 					'WHERE uid = me() and rsvp_status="attending")')
+
+create_event = (e,callback) ->
+	# Needs fields start_time, end_time, location, name, description
+	# and privacy = "OPEN" || "CLOSED"
+	FB.api '/me/events', 'post', e, (response) ->
+		if response.id then console.log 'Event created'
+		if callback? then callback()
+
 
 
 #///////////////////////////////////////////////////////////////////
