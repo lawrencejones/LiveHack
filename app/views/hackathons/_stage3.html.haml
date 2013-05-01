@@ -2,9 +2,20 @@
   .span8.offset2
     %h3#invite-header Create the Hackathon Schedule
     %p 
-      From here you can put together a hackathon schedule. This will be shown
-      at the top of the hackathon page, with the current event highlighted.
+      From here you can put together a hackathon schedule.
     %p
-      Use the live preview to customise the appearance of each button using
-      font-awesome icons, then give the event a short label (recommended 12 chars)
-      and a start time. We'll do the rest.
+      See <a href="http://http://fortawesome.github.io/Font-Awesome/">font-awesome</a> for the choice of icon.
+.row
+  .span5.offset1{:style => 'text-align:left;'}
+    %label Item Label
+    %label Starting Time
+    %label Font-Awesome Icon Class
+  .span5.span-divided{:style => 'height:300px'}
+.row
+  .span10.offset1
+    %table.table
+      %tbody
+        %tr
+          %th.sch-item-tb-header Label
+          %th.sch-item-tb-header Time
+          %th.sch-item-tb-header Font-awesome Icon
