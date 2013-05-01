@@ -20,17 +20,8 @@ routes = ->
 #///////////////////////////////////////////////////////////////////
 # New Hackathon Control Flow
 #///////////////////////////////////////////////////////////////////
+
 setup_new_modal_link = ->
-
-  # Initiate the timepicker handle
-  setup_time_picker = () ->
-    $('.time-in').datetimepicker {format : 'yyyy-mm-dd hh:ii'}
-
-  parse_fb_date = (d) ->
-    [year,month,day] = d.split(' ')[0].split('-')
-    [hour, minutes] = d.split(' ')[1].split(':')
-    d = new Date(year, month-1, day, hour, minutes)
-    return d.toISOString().split('.')[0]+'-0000'
 
   # Prevent users tabbing ahead of their current progress
   prevent_illegal_tabbing = () ->
@@ -38,12 +29,14 @@ setup_new_modal_link = ->
       if !$(this).data('allowed')
         return false
   
+  #/////////// STAGE 1 ////////////////////////////////////////////
+  
+  # Verify all inputs are present
   validate_inputs = () ->
     goahead = true
     $('.no input').each ->
       if $(this).val() == '' then goahead = false
     goahead and ($('.no textarea').val() != '')
-
 
   # Clear all current fields
   clear_inputs = () ->
@@ -51,11 +44,20 @@ setup_new_modal_link = ->
     $('#desc-in').val('')
     $('#stage1submit').addClass('disabled')
 
+  # start the listening for changes
+  start_live_validation = () ->
+    live_check = ->
+      if validate_inputs() then $('#stage1submit').removeClass 'disabled'
+      else $('#stage1submit').addClass 'disabled'
+    $('.no .stage1in').bind 'input', live_check
+
   # Initialise button functionality
   sort_btns = () ->
+    # set allowed tabbing properties to no for all
     $('#form-tabs a').each ->
       $(this).data('allowed',false)
 
+    # for the submit button click
     $('#stage1submit').click ->
       if validate_inputs()
         window.new_hackathon = 
@@ -76,15 +78,6 @@ setup_new_modal_link = ->
           window.new_hackathon.eid = window.selected_id
           segue_to_stage_2()
 
-    $('#go-back').click (e) ->
-      e.preventDefault() if e?
-      clear_inputs()
-      $('#new-hack-modal-content').animate {opacity : 0}, \
-        complete : -> 
-          $('#new-hack-modal-content').remove()
-          $('#hackathon-table').fadeIn()
-          $('.subs').hide()
-          $('#logged-in-subheading').show()
     $('#fbevent-select .btn')
       .click ->
         $(this).parent().find('.btn').removeClass('btn-primary')
@@ -100,6 +93,8 @@ setup_new_modal_link = ->
           $('.stage1in').attr('disabled','disabled')
           $('#stage1submit').text('Select Current Hackathon')
       .trigger 'click'
+
+  #/////////// STAGE 2 ////////////////////////////////////////////
 
   segue_to_stage_2 = ->
     if !$('#form-tabs a:eq(1)').data('allowed')
@@ -143,6 +138,9 @@ setup_new_modal_link = ->
           all: "All"
       }
 
+  #/////////// STAGE 3 ////////////////////////////////////////////
+
+  # Validate that the current value is a font-awesome class
   validate_font_selection = (val) ->
     klass = (c for c in window.font_awesome_classes when \
      c == val)[0]
@@ -150,7 +148,8 @@ setup_new_modal_link = ->
       $('#live-preview-icon').attr 'class', klass
       if valid_fields(true) then $('#schedule-item-add').removeClass 'disabled'
 
-
+  # check if all fields are valid (including the font-awesome, 
+  # excepting when ignore is true)
   valid_fields = (ignore) ->
     valid = true
     $('.schedule-item-form input').each ->
@@ -159,6 +158,20 @@ setup_new_modal_link = ->
     if ignore? then return valid
     valid and (f for f in window.font_awesome_classes when f == klass).length > 0
 
+  # move to stage 3
+  segue_to_stage_3 = (timeout) ->
+    timeout ?= 2000
+    $('#invite-header').text('Friends have been invited!')
+    after_pause = () ->
+      $('#form-tabs a:eq(1)')
+        .data('allowed',false)
+        .append $('<i class="icon-check">')
+      $('#form-tabs a:eq(2)')
+        .data('allowed',true).trigger 'click'
+      setup_stage3()
+    setTimeout(after_pause,timeout)
+
+  # setup the initial button functions etc
   setup_stage3 = () ->
     $('.schedule-item-form input').bind 'input', ->
       if valid_fields()
@@ -184,18 +197,9 @@ setup_new_modal_link = ->
       $('.schedule-item-form input').val('')
       update_schedule_item_table(window.new_hackathon.schedule_items)
 
-  segue_to_stage_3 = (timeout) ->
-    timeout ?= 2000
-    $('#invite-header').text('Friends have been invited!')
-    after_pause = () ->
-      $('#form-tabs a:eq(1)')
-        .data('allowed',false)
-        .append $('<i class="icon-check">')
-      $('#form-tabs a:eq(2)')
-        .data('allowed',true).trigger 'click'
-      setup_stage3()
-    setTimeout(after_pause,timeout)
+    $('#finish-new-hack').click -> process_new_hack(window.new_hackathon)
 
+  # refresh table with contents of items
   update_schedule_item_table = (items) ->
     $('#sch-item-table .item').remove()
     console.log items
@@ -211,14 +215,6 @@ setup_new_modal_link = ->
         $("<i/ class=\"#{item.font}\">").css 'margin-left', '15px'
       $('#sch-item-row-template').clone().attr('id','')
         .appendTo $('#sch-item-table')
-
-
-  start_live_validation = () ->
-    live_check = ->
-      if validate_inputs() then $('#stage1submit').removeClass 'disabled'
-      else $('#stage1submit').addClass 'disabled'
-    $('.no input').bind 'input', live_check
-    $('.no textarea').bind 'input', live_check
 
   # Load the contents of event e into the fields
   load_event = (e) ->
@@ -261,6 +257,8 @@ setup_new_modal_link = ->
         $('#event-table').append top, bottom
         $('.no').css('min-height',$('.yes').height())
 
+  #/////////// GENERAL NEW HACKATHON STUFF ///////////////////////
+
   # Initiate the first get for the new hack partial
   get_partial = (callback) ->
     $('#new-hack-modal').click (e) ->
@@ -285,6 +283,16 @@ setup_new_modal_link = ->
     start_live_validation()
     $('.subs').hide()
     $('#creating-hack-subheading').show()
+    # for the go back click, dismantle everything
+    $('#go-back').click (e) ->
+      e.preventDefault() if e?
+      clear_inputs()
+      $('#new-hack-modal-content').animate {opacity : 0}, \
+        complete : -> 
+          $('#new-hack-modal-content').remove()
+          $('#hackathon-table').fadeIn()
+          $('.subs').hide()
+          $('#logged-in-subheading').show()
 
   # Go get it!
   get_partial(once_appended)
@@ -293,6 +301,7 @@ setup_new_modal_link = ->
 #///////////////////////////////////////////////////////////////////
 # Home Page Control Flow
 #///////////////////////////////////////////////////////////////////
+
 process_home = ->
 
   check_login_result = (response) -> 
@@ -334,6 +343,7 @@ process_home = ->
 #///////////////////////////////////////////////////////////////////
 # A Hackathon View Control Flow
 #///////////////////////////////////////////////////////////////////
+
 process_hackathon = (id) ->
   $('body').data('id',id)
   update_hackathon_data ->
@@ -415,4 +425,14 @@ format_date = (d) ->
   pad = (a,b) ->
     (1e15+a+"").slice(-b)
   pad(d.getDate(),2) + '/' + pad(d.getMonth()+1,2) + '/' + d.getFullYear()
+
+# Initiate the timepicker handle
+setup_time_picker = () ->
+  $('.time-in').datetimepicker {format : 'yyyy-mm-dd hh:ii'}
+
+parse_fb_date = (d) ->
+  [year,month,day] = d.split(' ')[0].split('-')
+  [hour, minutes] = d.split(' ')[1].split(':')
+  d = new Date(year, month-1, day, hour, minutes)
+  return d.toISOString().split('.')[0]+'-0000'
 
