@@ -18,3 +18,4 @@
 //= require hackathons
 //= require clock
 //= require bootstrap-datetimepicker
+//= require jquery.facebook.multifriend.select

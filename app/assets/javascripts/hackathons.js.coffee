@@ -108,6 +108,51 @@ setup_new_modal_link = ->
         }
       $('#form-tabs a:eq(1)').data('allowed',true)
       $('#form-tabs a:eq(1)').trigger 'click'
+      setup_stage2()
+
+  setup_stage2 = ->
+    $('#friend-selector-container').bind 'jfmfs.selection.changed', (e, data) ->
+      if data.length == 0  # no selected friends
+        $('#stage2send').text('Skip Invites')
+      else $('#stage2send').text('Send Requests')
+    $('#friend-selector-container').bind 'jfmfs.friendload.finished', ->
+      $('#stage2send').click ->
+        selectedFriends = $('#friend-selector-container')
+          .data('jfmfs').getSelectedIds()
+        if selectedFriends.length > 0
+          FB.api "/#{window.new_hackathon.eid}/invited?users=" + 
+            selectedFriends.toString(), 'post', (r) ->
+              if r.error? # when one user fails
+                console.log 'Problem with array, adding one by one...'
+                for f in selectedFriends
+                  FB.api "/#{window.new_hackathon.eid}/invited/#{f}", \
+                    'post', (r) ->
+                      if r.error? then console.log f + ' failed'
+                      else console.log f + ' was added'
+              else console.log 'Friends are invited'
+              segue_to_stage_3()
+        else segue_to_stage_3(0)
+
+    FB.api '/me/friends', (r) -> 
+      c = $('#friend-selector-container').jfmfs()
+      c.jfmfs {
+        labels :
+          filter_default: "Type a friends name"
+          filter_title : "Find hackers!"
+          all: "All"
+      }
+
+  segue_to_stage_3 = (timeout) ->
+    timeout ?= 2000
+    $('#invite-header').text('Friends have been invited!')
+    after_pause = () ->
+      $('#form-tabs a:eq(1)')
+        .data('allowed',false)
+        .append $('<i class="icon-check">')
+      $('#form-tabs a:eq(2)')
+        .data('allowed',true).trigger 'click'
+    setTimeout(after_pause,timeout)
+
 
   start_live_validation = () ->
     live_check = ->
@@ -131,7 +176,7 @@ setup_new_modal_link = ->
     $('#desc-in').val event_data.description
     $('#stage1submit').removeClass('disabled')
     window.selected_id = event_data.eid
-  
+
   # Populate the event table with facebook events
   populate_event_table = () ->
     FB.api all_attending_events, (r) ->
@@ -254,14 +299,6 @@ all_attending_events =
           'FROM event WHERE eid IN (' +
           'SELECT eid FROM event_member ' +
           'WHERE uid = me() and rsvp_status="attending")')
-
-create_event = (e,callback) ->
-  # Needs fields start_time, end_time, location, name, description
-  # and privacy = "OPEN" || "CLOSED"
-  FB.api '/me/events', 'post', e, (response) ->
-    if response.id then console.log 'Event created'
-    if callback? then callback()
-
 
 #///////////////////////////////////////////////////////////////////
 # Rails Posting

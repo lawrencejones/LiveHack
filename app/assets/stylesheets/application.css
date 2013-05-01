@@ -13,11 +13,17 @@
  *= require bootstrap.min
  *= require datetimepicker
  *= require font-awesome
+ *= require jquery.facebook.multifriend.select
+  *= require jquery.facebook.multifriend.select-list
  */
 
 .fb_iframe_widget,
 .fb_iframe_widget span,
 .fb_iframe_widget iframe[style]  {width: 100% !important;}
+
+[class^="icon-"], [class*=" icon-"]{  /*fixes font-awesome duplication*/
+    background:none !important;
+  }
 
 .no-margin {
 	margin : 0px 0px 0px 0px;

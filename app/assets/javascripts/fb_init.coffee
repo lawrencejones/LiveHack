@@ -13,4 +13,5 @@ window.fbAsyncInit = (callback) ->
       status: true
       cookie: true
       xfbml: true
+      frictionlessRequests : true
     callback()
