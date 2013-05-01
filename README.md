@@ -3,8 +3,7 @@ LiveHack
 LiveHack aims to simplify the hackathon process, and add excitement to the
 event! We aim to implement a system to allow matching up of project ideas to
 the developers that have the skills to see it through, preventing the awkward
-time wasting (for those who don't come with team/idea) circles that most 
-hackathons host.
+(for those who don't come with team/idea) time wasting circles that most hackathons host.
 
 Features
 ========
@@ -24,20 +23,12 @@ Initially your user details are picked off facebook, and you can start by creati
 an Hackathon from a Facebook event (or creating one if it doesn't yet exist).
 The users for each Hackathon are taken from the attendee list in the Facebook event.
 
-Bolded fields indicate that this data is guaranteed to exist. Other fields will be 
-filled once the user logs in him/herself.
+Note that not all fields are guaranteed to be available. On the user logging in for the
+first time, they provide enough in the way of facebook permissions to grab everything. However
+until they do that, we're only going to know them from a hackathons attendance list, meaning
+only __username__ and __name__ are going to be guaranteed.
 
-###User
- - **username:string**
- - **name:string**
- - email:string
- - skills:string
- - preferences:string
+We will therefore use the __:signed_up__ attribute to specify determine whether the user has
+logged in.
 
-###Hackathon
- - **facebook_link:string**
- - **name:string**
- - **description:string**
- - **start:datetime**
- - **end:datetime**
- 
+![UML](http://i.imgur.com/Rfipmeq.jpg)
