@@ -33,9 +33,8 @@ setup_new_modal_link = ->
 
   # Prevent users tabbing ahead of their current progress
   prevent_illegal_tabbing = () ->
-    $('#form-tabs').click (e) ->
-      console.log('click')
-      if $(this).find('i[class="icon-check"]').length != 1
+    $('#form-tabs a').click (e) ->
+      if !$(this).data('allowed')
         return false
   
   validate_inputs = () ->
@@ -53,6 +52,9 @@ setup_new_modal_link = ->
 
   # Initialise button functionality
   sort_btns = () ->
+    $('#form-tabs a').each ->
+      $(this).data('allowed',false)
+
     $('#stage1submit').click ->
       if validate_inputs()
         window.new_hackathon = 
@@ -64,16 +66,19 @@ setup_new_modal_link = ->
           location : $('#location').val()
           privacy : 'OPEN'
         }
-        console.log window.new_hackathon
         if $('#fbevent-select .btn-primary').text() == 'No'
           FB.api '/me/events/', 'post', window.new_hackathon, (response) ->
-            console.log response
-
+            window.new_hackathon.eid = response.id
+            console.log response.id
+            segue_to_stage_2()
+        else  # if selecting event
+          window.new_hackathon.eid = window.selected_id
+          segue_to_stage_2()
 
     $('#go-back').click (e) ->
       e.preventDefault() if e?
       clear_inputs()
-      $('#new-hack-modal').animate {opacity : 0}, \
+      $('#new-hack-modal-content').animate {opacity : 0}, \
         complete : -> 
           $('#new-hack-modal-content').remove()
           $('#hackathon-table').fadeIn()
@@ -95,6 +100,14 @@ setup_new_modal_link = ->
           $('#stage1submit').text('Select Current Hackathon')
       .trigger 'click'
 
+  segue_to_stage_2 = ->
+    if !$('#form-tabs a:eq(1)').data('allowed')
+      $('#form-tabs li:eq(0) a')
+        .append $('<i/ class="icon-check">').css {
+          'margin-top':'3px', 'color':'#0088cc'
+        }
+      $('#form-tabs a:eq(1)').data('allowed',true)
+      $('#form-tabs a:eq(1)').trigger 'click'
 
   start_live_validation = () ->
     live_check = ->
@@ -117,12 +130,12 @@ setup_new_modal_link = ->
     $('#location').val event_data.location
     $('#desc-in').val event_data.description
     $('#stage1submit').removeClass('disabled')
+    window.selected_id = event_data.eid
   
   # Populate the event table with facebook events
   populate_event_table = () ->
     FB.api all_attending_events, (r) ->
       for e in r
-        console.log e
         top  = $('#event-row tr:eq(0)').clone()
         pic  = format_event_avatar(e.pic_square)
 
@@ -196,6 +209,7 @@ process_home = ->
     if response.status is "connected"
       window.fbtoken = response.authResponse.accessToken
       console.log "Connected to facebook"
+      FB.api('/me', (r) -> console.log 'Welcome ' + r.name)
       logged_in()
     else  # if we're not in, provide button
       $('#login-btn').css 'visibility', 'visible'
@@ -236,7 +250,7 @@ user_details =
 
 all_attending_events = 
   method : 'fql.query'
-  query : ('SELECT name, description, pic_square, venue, location, start_time, end_time ' + 
+  query : ('SELECT eid, name, description, pic_square, venue, location, start_time, end_time ' + 
           'FROM event WHERE eid IN (' +
           'SELECT eid FROM event_member ' +
           'WHERE uid = me() and rsvp_status="attending")')

@@ -1,0 +1,11 @@
+.row
+  .span8.offset2
+    %h3 Have you already setup a Facebook Event?
+    .btn-group#fbevent-select
+      %button.btn.btn-primary.padded Yes
+      %button.btn.padded No
+.row
+  .offset1.span5.yes
+    %table.table.table-hover#event-table
+  .span5.no
+    = render 'details_form'

@@ -4,23 +4,14 @@
       %a{:href => "#fbevent-tab", :'data-toggle' => 'tab'}
         Facebook
     %li
-      %a{:href => "#details-tab", :'data-toggle' => 'tab'}
-        Hackathon Details
+      %a{:href => "#invite-friends-tab", :'data-toggle' => 'tab'}
+        Invite Friends
     %li
       %a{:href => "#schedule-tab", :'data-toggle' => 'tab'}
         Schedule
   .tab-content.text-center
     .tab-pane.active{:id => "fbevent-tab"}
-      .row
-        .span8.offset2
-          %h3 Have you already setup a Facebook Event?
-          .btn-group#fbevent-select
-            %button.btn.btn-primary.padded Yes
-            %button.btn.padded No
-      .row
-        .offset1.span5.yes
-          %table.table.table-hover#event-table
-        .span5.no
-          = render 'details_form'
-    .tab-pane{:id => "details-tab"}
+      = render 'stage1'
+    .tab-pane{:id => "invite-friends-tab"}
+      = render 'stage2'
     .tab-pane{:id => "schedule-tab"}
