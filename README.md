@@ -28,48 +28,7 @@ first time, they provide enough in the way of facebook permissions to grab every
 until they do that, we're only going to know them from a hackathons attendance list, meaning
 only __username__ and __name__ are going to be guaranteed.
 
-We will therefore use the :signed_up attribute to specify determine whether the user has
+We will therefore use the __:signed_up__ attribute to specify determine whether the user has
 logged in.
 
-##User
-```ruby
-class User < ActiveRecord::Base
-  attr_accessible :email, :name, :username, :tags, :github_email, :signed_up
-
-  validates :name,     :presence => true
-  validates :username, :presence => true
-
-  has_many :hackathons
-  has_many :teams, :through => :hackathons
-
-end
-```
-
-##Hackathon
-```ruby
-class Hackathon < ActiveRecord::Base
-  attr_accessible :desc, :end, :location, :name, :scheduleItems, :start
-
-  has_many :users
-  has_many :teams
-  has_many :proposals, :through => :teams
-end
-```
-
-##Proposal
-```ruby
-class Proposal < ActiveRecord::Base
-  belongs_to :team
-  has_one :hackathon, :through => :team
-  attr_accessible :desc, :name, :skills
-end
-```
-
-##Team
-```ruby
-class Team < ActiveRecord::Base
-  belongs_to :hackathon
-  has_many :users
-  attr_accessible :name
-end
-```
+![UML](http://i.imgur.com/Rfipmeq.jpg)
