@@ -1,5 +1,5 @@
 class Hackathon < ActiveRecord::Base
-  attr_accessible :desc, :end, :location, :name, :start
+  attr_accessible :eid, :name, :start, :end, :location, :description
 
   has_many :users
   has_many :teams

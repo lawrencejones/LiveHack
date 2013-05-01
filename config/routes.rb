@@ -8,7 +8,10 @@ LiveHack::Application.routes.draw do
   resources :users  do
     get 'delete_all', :on => :collection
   end
-  resources :shared
+
+  resources :teams
+  resources :proposals
+  resources :schedule_items
 
   root :to => "hackathons#index"
 

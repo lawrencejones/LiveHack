@@ -1,0 +1,2 @@
+class ScheduleItemController < ApplicationController
+end
