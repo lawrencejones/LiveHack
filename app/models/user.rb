@@ -1,10 +1,10 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :name, :username
+  attr_accessible :email, :name, :username, :tags, :github_email, :signed_up
 
   validates :name,     :presence => true
   validates :username, :presence => true
-  validates :email,    :presence => true
 
   has_many :hackathons
+  has_many :teams, :through => :hackathons
 
 end

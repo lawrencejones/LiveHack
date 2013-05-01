@@ -11,31 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130429180031) do
-
-  create_table "attendees", :force => true do |t|
-    t.string   "fname"
-    t.string   "lname"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "buddy_data", :force => true do |t|
-    t.string   "name"
-    t.string   "idea"
-    t.string   "skills"
-    t.boolean  "isIdea"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "git_data", :force => true do |t|
-    t.string   "user"
-    t.string   "repo"
-    t.string   "time"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20130501075925) do
 
   create_table "hackathons", :force => true do |t|
     t.string   "name"
@@ -48,14 +24,37 @@ ActiveRecord::Schema.define(:version => 20130429180031) do
     t.datetime "updated_at",    :null => false
   end
 
-  create_table "schedule_items", :force => true do |t|
+  create_table "proposals", :force => true do |t|
     t.string   "name"
-    t.string   "iconUrl"
-    t.string   "time"
-    t.boolean  "isMajor"
+    t.text     "desc"
+    t.string   "skills"
+    t.integer  "team_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "proposals", ["team_id"], :name => "index_proposals_on_team_id"
+
+  create_table "schedule_items", :force => true do |t|
+    t.string   "label"
+    t.string   "start_time"
+    t.integer  "hackathon_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "schedule_items", ["hackathon_id"], :name => "index_schedule_items_on_hackathon_id"
+
+  create_table "teams", :force => true do |t|
+    t.string   "name"
+    t.integer  "hackathon_id"
+    t.integer  "users_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "teams", ["hackathon_id"], :name => "index_teams_on_hackathon_id"
+  add_index "teams", ["users_id"], :name => "index_teams_on_users_id"
 
   create_table "users", :force => true do |t|
     t.string   "username"
