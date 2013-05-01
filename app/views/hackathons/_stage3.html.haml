@@ -4,24 +4,34 @@
     %p 
       From here you can put together a hackathon schedule.
     %p
-      See <a href="http://http://fortawesome.github.io/Font-Awesome/">font-awesome</a> for the choice of icon.
+      See <a href="http://fortawesome.github.io/Font-Awesome/">font-awesome</a> for the choice of icon.
 .row
-  .span5.offset1
-    .buffer{:style => 'height:30px'}
+  .span5.offset1.schedule-item-form
+    .buffer{:style => 'height:20px'}
     %label Item Label
-    %input{:type => :text, :placeholder => 'Enter item label'}
+    %input#schedule-label-in{:type => :text, :placeholder => 'Enter item label'}
     %label Starting Time
-    %input{:type => :text, :placeholder => 'Start time'}
+    %input.time-in#schedule-start-in{:type => :text, :placeholder => 'Start time'}
     %label Font-Awesome Icon Class
     %input#font-input{:type => :text, :placeholder => 'Font-Awesome class'}
+    %br
+    %button#schedule-item-add.btn.btn-primary.disabled Add Item
   .span5.span-divided{:style => 'height:300px'}
-    %a.schedule-item{:style => 'position:relative;left:50%;top:30%;'}
+    %a#live-preview.schedule-item{:style => 'position:relative;left:50%;top:30%;'}
+      %i#live-preview-icon
 .row
   .buffer{:style => 'height:10px'}
   .span10.offset1
     %table.table.table-bordered
-      %tbody
+      %tbody#sch-item-table
         %tr
           %th.sch-item-tb-header Label
           %th.sch-item-tb-header Time
           %th.sch-item-tb-header Font-awesome Icon
+
+%table.hide
+  %tbody
+    %tr.item#sch-item-row-template
+      %td.sch-label{:style => 'text-align:center;'}
+      %td.time{:style => 'text-align:center;'}
+      %td.font{:style => 'text-align:center;'}

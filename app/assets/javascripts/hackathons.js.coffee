@@ -143,11 +143,46 @@ setup_new_modal_link = ->
           all: "All"
       }
 
+  validate_font_selection = (val) ->
+    klass = (c for c in window.font_awesome_classes when \
+     c == val)[0]
+    if klass? 
+      $('#live-preview-icon').attr 'class', klass
+      if valid_fields(true) then $('#schedule-item-add').removeClass 'disabled'
+
+
+  valid_fields = (ignore) ->
+    valid = true
+    $('.schedule-item-form input').each ->
+      if $(this).val() == '' then valid = false
+    klass = $('#font-input').val()
+    if ignore? then return valid
+    valid and (f for f in window.font_awesome_classes when f == klass).length > 0
+
   setup_stage3 = () ->
+    $('.schedule-item-form input').bind 'input', ->
+      if valid_fields()
+        $('#schedule-item-add').removeClass 'disabled'
+      else $('#schedule-item-add').addClass 'disabled'
+
+    window.new_hackathon.schedule_items = []
     $('#font-input').typeahead {
       source: window.font_awesome_classes
-      items : 4
+      items : 4, updater: (i) -> 
+        validate_font_selection i
+        return i
     }
+
+    $('#font-input').bind 'input', ->
+      validate_font_selection $(this).val()
+
+    $('#schedule-item-add').click ->
+      window.new_hackathon.schedule_items.push
+        label : $('#schedule-label-in').val()
+        start : new Date $('#schedule-start-in').val()
+        font : $('#font-input').val()
+      $('.schedule-item-form input').val('')
+      update_schedule_item_table(window.new_hackathon.schedule_items)
 
   segue_to_stage_3 = (timeout) ->
     timeout ?= 2000
@@ -160,6 +195,22 @@ setup_new_modal_link = ->
         .data('allowed',true).trigger 'click'
       setup_stage3()
     setTimeout(after_pause,timeout)
+
+  update_schedule_item_table = (items) ->
+    $('#sch-item-table .item').remove()
+    console.log items
+    for item in items
+      $('#sch-item-row-template .sch-label').html item.label
+      console.log format_date(item.start)
+      $('#sch-item-row-template .time').html \
+        '<b>' + item.start.toLocaleTimeString().split(':')[0..1]
+          .reduce((a,b) -> a + ':' + b) + '</b>  ' + 
+        format_date(item.start)
+      $('#sch-item-row-template .font').html item.font
+      $('#sch-item-row-template .font').append \
+        $("<i/ class=\"#{item.font}\">").css 'margin-left', '15px'
+      $('#sch-item-row-template').clone().attr('id','')
+        .appendTo $('#sch-item-table')
 
 
   start_live_validation = () ->

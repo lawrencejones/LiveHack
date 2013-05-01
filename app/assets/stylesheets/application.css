@@ -34,7 +34,9 @@
 }
 
 .time-in {
-	max-width: 120px;
+	.stage1in {
+		max-width: 120px;
+	}
 	cursor: default;
 }
 
