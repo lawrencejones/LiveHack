@@ -41,7 +41,13 @@ class HackathonsController < ApplicationController
   # POST /hackathons
   # POST /hackathons.json
   def create
-    @hackathon = Hackathon.new(params[:hackathon])
+    @hackathon = Hackathon.new()
+    @hackathon.eid      = params[:hackathon][:eid]
+    @hackathon.name     = params[:hackathon][:name]
+    @hackathon.desc     = params[:hackathon][:description]
+    @hackathon.location = params[:hackathon][:location]
+    @hackathon.start    = params[:hackathon][:start_time]
+    @hackathon.end      = params[:hackathon][:end_time]
 
     respond_to do |format|
       if @hackathon.save
@@ -57,7 +63,7 @@ class HackathonsController < ApplicationController
   # PUT /hackathons/1
   # PUT /hackathons/1.json
   def update
-    @hackathon = Hackathon.find(params[:id])
+    @hackathon = Hackathon.new(params[:hackathon])
 
     respond_to do |format|
       if @hackathon.update_attributes(params[:hackathon])

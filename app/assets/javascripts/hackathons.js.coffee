@@ -67,6 +67,7 @@ setup_new_modal_link = ->
           start_time : parse_fb_date($('#start').val())
           end_time : parse_fb_date($('#end').val())
           location : $('#location').val()
+          description : $('#desc-in').val()
           privacy : 'OPEN'
         }
         if $('#fbevent-select .btn-primary').text() == 'No'
@@ -197,7 +198,7 @@ setup_new_modal_link = ->
       $('.schedule-item-form input').val('')
       update_schedule_item_table(window.new_hackathon.schedule_items)
 
-    $('#finish-new-hack').click -> process_new_hack(window.new_hackathon)
+    $('#finish-new-hack').click -> add_hackathon window.new_hackathon
 
   # refresh table with contents of items
   update_schedule_item_table = (items) ->
@@ -382,6 +383,18 @@ add_user = (user,callback) ->
     success: ->
       window.user = user
       console.log 'Posted user'
+      if callback? then callback()
+
+add_hackathon = (hack,callback) ->
+  console.log hack
+  FB.api "/#{hack.eid}/invited", (r) ->
+    console.log r
+  $.ajax \
+    type: 'POST',
+    url: '/hackathons.json',
+    data: {hackathon : hack},
+    success: ->
+      console.log 'Posted hackathon'
       if callback? then callback()
 
 

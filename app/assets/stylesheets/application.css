@@ -33,13 +33,6 @@
 	cursor : default !important;
 }
 
-.time-in {
-	.stage1in {
-		max-width: 120px;
-	}
-	cursor: default;
-}
-
 .user-instructions {
 	margin-top : 20px;
 }
