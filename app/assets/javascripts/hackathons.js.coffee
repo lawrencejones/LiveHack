@@ -362,7 +362,7 @@ process_hackathon = (id) ->
 
 user_details =
   method : 'fql.query'
-  query : 'SELECT name, email, username FROM user WHERE uid=me()'
+  query : 'SELECT name, email, username, uid FROM user WHERE uid=me()'
 
 all_attending_events = 
   method : 'fql.query'
@@ -376,26 +376,26 @@ all_attending_events =
 #///////////////////////////////////////////////////////////////////
 
 add_user = (user,callback) ->
+  window.user = user
   $.ajax \
     type: "POST",
     url: '/users.json',
     data: { user : user },
     success: ->
-      window.user = user
       console.log 'Posted user'
       if callback? then callback()
 
 add_hackathon = (hack,callback) ->
   console.log hack
   FB.api "/#{hack.eid}/invited", (r) ->
-    console.log r
-  $.ajax \
-    type: 'POST',
-    url: '/hackathons.json',
-    data: {hackathon : hack},
-    success: ->
-      console.log 'Posted hackathon'
-      if callback? then callback()
+    hack.users = r.data
+    $.ajax \
+      type: 'POST',
+      url: '/hackathons.json',
+      data: {hackathon : hack},
+      success: ->
+        console.log 'Posted hackathon'
+        if callback? then callback()
 
 
 #///////////////////////////////////////////////////////////////////
@@ -408,20 +408,27 @@ logged_in = ->
   $('#initial-subheading').hide()
   $('#logged-in-subheading').show()
   # Add the user if they are not already in the system
-  FB.api user_details, (array) -> 
-    add_user array[0], generate_hackathon_table
+  FB.api user_details, (array) ->
+    user = array[0]
+    user = {
+      username : user.uid
+      email : user.email
+      name : user.name
+      signed_up : true
+    }
+    add_user user, generate_hackathon_table
 
 generate_hackathon_table = ->
   console.log 'Generating hackathon table'
   # Current username
   username = window.user.username
-  $.ajax \
+  ###$.ajax \
     type: "POST",
     url: "hackathons/subscribed_to",
     data: {username : username},
     success: (data) ->
       $('#hackathon-table').hide().append(data).fadeIn()
-      console.log 'Appended table'
+      console.log 'Appended table'###
 
 format_event_avatar = (url) ->
    $("<img/ src=\"#{url}\">").addClass('event-img')

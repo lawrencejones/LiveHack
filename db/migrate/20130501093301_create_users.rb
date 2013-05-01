@@ -12,7 +12,7 @@ class CreateUsers < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :users, :hackathons_id
-    add_index :users, :teams_id
+    add_index :users, :hackathon_id
+    add_index :users, :team_id
   end
 end

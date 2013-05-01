@@ -3,7 +3,9 @@ class UsersController < ApplicationController
 	# POST /users.json
 	def create
 		@user = User.find_by_username params[:user][:username]
-		if @user.blank?
+		if @user.blank? or !@user[:signed_up]
+      puts "Making new user!"
+      User.destroy(@user)
 			@user = User.new params[:user]
 			
 			if @user.save
@@ -11,8 +13,8 @@ class UsersController < ApplicationController
 			else
 				format.json { render json: @user.errors, status: :unprocessable_entity }
 			end
-		else
-  		render json: @user
+    else
+      render json: @user
     end
 	end
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130501093723) do
+ActiveRecord::Schema.define(:version => 20130501190314) do
 
   create_table "hackathons", :force => true do |t|
     t.string   "eid"
@@ -32,6 +32,14 @@ ActiveRecord::Schema.define(:version => 20130501093723) do
   add_index "hackathons", ["schedule_items_id"], :name => "index_hackathons_on_schedule_items_id"
   add_index "hackathons", ["teams_id"], :name => "index_hackathons_on_teams_id"
   add_index "hackathons", ["users_id"], :name => "index_hackathons_on_users_id"
+
+  create_table "hackathons_users", :id => false, :force => true do |t|
+    t.integer "hackathon_id"
+    t.integer "user_id"
+  end
+
+  add_index "hackathons_users", ["hackathon_id", "user_id"], :name => "index_hackathons_users_on_hackathon_id_and_user_id"
+  add_index "hackathons_users", ["user_id", "hackathon_id"], :name => "index_hackathons_users_on_user_id_and_hackathon_id"
 
   create_table "proposals", :force => true do |t|
     t.string   "desc"

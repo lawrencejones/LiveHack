@@ -18,7 +18,7 @@ class HackathonsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @hackathon }
+      format.json { render json: @hackathon.users }
     end
   end
 
@@ -41,22 +41,22 @@ class HackathonsController < ApplicationController
   # POST /hackathons
   # POST /hackathons.json
   def create
-    @hackathon = Hackathon.new()
-    @hackathon.eid      = params[:hackathon][:eid]
-    @hackathon.name     = params[:hackathon][:name]
-    @hackathon.desc     = params[:hackathon][:description]
-    @hackathon.location = params[:hackathon][:location]
-    @hackathon.start    = params[:hackathon][:start_time]
-    @hackathon.end      = params[:hackathon][:end_time]
-
-    respond_to do |format|
-      if @hackathon.save
-        format.html { redirect_to @hackathon, notice: 'Hackathon was successfully created.' }
-        format.json { render json: @hackathon, status: :created, location: @hackathon }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @hackathon.errors, status: :unprocessable_entity }
+    hack = params[:hackathon]
+    @hackathon = Hackathon.find_by_eid hack[:eid]
+    if @hackathon.blank?
+      @hackathon = Hackathon.create(:eid => hack[:eid], 
+        :name => hack[:name], :description => hack[:description],
+        :location => hack[:location], :start => hack[:start_time], :end => hack[:end_time])
+      hack[:users].each_pair do |i,usr|
+        @user = @hackathon.users.create(:name => usr[:name], :username => usr[:id])
       end
+      hack[:schedule_items].each_pair do |i,itm|
+        @item = @hackathon.schedule_items.create(:label => itm[:label], :start_time => itm[:start])
+      end
+      render json: @hackathon, status: :created, location: @hackathon
+    else
+      puts "Did not add"
+      render json: {:status => :Failed, :message => :"Already present"}
     end
   end
 

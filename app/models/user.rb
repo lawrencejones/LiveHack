@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   validates :name,     :presence => true
   validates :username, :presence => true
 
-  has_many :hackathons
+  has_and_belongs_to_many :hackathons
   has_many :teams, :through => :hackathons
 
 end
