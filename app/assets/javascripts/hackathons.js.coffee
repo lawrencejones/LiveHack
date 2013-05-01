@@ -4,6 +4,7 @@
 
 $ ->
   setup_new_modal_link()
+  get_font_awesome_classes()
   window.fbAsyncInit routes
 
 routes = ->
@@ -142,6 +143,12 @@ setup_new_modal_link = ->
           all: "All"
       }
 
+  setup_stage3 = () ->
+    $('#font-input').typeahead {
+      source: window.font_awesome_classes
+      items : 4
+    }
+
   segue_to_stage_3 = (timeout) ->
     timeout ?= 2000
     $('#invite-header').text('Friends have been invited!')
@@ -151,6 +158,7 @@ setup_new_modal_link = ->
         .append $('<i class="icon-check">')
       $('#form-tabs a:eq(2)')
         .data('allowed',true).trigger 'click'
+      setup_stage3()
     setTimeout(after_pause,timeout)
 
 
@@ -168,14 +176,15 @@ setup_new_modal_link = ->
       date = d.toISOString().split('T')[0]
       [hours,mins,ss...] = d.toISOString().split('T')[1].split(':')
       return date + ' ' + hours + ':' + mins
-    event_data = $(this).data('event')
-    $('#name').val event_data.name
-    $('#start').val time_to_picker(event_data.start_time)
-    $('#end').val time_to_picker(event_data.end_time)
-    $('#location').val event_data.location
-    $('#desc-in').val event_data.description
-    $('#stage1submit').removeClass('disabled')
-    window.selected_id = event_data.eid
+    if $('#fbevent-select button:eq(0)').hasClass('btn-primary')
+      event_data = $(this).data('event')
+      $('#name').val event_data.name
+      $('#start').val time_to_picker(event_data.start_time)
+      $('#end').val time_to_picker(event_data.end_time)
+      $('#location').val event_data.location
+      $('#desc-in').val event_data.description
+      $('#stage1submit').removeClass('disabled')
+      window.selected_id = event_data.eid
 
   # Populate the event table with facebook events
   populate_event_table = () ->
@@ -342,6 +351,14 @@ generate_hackathon_table = ->
 
 format_event_avatar = (url) ->
    $("<img/ src=\"#{url}\">").addClass('event-img')
+
+get_font_awesome_classes = ->
+  $.ajax \
+    type: 'GET',
+    dataType: 'text',
+    url: '/text/font-awesome-classes.txt',
+    success: (data) ->
+      window.font_awesome_classes = data.split(',')
 
 format_date = (d) ->
   pad = (a,b) ->
