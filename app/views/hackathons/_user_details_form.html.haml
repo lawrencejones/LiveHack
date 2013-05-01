@@ -1,0 +1,22 @@
+.tabbable#user-details-form.hide
+  %ul.nav.nav-tabs
+    %li.active
+      %a{:href => "#user-details", :'data-toggle' => 'tab'}
+        Setup your user details
+  .tab-content.text-center
+    .tab-pane.active{:id => "user-details"}
+      .row
+        .span8.offset2
+          %label Name
+          %input.user-details-in.name{:type => 'text', :disabled => true}
+          %label Email
+          %input.user-details-in.email{:type => 'text', :disabled => true}
+          %a#git-label{:href => '#', :'data-toggle' => :tooltip, :style => 'display:block'} GitHub Email
+          %input.user-details-in#github-in{:type => 'text'}
+          %a#skills-label{:href => '#', :'data-toggle' => :tooltip, :style => 'display:block'} Skill Tags
+          %input.user-details-in#skills-in{:type => 'text', :placeholder => 'Type skill then return'}
+          #skills{:style => 'height:45px;'}
+          %button.btn.btn-primary#save-details Save Changes
+
+#skill-badge-template.hide
+  %span.skill-badge.badge.badge-info{:style => 'display:inline;'}

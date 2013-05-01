@@ -191,12 +191,13 @@ setup_new_modal_link = ->
       validate_font_selection $(this).val()
 
     $('#schedule-item-add').click ->
-      window.new_hackathon.schedule_items.push
-        label : $('#schedule-label-in').val()
-        start : new Date $('#schedule-start-in').val()
-        font : $('#font-input').val()
-      $('.schedule-item-form input').val('')
-      update_schedule_item_table(window.new_hackathon.schedule_items)
+      if !$(this).hasClass 'disabled'
+        window.new_hackathon.schedule_items.push
+          label : $('#schedule-label-in').val()
+          start : new Date $('#schedule-start-in').val()
+          font : $('#font-input').val()
+        $('.schedule-item-form input').val('')
+        update_schedule_item_table(window.new_hackathon.schedule_items)
 
     $('#finish-new-hack').click -> add_hackathon window.new_hackathon
 
@@ -332,11 +333,20 @@ process_home = ->
         console.log "Not fb authed"
       else console.log "Not fb logged in"
   
-  # Initialise new hackathon button with rails remote
-  $.rails.handleRemote $('#sub-new-hack')
   # Initialise hackathon row functionality
   $('#hackathon_list tr').click ->
     segue_to_hackathon $(this).attr('id')
+  $('#git-label')
+    .tooltip {
+      placement:'right'
+      title : 'We use your github email to pull your commits for ' +
+        'display on the hackathon page- just a bit of fun!'
+    }
+  $('#skills-label')
+    .tooltip {
+      placement : 'left'
+      title : "Skills such as 'java', 'coffeescript', 'ios'"
+    }
   # Deal with the login
   initiate_login()
 
@@ -375,15 +385,17 @@ all_attending_events =
 # Rails Posting
 #///////////////////////////////////////////////////////////////////
 
+# only use for adding OUR user
 add_user = (user,callback) ->
-  window.user = user
   $.ajax \
     type: "POST",
     url: '/users.json',
+    dataType: 'json',
     data: { user : user },
-    success: ->
+    success: (data) ->
       console.log 'Posted user'
-      if callback? then callback()
+      window.user = data
+      if callback? then callback(data)
 
 add_hackathon = (hack,callback) ->
   console.log hack
@@ -414,21 +426,61 @@ logged_in = ->
       username : user.uid
       email : user.email
       name : user.name
-      signed_up : true
     }
-    add_user user, generate_hackathon_table
+    add_user user, ask_for_sign_up
+
+ask_for_sign_up = (user) ->
+  console.log user
+  if user.signed_up?
+    generate_hackathon_table()
+  else
+    $('.user-details-in.name').val user.name
+    $('.user-details-in.email, #github-in').val user.email
+    $('#user-details-form').fadeIn()
+    $('#skills-in').keypress (key) ->
+      skill = $('#skills-in').val()
+      if key.which == 13 and skill != ''
+        key.preventDefault()
+        badge = $('#skill-badge-template span').clone().html skill.toLowerCase()
+        badge.appendTo $('#skills')
+        badge.click -> $(this).remove()
+        $('#skills-in').val('')
+    $('#github-in').bind 'input', ->
+      if $(this).val().length == 0
+        $('#save-details').addClass 'disabled' 
+      else $('#save-details').removeClass 'disabled'
+    $('#save-details').click ->
+      if !$(this).hasClass 'disabled'
+        window.user.github_email = $('#github-in').val()
+        skills = []
+        $('#skills span').each -> skills.push $(this).html()
+        window.user.tags = skills.toString()
+        window.user.signed_up = true
+        $.ajax \
+          type: 'POST',
+          url: '/users.json',
+          data: {user : window.user, giving_details : true},
+          dataType : 'json',
+          success: (data) ->
+            if data.github_email == window.user.github_email
+              # it all worked
+              $('#save-details').html('Success!')
+              $('#user-details-form').delay(300).fadeOut {
+                duration : 300, complete: -> generate_hackathon_table()
+              }
+
 
 generate_hackathon_table = ->
   console.log 'Generating hackathon table'
   # Current username
   username = window.user.username
-  ###$.ajax \
+  $.ajax \
     type: "POST",
     url: "hackathons/subscribed_to",
     data: {username : username},
     success: (data) ->
       $('#hackathon-table').hide().append(data).fadeIn()
-      console.log 'Appended table'###
+      console.log 'Appended table'
 
 format_event_avatar = (url) ->
    $("<img/ src=\"#{url}\">").addClass('event-img')

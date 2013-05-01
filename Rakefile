@@ -7,5 +7,5 @@ require File.expand_path('../config/application', __FILE__)
 LiveHack::Application.load_tasks
 
 task "start" => :environment do
-	system 'rails server -p 4567'
+	system 'rails s thin -p 4567'
 end

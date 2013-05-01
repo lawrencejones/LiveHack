@@ -15,7 +15,9 @@ class HackathonsController < ApplicationController
   # GET /hackathons/1.json
   def show
     @hackathon = Hackathon.find(params[:id])
-
+    @hackathon.users.each do |user|
+      puts user[:name]
+    end
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @hackathon.users }
@@ -48,7 +50,12 @@ class HackathonsController < ApplicationController
         :name => hack[:name], :description => hack[:description],
         :location => hack[:location], :start => hack[:start_time], :end => hack[:end_time])
       hack[:users].each_pair do |i,usr|
-        @user = @hackathon.users.create(:name => usr[:name], :username => usr[:id])
+        @user = User.find_by_username(usr[:id])
+        if @user.blank?
+          @user = @hackathon.users.create(:name => usr[:name], :username => usr[:id])
+          puts @user.name
+        end
+        @user.hackathons << @hackathon
       end
       hack[:schedule_items].each_pair do |i,itm|
         @item = @hackathon.schedule_items.create(:label => itm[:label], :start_time => itm[:start])

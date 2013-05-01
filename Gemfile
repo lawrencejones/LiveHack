@@ -42,3 +42,4 @@ gem 'jquery-rails'
 # gem 'debugger'
 gem "haml"
 gem "jquery-rails"
+gem 'thin'
