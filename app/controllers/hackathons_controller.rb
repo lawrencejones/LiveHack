@@ -57,10 +57,10 @@ class HackathonsController < ApplicationController
       @hackathon = Hackathon.find_by_eid(data[:name])
       if !@hackathon.blank?
         data[:fql_result_set].each do |i,usr|
-          @user = @hackathon.users.find_by_username(usr[:username])
+          @user = @hackathon.users.find_by_username(usr[:uid])
           if @user.blank?
-            @user = @hackathon.users.create(:name => usr[:name], :username => usr[:id])
-            puts @user.name
+            @user = User.find_by_username(usr[:uid])
+            @hackathon.users << @user
             added_users << @user
           end
         end
@@ -93,7 +93,7 @@ class HackathonsController < ApplicationController
     end
     respond_to do |format|
       if added_hack
-        format.json { render json: @result }
+        format.json { render json: result }
       else
         format.json { render json: {:status => :'None added'}}
       end

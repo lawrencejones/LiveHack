@@ -555,7 +555,8 @@ ask_for_sign_up = (user) ->
               # it all worked
               $('#save-details').html('Success!')
               $('#user-details-form').delay(300).fadeOut {
-                duration : 300, complete: -> generate_hackathon_table()
+                duration : 300, complete: -> 
+                  update_hackathons_if_needed generate_hackathon_table
               }
 
 
@@ -594,6 +595,7 @@ update_hackathons_if_needed = (callback) ->
         data: { eids : eids, username : window.user.username },
         dataType: 'json',
         success: (data) ->
+          console.log data
           if data == null
             console.log 'No new hackathons for this user'
             if callback? then callback()
@@ -614,7 +616,8 @@ update_hackathons_if_needed = (callback) ->
                 url:'/update_hackathons_users.json',
                 data: {hackathons : data},
                 success: (data) ->
-                  console.log data.status
+                  console.log 'HELLO'
+                  console.log data
                   if callback? then callback()
 
 
