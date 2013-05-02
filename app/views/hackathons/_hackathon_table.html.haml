@@ -3,13 +3,19 @@
     %tr
       %th Name
       %th Location
-      %th Description
+      %th Start Time
+      %th Attendees
     - @user = User.find_by_username(params[:username])
     - @user.hackathons.each do |hack|
       %tr.minor{:'data-hack-id' => hack.id}
-        %td.hackathon_name
+        %td.hackathon-name
           = hack.name
-        %td.hackathon_location
+        %td.hackathon-location
           = hack.location
-        %td.hackathon_desc
-          = hack.description
+        %td.hackathon-start_date
+          %b 
+            = hack.start.split('T')[1].split(':')[0..1].join(':')
+          = ' on ' + hack.start.split('T')[0]
+        %td.hackathon-attendees
+          = "#{hack.users.where(:signed_up => true).size}/#{hack.users.size} signed up"
+          

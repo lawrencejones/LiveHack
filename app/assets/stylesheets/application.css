@@ -94,17 +94,19 @@ h5.loc {
 	visibility : hidden;
 }
 
-.table {
-	.hackathon_name {
-		width : 15%;
-	} .hackathon_desc {
-		width : 50%;
-	} .hackathon_location {
-		width : 35%;
-	} .minor {
-		cursor : pointer;
-	}
+
+.hackathon-name {
+	width : 25%;
+} .hackathon-location {
+	width : 25%;
+} .hackathon-start-date {
+	width : 25%;
+}	.hackathon-attendees {
+	width : 25%;
+} .minor {
+	cursor : pointer;
 }
+
 
 .nav-tabs > li, .nav-pills > li {
     float:none !important;
