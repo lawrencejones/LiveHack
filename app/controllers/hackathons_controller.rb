@@ -57,13 +57,15 @@ class HackathonsController < ApplicationController
         end
         @user.hackathons << @hackathon
       end
-      hack[:schedule_items].each_pair do |i,itm|
-        @item = @hackathon.schedule_items.create(:label => itm[:label], :start_time => itm[:start])
+      unless hack[:schedule_items].nil?
+        hack[:schedule_items].each_pair do |i,itm|
+          @item = @hackathon.schedule_items.create(:label => itm[:label], :start_time => itm[:start])
+        end
       end
       render json: @hackathon, status: :created, location: @hackathon
     else
       puts "Did not add"
-      render json: {:status => :Failed, :message => :"Already present"}
+      render json: {:status => :failed, :message => :"Already present"}
     end
   end
 

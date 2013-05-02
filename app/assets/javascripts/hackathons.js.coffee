@@ -27,6 +27,18 @@ dismantle_new_hack_and_return = (callback) ->
       $('#logged-in-subheading').show()
       if callback? then callback()
 
+show_new_hackathon_summary = (event_details) ->
+  console.log 'closing down'
+  goback = $('<a href="#">Go Back</a>').click (e) ->
+    e.preventDefault()
+    dismantle_new_hack_and_return()
+  $('#stage3-header').html('All done! ').append goback
+  $('.stage3-only').animate {
+    opacity : 0, duration : 200, complete: ->
+      $('.stage3-only').slideUp()
+  }
+
+
 # bind the new hack link to the creation of the form
 setup_new_modal_link = ->
 
@@ -275,7 +287,8 @@ setup_new_modal_link = ->
         $('.schedule-item-form input').val('')
         update_schedule_item_table(window.new_hackathon.schedule_items)
 
-    $('#finish-new-hack').click -> add_hackathon window.new_hackathon
+    $('#finish-new-hack').click -> 
+      add_hackathon window.new_hackathon, show_new_hackathon_summary
 
   # refresh table with contents of items
   update_schedule_item_table = (items) ->
@@ -439,9 +452,12 @@ add_hackathon = (hack,callback) ->
       type: 'POST',
       url: '/hackathons.json',
       data: {hackathon : hack},
-      success: ->
+      dataType: 'json',
+      success: (data) ->
         console.log 'Posted hackathon'
-        if callback? then callback()
+        console.log data
+        if data.status != 'failed'
+          if callback? then callback(data)
 
 
 #///////////////////////////////////////////////////////////////////

@@ -1,11 +1,11 @@
 .row
   .span8.offset2
-    %h3#invite-header Create the Hackathon Schedule
-    %p 
+    %h3#stage3-header Create the Hackathon Schedule
+    %p#stage3-caption
       From here you can put together a hackathon schedule.
-    %p
+    %p.stage3-only
       See <a href="http://fortawesome.github.io/Font-Awesome/">font-awesome</a> for the choice of icon.
-.row
+.row.stage3-only
   .span5.offset1.schedule-item-form
     .buffer{:style => 'height:20px'}
     %label Item Label
@@ -21,6 +21,7 @@
   .span5.span-divided{:style => 'height:300px'}
     %a#live-preview.schedule-item{:style => 'position:relative;left:50%;top:30%;'}
       %i#live-preview-icon
+
 .row
   .buffer{:style => 'height:10px'}
   .span10.offset1
