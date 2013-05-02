@@ -93,9 +93,11 @@ setup_new_modal_link = ->
   # Load the contents of event_data into the fields
   load_event = () ->
     time_to_picker = (d) ->
-      d = new Date(d)
-      date = d.toISOString().split('T')[0]
-      [hours,mins,ss...] = d.toISOString().split('T')[1].split(':')
+      if d is null then return null
+      date = d
+      date = d.split('T')[0] if !(d.length == 10)
+      time = d.split('T')[1] ? '00:00'
+      [hours,mins,ss...] = time.split(':')
       return date + ' ' + hours + ':' + mins
     event_data = $(this).data('event')
     $.ajax \
@@ -125,7 +127,7 @@ setup_new_modal_link = ->
 
         name = $('<h5/ class="event-header">') \
           .addClass('push-up').html e.name
-        start = format_date(new Date(e.start_time))
+        start = format_fb_date(e.start_time)
         sub  = $('<h5/>') \
           .addClass('event-header loc')
           .html (e.location + ' - ' + start)
@@ -576,10 +578,9 @@ setup_time_picker = () ->
   $('.time-in').datetimepicker {format : 'yyyy-mm-dd hh:ii'}
 
 format_fb_date = (d) ->
-  [year,month,date] = d.split(' ')[0].split('-')
-  [hour, minutes] = d.split(' ')[1].split(':')
-  d = new Date(year, month-1, date, hour, minutes)
-  return d.toISOString().split('.')[0]+'-0000'
+  if d.length == 10
+    return d.replace(/-/g,'/')
+  d.split('T')[0].split('-').reduce (a,b) -> a + '/' + b
 
 parse_fb_date = (d) ->
   [year, month, date] = d.split('T')[0].split('-')
