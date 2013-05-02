@@ -50,6 +50,56 @@ class HackathonsController < ApplicationController
     end
   end
 
+  # POST /update_hackathons_users
+  def update_hackathons_users
+    added_users = Array.new
+    params[:hackathons].each do |i,data|
+      @hackathon = Hackathon.find_by_eid(data[:name])
+      if !@hackathon.blank?
+        data[:fql_result_set].each do |i,usr|
+          @user = @hackathon.users.find_by_username(usr[:username])
+          if @user.blank?
+            @user = @hackathon.users.create(:name => usr[:name], :username => usr[:id])
+            puts @user.name
+            added_users << @user
+          end
+        end
+      end
+    end
+    respond_to do |format|
+      if added_users.size == 0
+        format.json {render json: {:status => :'None added?'}}
+      else
+        format.json {render json: {:status => :'Added users', :users => added_users}}
+      end
+    end
+  end
+
+
+  # POST /hackathons/get_hackathons_to_update.json
+  # return hackathons that need userlist updates
+  def get_hackathons_to_update
+    added_hack = false
+    result = Array.new
+    params[:eids].each do |eid|
+      @hackathon = Hackathon.find_by_eid(eid)
+      if !@hackathon.blank?
+        @check = @hackathon.users.find_by_username(params[:username])
+        if @check.blank?
+          added_hack = true
+          result.push @hackathon[:eid]
+        end
+      end
+    end
+    respond_to do |format|
+      if added_hack
+        format.json { render json: @result }
+      else
+        format.json { render json: {:status => :'None added'}}
+      end
+    end
+  end
+
   def new
     respond_to do |format|
       format.html {render :partial => 'new_hack_modal'}

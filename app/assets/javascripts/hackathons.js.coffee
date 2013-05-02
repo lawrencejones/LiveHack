@@ -12,6 +12,11 @@ routes = ->
   if p == '/hackathons' or p == '/'
     process_home()
 
+# start the automatic javascript requests to keep
+# the server data up to date
+start_refresh_intervals = ->
+
+
 #///////////////////////////////////////////////////////////////////
 # New Hackathon Control Flow
 #///////////////////////////////////////////////////////////////////
@@ -24,7 +29,7 @@ dismantle_new_hack_and_return = (callback) ->
       $('.datetimepicker').remove()
       $('.subs').hide()
       $('#logged-in-subheading').show()
-      generate_hackathon_table()
+      update_hackathons_if_needed generate_hackathon_table
       if callback? then callback()
 
 show_new_hackathon_summary = (event_details) ->
@@ -427,8 +432,12 @@ all_attending_events =
           'SELECT eid FROM event_member ' +
           'WHERE uid = me() and rsvp_status="attending")')
 
+users_for_event_query = (eid) ->
+  'SELECT uid, name FROM user WHERE uid IN (' +
+  "  SELECT uid FROM event_member WHERE eid = \"#{eid}\")"
+
 #///////////////////////////////////////////////////////////////////
-# Rails Posting
+# Rails Access
 #///////////////////////////////////////////////////////////////////
 
 # only use for adding OUR user
@@ -512,7 +521,7 @@ logged_in = ->
 ask_for_sign_up = (user) ->
   console.log user
   if user.signed_up?
-    generate_hackathon_table()
+    update_hackathons_if_needed generate_hackathon_table
   else
     $('.user-details-in.name').val user.name
     $('.user-details-in.email, #github-in').val user.email
@@ -569,6 +578,46 @@ generate_hackathon_table = ->
               load_hackathon_view(id)
           }
       console.log 'Appended table'
+
+update_hackathons_if_needed = (callback) ->
+  FB.api all_attending_events, (response) ->
+    eids = (r.eid for r in response)
+    # if any of the events the user is attending are in the
+    # database, AND the user is not subscribed, then update database
+    if eids.length == 0
+      console.log 'No new hackathons for this user'
+      if callback? then callback()
+    else
+      $.ajax \
+        type: 'POST',
+        url: '/get_hackathons_to_update.json',
+        data: { eids : eids, username : window.user.username },
+        dataType: 'json',
+        success: (data) ->
+          if !data.length?
+            console.log 'No new hackathons for this user'
+            if callback? then callback()
+          else
+            console.log 'Need to update these'
+            console.log data
+            # if the server returned any eids, update user lists
+            queries = {}
+            for eid in eids
+              queries[eid] = users_for_event_query(eid)
+            query = {
+              method: 'fql.multiquery'
+              queries: queries
+            }
+            FB.api query, (data) ->
+              $.ajax \
+                type:'POST',
+                url:'/update_hackathons_users.json',
+                data: {hackathons : data},
+                success: (data) ->
+                  console.log data.status
+                  if callback? then callback()
+
+
 
 format_event_avatar = (url) ->
    $("<img/ src=\"#{url}\">").addClass('event-img')

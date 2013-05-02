@@ -5,8 +5,9 @@ LiveHack::Application.routes.draw do
     get 'delete_all', :on => :collection
   end
 
-  match 'hackathons/exists' => 'hackathons#exists', :via => 'POST'
-
+  match 'hackathons/exists' => 'hackathons#exists', :via => :POST
+  match 'get_hackathons_to_update' => 'hackathons#get_hackathons_to_update', :via => :POST
+  match 'update_hackathons_users' => 'hackathons#update_hackathons_users', :via => :POST
   resources :users  do
     get 'delete_all', :on => :collection
   end
