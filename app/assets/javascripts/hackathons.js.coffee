@@ -594,7 +594,7 @@ update_hackathons_if_needed = (callback) ->
         data: { eids : eids, username : window.user.username },
         dataType: 'json',
         success: (data) ->
-          if data.status?
+          if data == null
             console.log 'No new hackathons for this user'
             if callback? then callback()
           else
