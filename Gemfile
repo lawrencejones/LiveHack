@@ -22,6 +22,7 @@ end
 
 group :development do
   gem "rails-erd"
+  gem "seed_dump", "~> 0.4.2"
 end
 
 gem 'jquery-rails'

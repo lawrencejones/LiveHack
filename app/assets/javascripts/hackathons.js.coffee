@@ -92,13 +92,6 @@ setup_new_modal_link = ->
 
   # Load the contents of event_data into the fields
   load_event = () ->
-    time_to_picker = (d) ->
-      if d is null then return null
-      date = d
-      date = d.split('T')[0] if !(d.length == 10)
-      time = d.split('T')[1] ? '00:00'
-      [hours,mins,ss...] = time.split(':')
-      return date + ' ' + hours + ':' + mins
     event_data = $(this).data('event')
     $.ajax \
       type: 'POST',
@@ -285,7 +278,7 @@ setup_new_modal_link = ->
       if !$(this).hasClass 'disabled'
         window.new_hackathon.schedule_items.push
           label : $('#schedule-label-in').val()
-          start : new Date $('#schedule-start-in').val()
+          start : picker_to_jsdate $('#schedule-start-in').val()
           font : $('#font-input').val()
         $('.schedule-item-form input').val('')
         update_schedule_item_table(window.new_hackathon.schedule_items)
@@ -301,7 +294,6 @@ setup_new_modal_link = ->
     console.log items
     for item in items
       $('#sch-item-row-template .sch-label').html item.label
-      console.log format_date(item.start)
       $('#sch-item-row-template .time').html \
         '<b>' + item.start.toLocaleTimeString().split(':')[0..1]
           .reduce((a,b) -> a + ':' + b) + '</b>  ' + 
@@ -407,16 +399,6 @@ process_home = ->
 # A Hackathon View Control Flow
 #///////////////////////////////////////////////////////////////////
 
-process_hackathon = (id) ->
-  $('body').data('id',id)
-  update_hackathon_data ->
-    update_schedule_data ->
-      initialise_clock(window.hackathon.end)
-      console.log "Initialising schedule"
-      initialise_schedule()
-      update_buddy_data(populate_buddy_tables)
-  update_git_data()
-
 load_hackathon_view = (id) ->
   $.get "/hackathons/#{id}.json", (hack) ->
     window.hackathon = hack
@@ -426,8 +408,8 @@ load_hackathon_view = (id) ->
       dataType: 'html',
       success: (data) ->
         $('body').html('').append(data)
-        end = parse_fb_date window.hackathon.end
-        window.initialise_clock(end)
+        end = formatted_date_to_jsdate window.hackathon.end
+        window.initialise_clock end
 
 
 #///////////////////////////////////////////////////////////////////
@@ -480,6 +462,37 @@ add_hackathon = (hack,callback) ->
 #///////////////////////////////////////////////////////////////////
 # Utilities
 #///////////////////////////////////////////////////////////////////
+
+# YYYY-MM-DD  ||   YYYY-MM-DD'T'hh:mm:ss... -> YYYY-MM-DD hh:mm
+time_to_picker = (d) ->
+  if d is null then return null
+  date = d
+  date = d.split('T')[0] if !(d.length == 10)
+  time = d.split('T')[1] ? '00:00'
+  [hours,mins,ss...] = time.split(':')
+  return date + ' ' + hours + ':' + mins
+
+# YYYY-MM-DD hh:mm  ->  JSDATE
+picker_to_jsdate = (d) ->
+  [y,m,d,h,m] = 
+    (d.split(' ')[0].split('-').concat d.split(' ')[1].split(':'))
+      .map (x) -> parseInt x, 10
+  new Date(y, m-1, d, h, m)
+
+# YYYY/MM/DD hh:mm  ->  JSDATE
+formatted_date_to_jsdate = (d) ->
+  console.log 'format?'
+  console.log d
+  [y,m,d,h,m] =
+    (d.split(' ')[0].split('/').concat d.split(' ')[1].split(':'))
+      .map (x) -> parseInt x, 10
+  new Date(y, m-1, d, h, m)
+
+# YYYY-MM-DD'T'*  ->  YYYY/MM/DD
+format_fb_date = (d) ->
+  if d.length == 10
+    return d.replace(/-/g,'/')
+  d.split('T')[0].split('-').reduce (a,b) -> a + '/' + b
 
 logged_in = ->
   # Hide the login button, no longer needed
@@ -576,15 +589,3 @@ format_date = (d) ->
 # Initiate the timepicker handle
 setup_time_picker = () ->
   $('.time-in').datetimepicker {format : 'yyyy-mm-dd hh:ii'}
-
-format_fb_date = (d) ->
-  if d.length == 10
-    return d.replace(/-/g,'/')
-  d.split('T')[0].split('-').reduce (a,b) -> a + '/' + b
-
-parse_fb_date = (d) ->
-  [year, month, date] = d.split('T')[0].split('-')
-  [hour, minutes] = d.split('T')[1].split(':')[0..1]
-  new Date(year, month-1, date, hour, minutes)
-
-
