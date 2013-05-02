@@ -153,8 +153,8 @@ setup_new_modal_link = ->
         {
           access_token : window.fbtoken
           name : $('#name').val()
-          start_time : parse_fb_date($('#start').val())
-          end_time : parse_fb_date($('#end').val())
+          start_time : format_fb_date($('#start').val())
+          end_time : format_fb_date($('#end').val())
           location : $('#location').val()
           description : $('#desc-in').val()
           privacy : 'OPEN'
@@ -415,6 +415,18 @@ process_hackathon = (id) ->
       update_buddy_data(populate_buddy_tables)
   update_git_data()
 
+load_hackathon_view = (id) ->
+  $.get "/hackathons/#{id}.json", (hack) ->
+    window.hackathon = hack
+    $.ajax \
+      type: 'GET',
+      url: "/hackathons/#{id}",
+      dataType: 'html',
+      success: (data) ->
+        $('body').html('').append(data)
+        end = parse_fb_date window.hackathon.end
+        window.initialise_clock(end)
+
 
 #///////////////////////////////////////////////////////////////////
 # Facebook 
@@ -533,6 +545,14 @@ generate_hackathon_table = ->
     data: {username : username},
     success: (data) ->
       $('#hackathon-table').html('').hide().append(data).fadeIn()
+      $('#hackathon-table .minor').each ->
+        $(this).click (e) ->
+          id = $(this).attr('hack-id')
+          $('#hackathon-table').fadeOut {
+            duration : 300, complete: ->
+              $('#hackathon-table').html('')
+              load_hackathon_view(id)
+          }
       console.log 'Appended table'
 
 format_event_avatar = (url) ->
@@ -555,9 +575,15 @@ format_date = (d) ->
 setup_time_picker = () ->
   $('.time-in').datetimepicker {format : 'yyyy-mm-dd hh:ii'}
 
-parse_fb_date = (d) ->
-  [year,month,day] = d.split(' ')[0].split('-')
+format_fb_date = (d) ->
+  [year,month,date] = d.split(' ')[0].split('-')
   [hour, minutes] = d.split(' ')[1].split(':')
-  d = new Date(year, month-1, day, hour, minutes)
+  d = new Date(year, month-1, date, hour, minutes)
   return d.toISOString().split('.')[0]+'-0000'
+
+parse_fb_date = (d) ->
+  [year, month, date] = d.split('T')[0].split('-')
+  [hour, minutes] = d.split('T')[1].split(':')[0..1]
+  new Date(year, month-1, date, hour, minutes)
+
 

@@ -15,29 +15,10 @@ class HackathonsController < ApplicationController
   # GET /hackathons/1.json
   def show
     @hackathon = Hackathon.find(params[:id])
-    @hackathon.users.each do |user|
-      puts user[:name]
-    end
     respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @hackathon.users }
-    end
-  end
-
-  # GET /hackathons/new
-  # GET /hackathons/new.json
-  def new
-    @hackathon = Hackathon.new
-
-    respond_to do |format|
-      format.html { render :partial => 'new_hack_modal'}
+      format.html { render :hackathon_body, :layout => false }
       format.json { render json: @hackathon }
     end
-  end
-
-  # GET /hackathons/1/edit
-  def edit
-    @hackathon = Hackathon.find(params[:id])
   end
 
   # POST /hackathons

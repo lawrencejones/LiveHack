@@ -1,0 +1,19 @@
+.jumbotron{:style => 'height:170px'}
+  %h1#jumbo_header
+    = @hackathon.name.split(/ /)[0]
+  .span12
+    #flip_clock
+      = render :partial => 'shared/clock'
+.tabbable
+  %ul.nav.nav-tabs#form-tabs
+    %li.active
+      %a{:href => "#hack-stats", :'data-toggle' => 'tab'}
+        Hackathon Stats
+    %li
+      %a{:href => "#teams-and-proposals", :'data-toggle' => 'tab'}
+        Teams and Proposals
+  .tab-content.text-center
+    .tab-pane.active{:id => "hack-stats"}
+      Hack stats
+    .tab-pane{:id => "teams-and-proposals"}
+      Teams and proposals

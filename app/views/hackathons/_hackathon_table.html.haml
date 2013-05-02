@@ -7,7 +7,7 @@
       %th Attendees
     - @user = User.find_by_username(params[:username])
     - @user.hackathons.each do |hack|
-      %tr.minor{:'data-hack-id' => hack.id}
+      %tr.minor{:'hack-id' => hack.id}
         %td.hackathon-name
           = hack.name
         %td.hackathon-location
