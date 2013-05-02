@@ -50,6 +50,12 @@ class HackathonsController < ApplicationController
     end
   end
 
+  def new
+    respond_to do |format|
+      format.html {render :partial => 'new_hack_modal'}
+    end
+  end
+
   # POST /hackathons/exists.json
   def exists
     if Hackathon.find_by_eid(params[:eid]).blank?
