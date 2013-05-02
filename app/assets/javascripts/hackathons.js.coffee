@@ -22,19 +22,20 @@ dismantle_new_hack_and_return = (callback) ->
       $('#new-hack-modal-content').remove()
       $('.modal-backdrop').remove()
       $('.datetimepicker').remove()
-      $('#hackathon-table').fadeIn()
       $('.subs').hide()
       $('#logged-in-subheading').show()
+      generate_hackathon_table()
       if callback? then callback()
 
 show_new_hackathon_summary = (event_details) ->
-  console.log 'closing down'
   goback = $('<a href="#">Go Back</a>').click (e) ->
     e.preventDefault()
     dismantle_new_hack_and_return()
+  $('#form-tabs a:eq(2)').append $('<i/ class="icon-check">')
   $('#stage3-header').html('All done! ').append goback
-  $('.stage3-only').animate {
-    opacity : 0, duration : 200, complete: ->
+  $('#stage3-caption').html("#{event_details.name} been created, happy hacking!")
+  $('.stage3-only').animate {opacity : 0}, {
+    duration : 300, complete: ->
       $('.stage3-only').slideUp()
   }
 
@@ -288,7 +289,9 @@ setup_new_modal_link = ->
         update_schedule_item_table(window.new_hackathon.schedule_items)
 
     $('#finish-new-hack').click -> 
-      add_hackathon window.new_hackathon, show_new_hackathon_summary
+      if !$(this).hasClass 'disabled'
+        $(this).addClass 'disabled'
+        add_hackathon window.new_hackathon, show_new_hackathon_summary
 
   # refresh table with contents of items
   update_schedule_item_table = (items) ->
@@ -529,7 +532,7 @@ generate_hackathon_table = ->
     url: "hackathons/subscribed_to",
     data: {username : username},
     success: (data) ->
-      $('#hackathon-table').hide().append(data).fadeIn()
+      $('#hackathon-table').html('').hide().append(data).fadeIn()
       console.log 'Appended table'
 
 format_event_avatar = (url) ->
