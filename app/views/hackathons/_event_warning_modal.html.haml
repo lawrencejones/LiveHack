@@ -1,0 +1,18 @@
+#event-warning-modal-template
+  .modal.hide.fade
+    .modal-header
+      %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+      %h3 Someone beat you to it!
+    .modal-body
+      %p
+        This hackathon is already on our system. 
+      %p
+        In fact, it should be on your homepage? If it's not,
+        just double check that (a), you're attending on facebook and (b), you're
+        not too stingy with you fb privacy settings.
+      %p
+        A link to the facebook event page is provided beneath.
+      %a.fb-hackathon-link
+    .modal-footer
+      %a.btn.go-home{:href => "#"} Go to home
+      %a.btn.btn-primary.quit-modal{:href => "#"} Close

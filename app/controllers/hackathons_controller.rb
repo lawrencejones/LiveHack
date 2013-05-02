@@ -67,6 +67,16 @@ class HackathonsController < ApplicationController
     end
   end
 
+  # POST /hackathons/exists.json
+  def exists
+    if Hackathon.find_by_eid(params[:eid]).blank?
+      render json: {:status => :fine}
+    else
+      render json: {:status => :stop}
+    end
+  end
+
+
   # PUT /hackathons/1
   # PUT /hackathons/1.json
   def update

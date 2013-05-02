@@ -11,16 +11,23 @@ routes = ->
   p = window.location.pathname
   if p == '/hackathons' or p == '/'
     process_home()
-  else if /\/hackathons\/+/.test(p)
-    [first..., id] = p.split('/')
-    process_hackathon(id)
-  else if p == '/user/new'
-    process_new_user()
 
 #///////////////////////////////////////////////////////////////////
 # New Hackathon Control Flow
 #///////////////////////////////////////////////////////////////////
 
+dismantle_new_hack_and_return = (callback) ->
+  $('#new-hack-modal-content').animate {opacity : 0, duration : 300}, \
+    complete : -> 
+      $('#new-hack-modal-content').remove()
+      $('.modal-backdrop').remove()
+      $('.datetimepicker').remove()
+      $('#hackathon-table').fadeIn()
+      $('.subs').hide()
+      $('#logged-in-subheading').show()
+      if callback? then callback()
+
+# bind the new hack link to the creation of the form
 setup_new_modal_link = ->
 
   # Prevent users tabbing ahead of their current progress
@@ -50,6 +57,75 @@ setup_new_modal_link = ->
       if validate_inputs() then $('#stage1submit').removeClass 'disabled'
       else $('#stage1submit').addClass 'disabled'
     $('.no .stage1in').bind 'input', live_check
+
+  # display the event modal
+  create_event_warning_modal = (event_data) ->
+    modal = $('#event-warning-modal-template .modal')
+    modal.find('.fb-hackathon-link')
+      .html(event_data.name)
+      .attr('href', "http://www.facebook.com/#{event_data.eid}")
+      .click (e) ->
+        e.preventDefault()
+        window.open $(this).attr 'href'
+    modal.find('.quit-modal').click (e) ->
+      e.preventDefault()
+      modal.modal('hide')
+    modal.find('.go-home').click (e) ->
+      e.preventDefault()
+      modal.modal('hide')
+      dismantle_new_hack_and_return()
+    modal.modal('show')
+
+
+  # Load the contents of event_data into the fields
+  load_event = () ->
+    time_to_picker = (d) ->
+      d = new Date(d)
+      date = d.toISOString().split('T')[0]
+      [hours,mins,ss...] = d.toISOString().split('T')[1].split(':')
+      return date + ' ' + hours + ':' + mins
+    event_data = $(this).data('event')
+    $.ajax \
+      type: 'POST',
+      url: '/hackathons/exists.json',
+      data: {eid : event_data.eid},
+      dataType: 'json',
+      success: (data) ->
+        console.log data.status
+        if data.status == 'stop'
+          create_event_warning_modal(event_data)
+        else if $('#fbevent-select button:eq(0)').hasClass('btn-primary')
+          $('#name').val event_data.name
+          $('#start').val time_to_picker(event_data.start_time)
+          $('#end').val time_to_picker(event_data.end_time)
+          $('#location').val event_data.location
+          $('#desc-in').val event_data.description
+          $('#stage1submit').removeClass('disabled')
+          window.selected_id = event_data.eid
+
+  # Populate the event table with facebook events
+  populate_event_table = () ->
+    FB.api all_attending_events, (r) ->
+      for e in r
+        top  = $('#event-row tr:eq(0)').clone()
+        pic  = format_event_avatar(e.pic_square)
+
+        name = $('<h5/ class="event-header">') \
+          .addClass('push-up').html e.name
+        start = format_date(new Date(e.start_time))
+        sub  = $('<h5/>') \
+          .addClass('event-header loc')
+          .html (e.location + ' - ' + start)
+        top.append pic, name, sub
+
+        bottom = $('#event-row tr:eq(1)').clone()
+        bottom.hide()
+        bottom.find('.info').html(e.description.replace(/\n/g, "<br/>"))
+        name.data('event',e).click load_event #expand_logic
+        sub.data('event',e).click load_event #expand_logic
+          
+        $('#event-table').append top, bottom
+        $('.no').css('min-height',$('.yes').height())
 
   # Initialise button functionality
   sort_btns = () ->
@@ -218,54 +294,13 @@ setup_new_modal_link = ->
       $('#sch-item-row-template').clone().attr('id','')
         .appendTo $('#sch-item-table')
 
-  # Load the contents of event e into the fields
-  load_event = (e) ->
-    time_to_picker = (d) ->
-      d = new Date(d)
-      date = d.toISOString().split('T')[0]
-      [hours,mins,ss...] = d.toISOString().split('T')[1].split(':')
-      return date + ' ' + hours + ':' + mins
-    if $('#fbevent-select button:eq(0)').hasClass('btn-primary')
-      event_data = $(this).data('event')
-      $('#name').val event_data.name
-      $('#start').val time_to_picker(event_data.start_time)
-      $('#end').val time_to_picker(event_data.end_time)
-      $('#location').val event_data.location
-      $('#desc-in').val event_data.description
-      $('#stage1submit').removeClass('disabled')
-      window.selected_id = event_data.eid
-
-  # Populate the event table with facebook events
-  populate_event_table = () ->
-    FB.api all_attending_events, (r) ->
-      for e in r
-        top  = $('#event-row tr:eq(0)').clone()
-        pic  = format_event_avatar(e.pic_square)
-
-        name = $('<h5/ class="event-header">') \
-          .addClass('push-up').html e.name
-        start = format_date(new Date(e.start_time))
-        sub  = $('<h5/>') \
-          .addClass('event-header loc')
-          .html (e.location + ' - ' + start)
-        top.append pic, name, sub
-
-        bottom = $('#event-row tr:eq(1)').clone()
-        bottom.hide()
-        bottom.find('.info').html(e.description.replace(/\n/g, "<br/>"))
-        name.data('event',e).click load_event #expand_logic
-        sub.data('event',e).click load_event #expand_logic
-          
-        $('#event-table').append top, bottom
-        $('.no').css('min-height',$('.yes').height())
-
   #/////////// GENERAL NEW HACKATHON STUFF ///////////////////////
 
   # Initiate the first get for the new hack partial
   get_partial = (callback) ->
     $('#new-hack-modal').click (e) ->
       e.preventDefault()
-      if $('#new-hack-container').length == 0
+      if $('#new-hack-container')?
         $('#hackathon-table').fadeOut 200, ->
           $.ajax \
             type: "GET",
@@ -288,7 +323,6 @@ setup_new_modal_link = ->
     # for the go back click, dismantle everything
     $('#go-back').click (e) ->
       e.preventDefault() if e?
-      clear_inputs()
       $('#new-hack-modal-content').animate {opacity : 0}, \
         complete : -> 
           $('#new-hack-modal-content').remove()
