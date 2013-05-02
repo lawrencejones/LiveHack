@@ -31,4 +31,4 @@ only __username__ and __name__ are going to be guaranteed.
 We will therefore use the __:signed_up__ attribute to specify determine whether the user has
 logged in.
 
-![UML](http://i.imgur.com/Rfipmeq.jpg)
+![UML](http://i.imgur.com/J2gHDjq.jpg)
