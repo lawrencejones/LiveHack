@@ -519,7 +519,6 @@ logged_in = ->
     add_user user, ask_for_sign_up
 
 ask_for_sign_up = (user) ->
-  console.log user
   if user.signed_up?
     update_hackathons_if_needed generate_hackathon_table
   else
@@ -585,6 +584,7 @@ update_hackathons_if_needed = (callback) ->
     eids = (r.eid for r in response)
     # if any of the events the user is attending are in the
     # database, AND the user is not subscribed, then update database
+    console.log eids
     if eids.length == 0
       console.log 'No new hackathons for this user'
       if callback? then callback()
@@ -595,13 +595,10 @@ update_hackathons_if_needed = (callback) ->
         data: { eids : eids, username : window.user.username },
         dataType: 'json',
         success: (data) ->
-          console.log data
-          if data == null
+          if data.status == 'None added'
             console.log 'No new hackathons for this user'
             if callback? then callback()
-          else
-            console.log 'Need to update these'
-            console.log data
+          else if eids.length > 0
             # if the server returned any eids, update user lists
             queries = {}
             for eid in eids
@@ -616,8 +613,6 @@ update_hackathons_if_needed = (callback) ->
                 url:'/update_hackathons_users.json',
                 data: {hackathons : data},
                 success: (data) ->
-                  console.log 'HELLO'
-                  console.log data
                   if callback? then callback()
 
 
