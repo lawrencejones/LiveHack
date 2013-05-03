@@ -14,8 +14,8 @@
           = hack.location
         %td.hackathon-start_date
           %b 
-            = hack.start.split(' ')[1]
-          = ' on ' + hack.start.split(' ')[0]
+            = hack.start.split('T')[1].split(':')[0..1].join(':')
+          = ' on ' + hack.start.split('T')[0]
         %td.hackathon-attendees
           = "#{hack.users.where(:signed_up => true).size}/#{hack.users.size} signed up"
           

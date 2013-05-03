@@ -4,45 +4,12 @@
 
 $ ->
   setup_new_modal_link()
-  cache 'first_run'
   window.fbAsyncInit routes
 
 routes = ->
   p = window.location.pathname
   if p == '/hackathons' or p == '/'
     process_home()
-
-cache_times = {   # in seconds
-  user : 60*60*1000  # 1 hour
-  eids : 10*60*1000  # 5 minutes
-}
-
-cache_getters = {
-
-}
-
-cache = (key, value) ->
-  if key is 'first_run'
-    window.cache = {}
-  else 
-    window.cache[key] = {
-      value : value, timestamp : new Date()
-    }
-
-get = (key, callback, now) ->
-  if not now?
-    cache_entry = window.cache[key]
-    # get the cache_entry, {value, timestamp}
-    if (new Date - cache_entry.timestamp) > cache_times[key]
-      now = true
-    else callback cache_entry.value
-  if now
-    cache_getters[key] callback
-
-
-# start the automatic javascript requests to keep
-# the server data up to date
-start_refresh_intervals = ->
 
 
 #///////////////////////////////////////////////////////////////////
@@ -96,6 +63,7 @@ setup_new_modal_link = ->
     $('.span5.no input').val('')
     $('#desc-in').val('')
     $('#stage1submit').addClass('disabled')
+    $('#end-requirement-label').slideUp()
 
   # start the listening for changes
   start_live_validation = () ->
@@ -132,7 +100,6 @@ setup_new_modal_link = ->
       data: {eid : event_data.eid},
       dataType: 'json',
       success: (data) ->
-        console.log data.status
         if data.status == 'stop'
           create_event_warning_modal(event_data)
         else if $('#fbevent-select button:eq(0)').hasClass('btn-primary')
@@ -142,18 +109,28 @@ setup_new_modal_link = ->
           $('#location').val event_data.location
           $('#desc-in').val event_data.description
           $('#stage1submit').removeClass('disabled')
+          $('#end').attr 'readonly', 'readonly'
+          $('#end').attr 'disabled', 'disabled'
+          if $('#end').val() == ''
+            $('#end').removeAttr 'readonly'
+            $('#end').removeAttr 'disabled'
+            $('#end-requirement-label').slideDown()
+          else 
+            $('#end').attr 'readonly', 'readonly'
+            $('#end').attr 'disabled', 'disabled'
+            $('#end-requirement-label').slideUp()
           window.selected_id = event_data.eid
 
   # Populate the event table with facebook events
   populate_event_table = () ->
-    FB.api all_attending_events, (r) ->
+    get 'attending_events', (r) ->
       for e in r
         top  = $('#event-row tr:eq(0)').clone()
         pic  = format_event_avatar(e.pic_square)
 
         name = $('<h5/ class="event-header">') \
           .addClass('push-up').html e.name
-        start = format_fb_date(e.start_time)
+        start = format_to_single_date(e.start_time)
         sub  = $('<h5/>') \
           .addClass('event-header loc')
           .html (e.location + ' - ' + start)
@@ -166,7 +143,7 @@ setup_new_modal_link = ->
         sub.data('event',e).click load_event #expand_logic
           
         $('#event-table').append top, bottom
-        $('.no').css('min-height',$('.yes').height())
+      $('.no').css 'height',$('.yes').height() + 'px'
 
   # Initialise button functionality
   sort_btns = () ->
@@ -177,20 +154,19 @@ setup_new_modal_link = ->
     # for the submit button click
     $('#stage1submit').click ->
       if validate_inputs()
+        [s,e] = [$('#start').val(), $('#end').val()].map picker_to_fbdate
         window.new_hackathon = 
         {
           access_token : window.fbtoken
           name : $('#name').val()
-          start_time : format_fb_date($('#start').val())
-          end_time : format_fb_date($('#end').val())
+          start_time : s
+          end_time : e
           location : $('#location').val()
-          description : $('#desc-in').val()
           privacy : 'OPEN'
         }
         if $('#fbevent-select .btn-primary').text() == 'No'
           FB.api '/me/events/', 'post', window.new_hackathon, (response) ->
             window.new_hackathon.eid = response.id
-            console.log response.id
             segue_to_stage_2()
         else  # if selecting event
           window.new_hackathon.eid = window.selected_id
@@ -247,7 +223,7 @@ setup_new_modal_link = ->
               segue_to_stage_3()
         else segue_to_stage_3(0)
 
-    FB.api '/me/friends', (r) -> 
+    get 'user_friends', (r) -> 
       c = $('#friend-selector-container').jfmfs()
       c.jfmfs {
         labels :
@@ -324,7 +300,6 @@ setup_new_modal_link = ->
   # refresh table with contents of items
   update_schedule_item_table = (items) ->
     $('#sch-item-table .item').remove()
-    console.log items
     for item in items
       $('#sch-item-row-template .sch-label').html item.label
       $('#sch-item-row-template .time').html \
@@ -350,7 +325,7 @@ setup_new_modal_link = ->
             url: "/hackathons/new",
             success: (data) ->
               $('.container').append(data)
-              console.log 'Appended hack setup'
+              console.log 'Appended new hack setup'
               callback()
 
   # Callback for completion of getting partial
@@ -389,7 +364,6 @@ process_home = ->
       console.log 'Login succeeded'
       FB.api('/me', (r) -> console.log 'Welcome ' + r.name)
       logged_in()
-    else alert 'Login failed'
 
   initiate_login = ->
     $('#login-btn').click ->
@@ -402,7 +376,6 @@ process_home = ->
     if response.status is "connected"
       window.fbtoken = response.authResponse.accessToken
       console.log "Connected to facebook"
-      FB.api('/me', (r) -> console.log 'Welcome ' + r.name)
       logged_in()
     else  # if we're not in, provide button
       $('#login-btn').css 'visibility', 'visible'
@@ -427,6 +400,15 @@ process_home = ->
   # Deal with the login
   initiate_login()
 
+logged_in = ->
+  # Hide the login button, no longer needed
+  $('#login-btn').hide()
+  $('#initial-subheading').hide()
+  $('#logged-in-subheading').show()
+  # Add the user if they are not already in the system
+  get 'user', (user) ->
+    add_user user, ask_for_sign_up
+
 
 #///////////////////////////////////////////////////////////////////
 # A Hackathon View Control Flow
@@ -444,25 +426,80 @@ load_hackathon_view = (id) ->
         end = formatted_date_to_jsdate window.hackathon.end
         window.initialise_clock end
 
-
 #///////////////////////////////////////////////////////////////////
-# Facebook 
+# Reuseable Partials
 #///////////////////////////////////////////////////////////////////
 
-user_details =
-  method : 'fql.query'
-  query : 'SELECT name, email, username, uid FROM user WHERE uid=me()'
+generate_hackathon_table = ->
 
-all_attending_events = 
-  method : 'fql.query'
-  query : ('SELECT eid, name, description, pic_square, venue, location, start_time, end_time ' + 
-          'FROM event WHERE eid IN (' +
-          'SELECT eid FROM event_member ' +
-          'WHERE uid = me() and rsvp_status="attending")')
+  setup_hackathon_table_links = ->
+    $('#hackathon-table .minor').each ->
+      $(this).click (e) ->
+        id = $(this).attr('hack-id')
+        $('#hackathon-table').fadeOut {
+          duration : 300, complete: ->
+            $('#hackathon-table').html('')
+            load_hackathon_view(id)
+        }
+  get 'attending_events', (response) ->
+    eids = (r.eid for r in response)
+    get 'user', (user) ->
+      request = {
+        username : user.username
+        eids : eids
+      }
+      $.ajax \
+        type: "POST",
+        url: "hackathons/subscribed_to",
+        data: request,
+        success: (data) ->
+          $('#hackathon-table').html('').hide().append(data).fadeIn()
+          eids = []
+          $('#hackathon-table tr[class="minor"]').each ->
+            eids.push @.getAttribute 'hack-eid'
+          update_rails_hackathons(eids) if eids.length != 0
 
-users_for_event_query = (eid) ->
-  'SELECT uid, name FROM user WHERE uid IN (' +
-  "  SELECT uid FROM event_member WHERE eid = \"#{eid}\")"
+ask_for_sign_up = (user) ->
+  if user.signed_up?
+    generate_hackathon_table()
+  else
+    $('.user-details-in.name').val user.name
+    $('.user-details-in.email, #github-in').val user.email
+    $('#user-details-form').fadeIn()
+    $('#skills-in').keypress (key) ->
+      skill = $('#skills-in').val()
+      if key.which == 13 and skill != ''
+        key.preventDefault()
+        badge = $('#skill-badge-template span').clone().html skill.toLowerCase()
+        badge.appendTo $('#skills')
+        badge.click -> $(this).remove()
+        $('#skills-in').val('')
+    $('#github-in').bind 'input', ->
+      if $(this).val().length == 0
+        $('#save-details').addClass 'disabled' 
+      else $('#save-details').removeClass 'disabled'
+    $('#save-details').click ->
+      if !$(this).hasClass 'disabled'
+        get 'user', (user) ->
+          user.github_email = $('#github-in').val()
+          skills = []
+          $('#skills span').each -> skills.push $(this).html()
+          user.tags = skills.toString()
+          user.signed_up = true
+          set 'user', user, ->
+            $.ajax \
+              type: 'POST',
+              url: '/users.json',
+              data: {user : user, giving_details : true},
+              dataType : 'json',
+              success: (data) ->
+                if data.github_email == user.github_email
+                  # it all worked
+                  $('#save-details').html('Success!')
+                  $('#user-details-form').delay(300).fadeOut {
+                    duration : 300, complete: -> 
+                      generate_hackathon_table()
+                  }
 
 #///////////////////////////////////////////////////////////////////
 # Rails Access
@@ -477,11 +514,9 @@ add_user = (user,callback) ->
     data: { user : user },
     success: (data) ->
       console.log 'Posted user'
-      window.user = data
       if callback? then callback(data)
 
 add_hackathon = (hack,callback) ->
-  console.log hack
   FB.api "/#{hack.eid}/invited", (r) ->
     hack.users = r.data
     $.ajax \
@@ -490,12 +525,15 @@ add_hackathon = (hack,callback) ->
       data: {hackathon : hack},
       dataType: 'json',
       success: (data) ->
-        console.log 'Posted hackathon'
-        console.log data
+        console.log "Posted hackathon #{data.name}"
         if data.status != 'failed'
           if callback? then callback(data)
 
 update_rails_hackathons = (eids) ->
+  users_for_event_query = (eid) ->
+    'SELECT uid, name FROM user WHERE uid IN (' +
+    "  SELECT uid FROM event_member WHERE eid = \"#{eid}\")"
+
   console.log 'Updating rails hackathon data'
   queries = {}  
   if eids? then for eid in eids
@@ -522,117 +560,23 @@ time_to_picker = (d) ->
   [hours,mins,ss...] = time.split(':')
   return date + ' ' + hours + ':' + mins
 
+picker_to_fbdate = (d) ->
+  d = picker_to_jsdate d
+  return d.toISOString().split('.')[0]+'-0000'
+
 # YYYY-MM-DD hh:mm  ->  JSDATE
 picker_to_jsdate = (d) ->
-  [y,m,d,h,m] = 
-    (d.split(' ')[0].split('-').concat d.split(' ')[1].split(':'))
-      .map (x) -> parseInt x, 10
-  new Date(y, m-1, d, h, m)
+  moment(d, 'YYYY-MM-DD hh:mm').toDate()
 
 # YYYY/MM/DD hh:mm  ->  JSDATE
 formatted_date_to_jsdate = (d) ->
-  console.log 'format?'
-  console.log d
-  [y,m,d,h,m] =
-    (d.split(' ')[0].split('/').concat d.split(' ')[1].split(':'))
-      .map (x) -> parseInt x, 10
-  new Date(y, m-1, d, h, m)
+  moment(d, 'YYYY/MM/DD hh:mm').unix()
 
 # YYYY-MM-DD'T'*  ->  YYYY/MM/DD
-format_fb_date = (d) ->
+format_to_single_date = (d) ->
   if d.length == 10
     return d.replace(/-/g,'/')
   d.split('T')[0].split('-').reduce (a,b) -> a + '/' + b
-
-logged_in = ->
-  # Hide the login button, no longer needed
-  $('#login-btn').hide()
-  $('#initial-subheading').hide()
-  $('#logged-in-subheading').show()
-  # Add the user if they are not already in the system
-  FB.api user_details, (array) ->
-    user = array[0]
-    user = {
-      username : user.uid
-      email : user.email
-      name : user.name
-    }
-    add_user user, ask_for_sign_up
-
-ask_for_sign_up = (user) ->
-  if user.signed_up?
-    generate_hackathon_table()
-  else
-    $('.user-details-in.name').val user.name
-    $('.user-details-in.email, #github-in').val user.email
-    $('#user-details-form').fadeIn()
-    $('#skills-in').keypress (key) ->
-      skill = $('#skills-in').val()
-      if key.which == 13 and skill != ''
-        key.preventDefault()
-        badge = $('#skill-badge-template span').clone().html skill.toLowerCase()
-        badge.appendTo $('#skills')
-        badge.click -> $(this).remove()
-        $('#skills-in').val('')
-    $('#github-in').bind 'input', ->
-      if $(this).val().length == 0
-        $('#save-details').addClass 'disabled' 
-      else $('#save-details').removeClass 'disabled'
-    $('#save-details').click ->
-      if !$(this).hasClass 'disabled'
-        window.user.github_email = $('#github-in').val()
-        skills = []
-        $('#skills span').each -> skills.push $(this).html()
-        window.user.tags = skills.toString()
-        window.user.signed_up = true
-        $.ajax \
-          type: 'POST',
-          url: '/users.json',
-          data: {user : window.user, giving_details : true},
-          dataType : 'json',
-          success: (data) ->
-            if data.github_email == window.user.github_email
-              # it all worked
-              $('#save-details').html('Success!')
-              $('#user-details-form').delay(300).fadeOut {
-                duration : 300, complete: -> 
-                  generate_hackathon_table()
-              }
-
-
-generate_hackathon_table = ->
-
-  setup_hackathon_table_links = ->
-    $('#hackathon-table .minor').each ->
-      $(this).click (e) ->
-        id = $(this).attr('hack-id')
-        $('#hackathon-table').fadeOut {
-          duration : 300, complete: ->
-            $('#hackathon-table').html('')
-            load_hackathon_view(id)
-        }
-  console.log 'Generating hackathon table...'
-  FB.api all_attending_events, (response) ->
-    eids = (r.eid for r in response)
-    request = {
-      username : window.user.username
-      eids : eids
-    }
-    console.log 'Received facebook response...'
-    $.ajax \
-      type: "POST",
-      url: "hackathons/subscribed_to",
-      data: request,
-      success: (data) ->
-        console.log 'Received rails response...'
-        $('#hackathon-table').html('').hide().append(data).fadeIn()
-        console.log 'Appended table'
-        eids = []
-        $('#hackathon-table tr[class="minor"]').each ->
-          eids.push @.getAttribute 'hack-eid'
-        cache 'eids', eids
-        update_rails_hackathons(eids) if eids.length != 0
-
 
 format_event_avatar = (url) ->
    $("<img/ src=\"#{url}\">").addClass('event-img')

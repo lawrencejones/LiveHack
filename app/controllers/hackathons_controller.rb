@@ -72,13 +72,15 @@ class HackathonsController < ApplicationController
   #       eids : { 1 => 'eid', ..., n => 'eid' }
   def subscribed_to
     response = 'No update required'
-    params[:eids].each do |eid|
-      @hackathon = Hackathon.find_by_eid(eid)
-      if !@hackathon.blank?
-        @user = @hackathon.users.find_by_username params[:username]
-        if @user.blank?
-          @hackathons.users << User.find_by_username[:username]
-          response = 'Update required'
+    if !params[:eids].nil?
+      params[:eids].each do |eid|
+        @hackathon = Hackathon.find_by_eid(eid)
+        if !@hackathon.blank?
+          @user = @hackathon.users.find_by_username params[:username]
+          if @user.blank?
+            @hackathon.users << User.find_by_username(params[:username])
+            response = 'Update required'
+          end
         end
       end
     end
@@ -99,7 +101,8 @@ class HackathonsController < ApplicationController
           event[:fql_result_set].each do |i,usr|
             @user = User.find_by_username usr[:uid]
             if @user.blank?
-              @hackathon.users << User.create(:username => usr[:uid], name => usr[:name])
+              @hackathon.users << User.create(:username => usr[:uid],
+               :name => usr[:name])
             elsif @user.hackathons.find_by_eid(@hackathon.eid).blank?
               @hackathon.users << @user
             end

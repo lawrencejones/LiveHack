@@ -15,6 +15,8 @@
 //= require fb
 //= require fb_init
 //= require bootstrap.min
+//= require moment.min
+//= require cache 
 //= require hackathons
 //= require clock
 //= require bootstrap-datetimepicker

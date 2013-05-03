@@ -2,14 +2,16 @@
 %label Hackathon Name
 %input.stage1in#name{:type => :text, :placeholder => 'The best damn hackathon ever'}
 %form.form-inline
-	%label Start
-	%input.stage1in#start.time-in{:size => '16', :type => :text, :value => '2013-01-01 00:00', :'readonly' => :''}
-	%label End
-	%input.stage1in#end.time-in{:size => '16', :type => :text, :value => '2013-01-01 00:00', :'readonly' => :''}
+  %label Start
+  %input.stage1in#start.time-in{:size => '16', :type => :text, :value => '2013-01-01 00:00', :'readonly' => :''}
+  %label End
+  %input.stage1in#end.time-in{:size => '16', :type => :text, :value => '2013-01-01 00:00', :'readonly' => :''}
+  %label#end-requirement-label.hide
+    An end date is required. Please enter the time at which your hackathon will end.
 %label Location
 %input.stage1in#location{:type => :text, :placeholder => 'California, Venice Beach'}
 %label Description
-%textarea.stage1in#desc-in{:rows => '6'}
+%textarea.stage1in#desc-in{:rows => '10'}
 %button.btn.btn-primary#stage1submit.disabled Select Current Hackathon
 
 // Needs fields start_time, end_time, location, name, description
