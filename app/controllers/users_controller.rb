@@ -38,7 +38,6 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by_username params[:user][:username]
-    
   end
 
 	# GET /users.json

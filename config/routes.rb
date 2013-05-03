@@ -1,13 +1,12 @@
 LiveHack::Application.routes.draw do
 
+  root :to => "hackathons#index"
+
   resources :hackathons do
     post 'subscribed_to', :on => :collection, :action => 'subscribed_to'
     get 'delete_all', :on => :collection
   end
 
-  match 'hackathons/exists' => 'hackathons#exists', :via => :POST
-  match 'get_hackathons_to_update' => 'hackathons#get_hackathons_to_update', :via => :POST
-  match 'update_hackathons_users' => 'hackathons#update_hackathons_users', :via => :POST
   resources :users  do
     get 'delete_all', :on => :collection
   end
@@ -16,7 +15,10 @@ LiveHack::Application.routes.draw do
   resources :proposals
   resources :schedule_items
 
-  root :to => "hackathons#index"
+  match 'hackathons/exists' => 'hackathons#exists', :via => :POST
+  match 'get_hackathons_to_update' => 'hackathons#get_hackathons_to_update', :via => :POST
+  match 'update_hackathons_users' => 'hackathons#update_hackathons_users', :via => :POST
+  match 'update_users' => 'hackathons#update_users', :via => :POST
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

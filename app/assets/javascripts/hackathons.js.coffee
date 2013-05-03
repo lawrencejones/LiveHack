@@ -4,13 +4,41 @@
 
 $ ->
   setup_new_modal_link()
-  get_font_awesome_classes()
+  cache 'first_run'
   window.fbAsyncInit routes
 
 routes = ->
   p = window.location.pathname
   if p == '/hackathons' or p == '/'
     process_home()
+
+cache_times = {   # in seconds
+  user : 60*60*1000  # 1 hour
+  eids : 10*60*1000  # 5 minutes
+}
+
+cache_getters = {
+
+}
+
+cache = (key, value) ->
+  if key is 'first_run'
+    window.cache = {}
+  else 
+    window.cache[key] = {
+      value : value, timestamp : new Date()
+    }
+
+get = (key, callback, now) ->
+  if not now?
+    cache_entry = window.cache[key]
+    # get the cache_entry, {value, timestamp}
+    if (new Date - cache_entry.timestamp) > cache_times[key]
+      now = true
+    else callback cache_entry.value
+  if now
+    cache_getters[key] callback
+
 
 # start the automatic javascript requests to keep
 # the server data up to date
@@ -29,7 +57,7 @@ dismantle_new_hack_and_return = (callback) ->
       $('.datetimepicker').remove()
       $('.subs').hide()
       $('#logged-in-subheading').show()
-      update_hackathons_if_needed generate_hackathon_table
+      generate_hackathon_table()
       if callback? then callback()
 
 show_new_hackathon_summary = (event_details) ->
@@ -40,7 +68,7 @@ show_new_hackathon_summary = (event_details) ->
   $('#stage3-header').html('All done! ').append goback
   $('#stage3-caption').html("#{event_details.name} been created, happy hacking!")
   $('.stage3-only').animate {opacity : 0}, {
-    duration : 300, complete: ->
+    duration : 300, complete: ->\
       $('.stage3-only').slideUp()
   }
 
@@ -467,6 +495,19 @@ add_hackathon = (hack,callback) ->
         if data.status != 'failed'
           if callback? then callback(data)
 
+update_rails_hackathons = (eids) ->
+  console.log 'Updating rails hackathon data'
+  queries = {}  
+  if eids? then for eid in eids
+    queries[eid] = users_for_event_query(eid) 
+  FB.api {method: 'fql.multiquery', queries : queries}, (data) ->
+    $.ajax \
+      type: 'POST',
+      data: {events : data},
+      url: '/update_users.json'
+      success: (response) ->
+        console.log response
+
 
 #///////////////////////////////////////////////////////////////////
 # Utilities
@@ -520,7 +561,7 @@ logged_in = ->
 
 ask_for_sign_up = (user) ->
   if user.signed_up?
-    update_hackathons_if_needed generate_hackathon_table
+    generate_hackathon_table()
   else
     $('.user-details-in.name').val user.name
     $('.user-details-in.email, #github-in').val user.email
@@ -555,78 +596,46 @@ ask_for_sign_up = (user) ->
               $('#save-details').html('Success!')
               $('#user-details-form').delay(300).fadeOut {
                 duration : 300, complete: -> 
-                  update_hackathons_if_needed generate_hackathon_table
+                  generate_hackathon_table()
               }
 
 
 generate_hackathon_table = ->
-  console.log 'Generating hackathon table'
-  # Current username
-  username = window.user.username
-  $.ajax \
-    type: "POST",
-    url: "hackathons/subscribed_to",
-    data: {username : username},
-    success: (data) ->
-      $('#hackathon-table').html('').hide().append(data).fadeIn()
-      $('#hackathon-table .minor').each ->
-        $(this).click (e) ->
-          id = $(this).attr('hack-id')
-          $('#hackathon-table').fadeOut {
-            duration : 300, complete: ->
-              $('#hackathon-table').html('')
-              load_hackathon_view(id)
-          }
-      console.log 'Appended table'
 
-update_hackathons_if_needed = (callback) ->
+  setup_hackathon_table_links = ->
+    $('#hackathon-table .minor').each ->
+      $(this).click (e) ->
+        id = $(this).attr('hack-id')
+        $('#hackathon-table').fadeOut {
+          duration : 300, complete: ->
+            $('#hackathon-table').html('')
+            load_hackathon_view(id)
+        }
+  console.log 'Generating hackathon table...'
   FB.api all_attending_events, (response) ->
     eids = (r.eid for r in response)
-    # if any of the events the user is attending are in the
-    # database, AND the user is not subscribed, then update database
-    console.log eids
-    if eids.length == 0
-      console.log 'No new hackathons for this user'
-      if callback? then callback()
-    else
-      $.ajax \
-        type: 'POST',
-        url: '/get_hackathons_to_update.json',
-        data: { eids : eids, username : window.user.username },
-        dataType: 'json',
-        success: (data) ->
-          if data.status == 'None added'
-            console.log 'No new hackathons for this user'
-            if callback? then callback()
-          else if eids.length > 0
-            # if the server returned any eids, update user lists
-            queries = {}
-            for eid in eids
-              queries[eid] = users_for_event_query(eid)
-            query = {
-              method: 'fql.multiquery'
-              queries: queries
-            }
-            FB.api query, (data) ->
-              $.ajax \
-                type:'POST',
-                url:'/update_hackathons_users.json',
-                data: {hackathons : data},
-                success: (data) ->
-                  if callback? then callback()
-
+    request = {
+      username : window.user.username
+      eids : eids
+    }
+    console.log 'Received facebook response...'
+    $.ajax \
+      type: "POST",
+      url: "hackathons/subscribed_to",
+      data: request,
+      success: (data) ->
+        console.log 'Received rails response...'
+        $('#hackathon-table').html('').hide().append(data).fadeIn()
+        console.log 'Appended table'
+        eids = []
+        $('#hackathon-table tr[class="minor"]').each ->
+          eids.push @.getAttribute 'hack-eid'
+        cache 'eids', eids
+        update_rails_hackathons(eids) if eids.length != 0
 
 
 format_event_avatar = (url) ->
    $("<img/ src=\"#{url}\">").addClass('event-img')
-
-get_font_awesome_classes = ->
-  $.ajax \
-    type: 'GET',
-    dataType: 'text',
-    url: '/text/font-awesome-classes.txt',
-    success: (data) ->
-      window.font_awesome_classes = data.split(',')
 
 format_date = (d) ->
   pad = (a,b) ->
