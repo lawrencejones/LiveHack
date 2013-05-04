@@ -284,6 +284,7 @@
 		},
 
 		setValue: function() {
+			console.log('setting val');
 			var formatted = this.getFormattedDate();
 			if (!this.isInput) {
 				if (this.component){
@@ -300,6 +301,7 @@
 
 		getFormattedDate: function(format) {
 			if(format == undefined) format = this.format;
+			return moment(this.date).format('hh:mm DD/MM/YYYY'); //mine
 			return DPGlobal.formatDate(this.date, format, this.language, this.formatType);
 		},
 
