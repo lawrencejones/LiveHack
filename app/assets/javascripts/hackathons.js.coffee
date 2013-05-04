@@ -150,7 +150,7 @@ setup_new_modal_link = ->
         sub.data('event',e).click load_event #expand_logic
           
         $('#event-table').append top, bottom
-      $('.no').css 'height',$('.yes').height() + 'px'
+      $('.no').css 'height',$('.yes').height() + 15 + 'px'
 
   # Initialise button functionality
   sort_btns = () ->
@@ -475,7 +475,8 @@ generate_hackathon_table = ->
           eids = []
           $('#hackathon-table tr[class="minor"]').each ->
             eids.push @.getAttribute 'hack-eid'
-          update_rails_hackathons(eids) if eids.length != 0
+          #if $('#hackathon-table tbody').attr('needs-update') is 'true'
+          update_rails_hackathons(eids) 
 
 ask_for_sign_up = (user) ->
   if user.signed_up?

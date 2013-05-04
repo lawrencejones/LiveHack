@@ -68,21 +68,20 @@ class HackathonsController < ApplicationController
   #       username : username
   #       eids : { 1 => 'eid', ..., n => 'eid' }
   def subscribed_to
-    response = 'No update required'
+    needs_update = false
     if !params[:eids].nil?
       params[:eids].each do |eid|
         @hackathon = Hackathon.find_by_eid(eid)
         if !@hackathon.blank?
           @user = @hackathon.users.find_by_username params[:username]
           if @user.blank?
+            needs_update = true
             @hackathon.users << User.find_by_username(params[:username])
-            response = 'Update required'
           end
         end
       end
     end
-    puts response
-    render :partial => 'hackathon_table'
+    render :partial => 'hackathon_table', :locals => {:needs_update => needs_update}
   end
 
   # POST /update_users
