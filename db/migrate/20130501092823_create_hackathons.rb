@@ -3,8 +3,8 @@ class CreateHackathons < ActiveRecord::Migration
     create_table :hackathons do |t|
       t.string :eid
       t.string :name
-      t.string :start
-      t.string :end
+      t.datetime :start
+      t.datetime :end
       t.string :location
       t.text :description
       t.references :users

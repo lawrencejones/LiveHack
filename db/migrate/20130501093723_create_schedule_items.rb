@@ -3,7 +3,7 @@ class CreateScheduleItems < ActiveRecord::Migration
     create_table :schedule_items do |t|
       t.string :label
       t.references :hackathon
-      t.string :start_time
+      t.datetime :start_time
 
       t.timestamps
     end

@@ -30,7 +30,7 @@ dismantle_new_hack_and_return = (callback) ->
 show_new_hackathon_summary = (event_details) ->
   goback = $('<a href="#">Go Back</a>').click (e) ->
     e.preventDefault()
-    dismantle_new_hack_and_return()
+    get 'attending_events', (-> dismantle_new_hack_and_return()), true
   $('#processing-progress').hide()
   $('#form-tabs a:eq(2)').append $('<i/ class="icon-check">')
   $('#stage3-header').html('All done! ').append goback
@@ -107,8 +107,11 @@ setup_new_modal_link = ->
           create_event_warning_modal(event_data)
         else if $('#fbevent-select button:eq(0)').hasClass('btn-primary')
           $('#name').val event_data.name
-          $('#start').val time_to_picker(event_data.start_time)
-          $('#end').val time_to_picker(event_data.end_time)
+          $('#start').val moment(event_data.start_time).format('HH:mm DD/MM/YYYY')
+          if event_data.end_time?
+            end_str = moment(event_data.end_time).format('HH:mm DD/MM/YYYY')
+          else end_str = ''
+          $('#end').val end_str
           $('#location').val event_data.location
           $('#desc-in').val event_data.description
           $('#stage1submit').removeClass('disabled')
@@ -133,7 +136,8 @@ setup_new_modal_link = ->
 
         name = $('<h5/ class="event-header">') \
           .addClass('push-up').html e.name
-        start = format_to_single_date(e.start_time)
+        s = moment(e.start_time)
+        start = s.format('DD/MM/YYYY')
         sub  = $('<h5/>') \
           .addClass('event-header loc')
           .html (e.location + ' - ' + start)
@@ -157,7 +161,8 @@ setup_new_modal_link = ->
     # for the submit button click
     $('#stage1submit').click ->
       if validate_inputs()
-        [s,e] = [$('#start').val(), $('#end').val()].map picker_to_fbdate
+        [s,e] = [$('#start').val(), $('#end').val()].map (d)->
+          d = moment(d, 'HH:mm DD/MM/YYYY').toDate()
         window.new_hackathon = 
         {
           access_token : window.fbtoken
@@ -291,7 +296,7 @@ setup_new_modal_link = ->
       if !$(this).hasClass 'disabled'
         window.new_hackathon.schedule_items.push
           label : $('#schedule-label-in').val()
-          start : picker_to_jsdate $('#schedule-start-in').val()
+          start : moment($('#schedule-start-in').val(), 'hh:mm DD/MM/YYYY').toDate()
           font : $('#font-input').val()
         $('.schedule-item-form input').val('')
         update_schedule_item_table(window.new_hackathon.schedule_items)
@@ -312,12 +317,13 @@ setup_new_modal_link = ->
   # refresh table with contents of items
   update_schedule_item_table = (items) ->
     $('#sch-item-table .item').remove()
+    items.sort (a,b) -> a.start - b.start
     for item in items
       $('#sch-item-row-template .sch-label').html item.label
+      s = moment(item.start)
+      console.log item.start
       $('#sch-item-row-template .time').html \
-        '<b>' + item.start.toLocaleTimeString().split(':')[0..1]
-          .reduce((a,b) -> a + ':' + b) + '</b>  ' + 
-        format_date(item.start)
+        '<b>' + s.format('HH:mm') + ' on ' + s.format('dddd, Do') + '</b>'
       $('#sch-item-row-template .font').html item.font
       $('#sch-item-row-template .font').append \
         $("<i/ class=\"#{item.font}\">").css 'margin-left', '15px'
@@ -435,7 +441,7 @@ load_hackathon_view = (id) ->
       dataType: 'html',
       success: (data) ->
         $('body').html('').append(data)
-        end = formatted_date_to_jsdate window.hackathon.end
+        end = moment(window.hackathon.end).format('DD/MM/YYYY')
         window.initialise_clock end
 
 #///////////////////////////////////////////////////////////////////
@@ -549,6 +555,8 @@ add_hackathon = (hack,in_situ,callback) ->
 
   FB.api "/#{hack.eid}/invited", (r) ->
     users = r.data
+    console.log typeof (new Date(hack.start_time))
+    console.log typeof 'hey'
     post_to_rails 0, users
 
 update_rails_hackathons = (eids) ->
@@ -573,41 +581,12 @@ update_rails_hackathons = (eids) ->
 # Utilities
 #///////////////////////////////////////////////////////////////////
 
-# YYYY-MM-DD  ||   YYYY-MM-DD'T'hh:mm:ss... -> YYYY-MM-DD hh:mm
-time_to_picker = (d) ->
-  if d is null then return null
-  date = d
-  date = d.split('T')[0] if !(d.length == 10)
-  time = d.split('T')[1] ? '00:00'
-  [hours,mins,ss...] = time.split(':')
-  return date + ' ' + hours + ':' + mins
-
-picker_to_fbdate = (d) ->
-  d = picker_to_jsdate d
+js_date_to_fb_date = (d) ->
   return d.toISOString().split('.')[0]+'-0000'
-
-# YYYY-MM-DD hh:mm  ->  JSDATE
-picker_to_jsdate = (d) ->
-  moment(d, 'YYYY-MM-DD hh:mm').toDate()
-
-# YYYY/MM/DD hh:mm  ->  JSDATE
-formatted_date_to_jsdate = (d) ->
-  moment(d, 'YYYY/MM/DD hh:mm').unix()
-
-# YYYY-MM-DD'T'*  ->  YYYY/MM/DD
-format_to_single_date = (d) ->
-  if d.length == 10
-    return d.replace(/-/g,'/')
-  d.split('T')[0].split('-').reduce (a,b) -> a + '/' + b
 
 format_event_avatar = (url) ->
    $("<img/ src=\"#{url}\">").addClass('event-img')
 
-format_date = (d) ->
-  pad = (a,b) ->
-    (1e15+a+"").slice(-b)
-  pad(d.getDate(),2) + '/' + pad(d.getMonth()+1,2) + '/' + d.getFullYear()
-
 # Initiate the timepicker handle
 setup_time_picker = () ->
-  $('.time-in').datetimepicker {format : 'yyyy-mm-dd hh:ii'}
+  $('.time-in').datetimepicker {format : 'hh:ii dd/mm/yyyy'}

@@ -75,6 +75,6 @@ attending_events =
   query : ('SELECT eid, name, description, pic_square, venue, location, start_time, end_time ' + 
           'FROM event WHERE eid IN (' +
           'SELECT eid FROM event_member ' +
-          'WHERE uid = me())')
-          #'WHERE uid = me() and rsvp_status="attending")')  # filter for attending only
+          'WHERE uid = me() and rsvp_status="attending")')  # filter for attending only
+          #'WHERE uid = me())')
 
