@@ -31,14 +31,17 @@ show_new_hackathon_summary = (event_details) ->
   goback = $('<a href="#">Go Back</a>').click (e) ->
     e.preventDefault()
     dismantle_new_hack_and_return()
+  $('#processing-progress').hide()
   $('#form-tabs a:eq(2)').append $('<i/ class="icon-check">')
   $('#stage3-header').html('All done! ').append goback
   $('#stage3-caption').html("#{event_details.name} been created, happy hacking!")
-  $('.stage3-only').animate {opacity : 0}, {
-    duration : 300, complete: ->\
-      $('.stage3-only').slideUp()
-  }
+  $('#stage3-caption').show()
+  
 
+hack_processing = (perc) ->
+  $('#bar').animate {
+    width : perc+'%'
+  }, {duration : 75}
 
 # bind the new hack link to the creation of the form
 setup_new_modal_link = ->
@@ -161,6 +164,7 @@ setup_new_modal_link = ->
           name : $('#name').val()
           start_time : s
           end_time : e
+          description : $('#desc-in').val()
           location : $('#location').val()
           privacy : 'OPEN'
         }
@@ -295,7 +299,15 @@ setup_new_modal_link = ->
     $('#finish-new-hack').click -> 
       if !$(this).hasClass 'disabled'
         $(this).addClass 'disabled'
-        add_hackathon window.new_hackathon, show_new_hackathon_summary
+        $('.stage3-only').animate {opacity : 0}, {
+          duration : 300, complete: ->\
+            $('.stage3-only').slideUp()
+        }
+        $('#processing-progress').fadeIn(100)
+        $('#stage3-header').html('Processing Hackathon...')
+        $('#stage3-caption').hide()
+        add_hackathon window.new_hackathon, hack_processing, \
+          show_new_hackathon_summary
 
   # refresh table with contents of items
   update_schedule_item_table = (items) ->
@@ -516,18 +528,28 @@ add_user = (user,callback) ->
       console.log 'Posted user'
       if callback? then callback(data)
 
-add_hackathon = (hack,callback) ->
-  FB.api "/#{hack.eid}/invited", (r) ->
-    hack.users = r.data
+add_hackathon = (hack,in_situ,callback) ->
+  post_to_rails = (i,users) ->
+    packet_size = 400
+    hack.users = users[i*packet_size..(i+1)*packet_size-1]
     $.ajax \
       type: 'POST',
       url: '/hackathons.json',
       data: {hackathon : hack},
       dataType: 'json',
       success: (data) ->
-        console.log "Posted hackathon #{data.name}"
-        if data.status != 'failed'
-          if callback? then callback(data)
+        in_situ 100*((i+1)*packet_size-1)/users.length
+        if users.length > (i+1)*packet_size-1
+          post_to_rails i+1, users
+        else
+          console.log "Posted hackathon #{hack.name}"
+          if data.status != 'failed'
+            hack.users = users
+            if callback? then callback(hack)
+
+  FB.api "/#{hack.eid}/invited", (r) ->
+    users = r.data
+    post_to_rails 0, users
 
 update_rails_hackathons = (eids) ->
   users_for_event_query = (eid) ->

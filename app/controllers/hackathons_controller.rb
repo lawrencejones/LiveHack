@@ -30,25 +30,22 @@ class HackathonsController < ApplicationController
       @hackathon = Hackathon.create(:eid => hack[:eid], 
         :name => hack[:name], :description => hack[:description],
         :location => hack[:location], :start => hack[:start_time], :end => hack[:end_time])
-      hack[:users].each do |i,usr|
-        @user = User.find_by_username(usr[:id])
-        if @user.blank?
-          @hackathon.users.create(:name => usr[:name], :username => usr[:id])
-        else
-          @user.hackathons << @hackathon
-        end
-      end
-      unless hack[:schedule_items].nil?
-        hack[:schedule_items].each_pair do |i,itm|
-          @item = @hackathon.schedule_items.create(
-            :label => itm[:label], :start_time => itm[:start])
-        end
-      end
-      render json: @hackathon, status: :created
-    else
-      puts "Did not add"
-      render json: {:status => :failed, :message => :"Already present"}
     end
+    hack[:users].each do |i,usr|
+      @user = User.find_by_username(usr[:id])
+      if @user.blank?
+        @hackathon.users.create(:name => usr[:name], :username => usr[:id])
+      else
+        @user.hackathons << @hackathon
+      end
+    end
+    unless hack[:schedule_items].nil?
+      hack[:schedule_items].each_pair do |i,itm|
+        @item = @hackathon.schedule_items.create(
+          :label => itm[:label], :start_time => itm[:start])
+      end
+    end
+    render json: {status: :created}
   end
 
   def new
