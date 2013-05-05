@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(:version => 20130501190314) do
   create_table "hackathons", :force => true do |t|
     t.string   "eid"
     t.string   "name"
-    t.string   "start"
-    t.string   "end"
+    t.datetime "start"
+    t.datetime "end"
     t.string   "location"
     t.text     "description"
     t.integer  "users_id"
@@ -57,8 +57,8 @@ ActiveRecord::Schema.define(:version => 20130501190314) do
   create_table "schedule_items", :force => true do |t|
     t.string   "label"
     t.integer  "hackathon_id"
+    t.datetime "start_time"
     t.string   "icon_class"
-    t.string   "start_time"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
