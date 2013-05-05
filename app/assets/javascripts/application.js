@@ -12,6 +12,7 @@
 //
 //= require jquery.min
 //= require jquery_ujs
+//= require jquery_easing.min
 //= require fb
 //= require fb_init
 //= require bootstrap.min

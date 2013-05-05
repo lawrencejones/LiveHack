@@ -15,17 +15,17 @@ Proposal.create([
 
 
 ScheduleItem.create([
-  { :label => "Intro", :hackathon_id => 1, :start_time => "Sat May 04 2013 17:00:00 GMT+0100 (BST)", :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" },
-  { :label => "Pitches", :hackathon_id => 1, :start_time => "Sat May 04 2013 17:20:00 GMT+0100 (BST)", :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" },
-  { :label => "Facebook API's", :hackathon_id => 1, :start_time => "Sat May 04 2013 17:30:00 GMT+0100 (BST)", :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" },
-  { :label => "Dinner", :hackathon_id => 1, :start_time => "Sat May 04 2013 19:00:00 GMT+0100 (BST)", :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" },
-  { :label => "Pizza", :hackathon_id => 1, :start_time => "Sun May 05 2013 00:00:00 GMT+0100 (BST)", :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" },
-  { :label => "Bubble Tea", :hackathon_id => 1, :start_time => "Sun May 05 2013 03:00:00 GMT+0100 (BST)", :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" },
-  { :label => "Snacks", :hackathon_id => 1, :start_time => "Sun May 05 2013 05:30:00 GMT+0100 (BST)", :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" },
-  { :label => "Breakfast", :hackathon_id => 1, :start_time => "Sun May 05 2013 08:00:00 GMT+0100 (BST)", :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" },
-  { :label => "Lunch", :hackathon_id => 1, :start_time => "Sun May 05 2013 12:00:00 GMT+0100 (BST)", :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" },
-  { :label => "Final Push", :hackathon_id => 1, :start_time => "Sun May 05 2013 14:50:00 GMT+0100 (BST)", :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" },
-  { :label => "Presentations", :hackathon_id => 1, :start_time => "Sun May 05 2013 15:00:00 GMT+0100 (BST)", :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" }
+  { :label => "Intro", :hackathon_id => 1, :start_time => "Sat May 04 2013 17:00:00 GMT+0100 (BST)", :icon_class => 'icon-bullhorn', :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" },
+  { :label => "Pitches", :hackathon_id => 1, :start_time => "Sat May 04 2013 17:20:00 GMT+0100 (BST)", :icon_class => 'icon-group', :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" },
+  { :label => "Facebook API's", :hackathon_id => 1, :start_time => "Sat May 04 2013 17:30:00 GMT+0100 (BST)", :icon_class => 'icon-exchange', :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" },
+  { :label => "Dinner", :hackathon_id => 1, :start_time => "Sat May 04 2013 19:00:00 GMT+0100 (BST)", :icon_class => 'icon-food', :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" },
+  { :label => "Pizza", :hackathon_id => 1, :start_time => "Sun May 05 2013 00:00:00 GMT+0100 (BST)", :icon_class => 'icon-food', :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" },
+  { :label => "Bubble Tea", :hackathon_id => 1, :start_time => "Sun May 05 2013 03:00:00 GMT+0100 (BST)", :icon_class => 'icon-coffee', :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" },
+  { :label => "Snacks", :hackathon_id => 1, :start_time => "Sun May 05 2013 05:30:00 GMT+0100 (BST)", :icon_class => 'icon-food', :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" },
+  { :label => "Breakfast", :hackathon_id => 1, :start_time => "Sun May 05 2013 08:00:00 GMT+0100 (BST)", :icon_class => 'icon-food', :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" },
+  { :label => "Lunch", :hackathon_id => 1, :start_time => "Sun May 05 2013 12:00:00 GMT+0100 (BST)", :icon_class => 'icon-food', :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" },
+  { :label => "Final Push", :hackathon_id => 1, :start_time => "Sun May 05 2013 14:50:00 GMT+0100 (BST)", :icon_class => 'icon-exclamation-sign', :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" },
+  { :label => "Presentations", :hackathon_id => 1, :start_time => "Sun May 05 2013 15:00:00 GMT+0100 (BST)", :icon_class => 'icon-flag', :created_at => "2013-05-04 21:24:22", :updated_at => "2013-05-04 21:24:22" }
 ], :without_protection => true )
 
 

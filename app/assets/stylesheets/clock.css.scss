@@ -5,6 +5,11 @@ $digit-offset : 9px;
 $offset : -147px;
 /* yeah, they're not all interdependent. get over it. */
 
+@font-face {
+  font-family: 'digi';
+  src: url('http://cssdeck.com/uploads/resources/fonts/digii/DS-DIGII.TTF');
+}
+
 #flip_clock {
 
   margin-left : $offset;
@@ -15,7 +20,7 @@ $offset : -147px;
     position : absolute;
     top : 0px; left : 6%;
     line-height : $font-size;
-    //font-family : "Times New Roman";
+    font-family : "digi";
     font-weight : normal;
     font-size : $font-size;
     text-shadow : 2px 2px black;

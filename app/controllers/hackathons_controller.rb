@@ -14,7 +14,7 @@ class HackathonsController < ApplicationController
   # GET /hackathons/1
   # GET /hackathons/1.json
   def show
-    @hackathon = Hackathon.find(params[:id])
+    @hackathon = Hackathon.find_by_eid(params[:id])
     respond_to do |format|
       format.html { render :hackathon_body, :layout => false }
       format.json { render json: @hackathon }
@@ -42,7 +42,7 @@ class HackathonsController < ApplicationController
     unless hack[:schedule_items].nil?
       hack[:schedule_items].each_pair do |i,itm|
         @item = @hackathon.schedule_items.create(
-          :label => itm[:label], :start_time => itm[:start])
+          :label => itm[:label], :icon_class => itm[:icon_class], :start_time => itm[:start])
       end
     end
     render json: {status: :created}
@@ -61,6 +61,11 @@ class HackathonsController < ApplicationController
     else
       render json: {:status => :stop}
     end
+  end
+
+  def schedule_items
+    @hack = Hackathon.find_by_eid params[:eid]
+    render json: { :schedule => @hack.schedule_items.all }
   end
 
   # GET /subscribed_to/username

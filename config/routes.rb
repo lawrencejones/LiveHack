@@ -5,6 +5,7 @@ LiveHack::Application.routes.draw do
   resources :hackathons do
     post 'subscribed_to', :on => :collection, :action => 'subscribed_to'
     get 'delete_all', :on => :collection
+    get 'schedule_items', :on => :collection, :action => 'schedule_items'
   end
 
   resources :users  do

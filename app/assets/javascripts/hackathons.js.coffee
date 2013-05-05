@@ -23,9 +23,7 @@ dismantle_new_hack_and_return = (callback) ->
       $('.modal-backdrop').remove()
       $('.datetimepicker').remove()
       $('.subs').hide()
-      $('#logged-in-subheading').show()
-      generate_hackathon_table()
-      if callback? then callback()
+      load_main_page callback
 
 show_new_hackathon_summary = (event_details) ->
   goback = $('<a href="#">Go Back</a>').click (e) ->
@@ -297,7 +295,7 @@ setup_new_modal_link = ->
         window.new_hackathon.schedule_items.push
           label : $('#schedule-label-in').val()
           start : moment($('#schedule-start-in').val(), 'hh:mm DD/MM/YYYY').toDate()
-          font : $('#font-input').val()
+          icon_class : $('#font-input').val()
         $('.schedule-item-form input').val('')
         update_schedule_item_table(window.new_hackathon.schedule_items)
 
@@ -324,9 +322,9 @@ setup_new_modal_link = ->
       console.log item.start
       $('#sch-item-row-template .time').html \
         '<b>' + s.format('HH:mm') + ' on ' + s.format('dddd, Do') + '</b>'
-      $('#sch-item-row-template .font').html item.font
+      $('#sch-item-row-template .font').html item.font_class
       $('#sch-item-row-template .font').append \
-        $("<i/ class=\"#{item.font}\">").css 'margin-left', '15px'
+        $("<i/ class=\"#{item.font_class}\">").css 'margin-left', '15px'
       $('#sch-item-row-template').clone().attr('id','')
         .appendTo $('#sch-item-table')
 
@@ -418,6 +416,11 @@ process_home = ->
   # Deal with the login
   initiate_login()
 
+load_main_page = (callback) ->
+  $('#logged-in-subheading').show()
+  # make sure to force the reload, obviously things have changed
+  generate_hackathon_table (-> $('#main-page').fadeIn()), callback, true
+
 logged_in = ->
   # Hide the login button, no longer needed
   $('#login-btn').hide()
@@ -435,31 +438,139 @@ logged_in = ->
 load_hackathon_view = (id) ->
   $.get "/hackathons/#{id}.json", (hack) ->
     window.hackathon = hack
+    window.hackathon.start = new Date hack.start
+    window.hackathon.end = new Date hack.end
     $.ajax \
       type: 'GET',
       url: "/hackathons/#{id}",
       dataType: 'html',
       success: (data) ->
-        $('body').html('').append(data)
-        end = moment(window.hackathon.end).format('DD/MM/YYYY')
-        window.initialise_clock end
+        $('#hackathon').hide().html('').append(data).fadeIn()
+        $.get '/hackathons/schedule_items', {eid : hack.eid}, (res) ->
+          console.log(res.schedule)
+          produce_schedule res.schedule
+        window.initialise_clock window.hackathon.end
+        $('#jumbo_header').click dismantle_hackathon_and_return
+
+dismantle_hackathon_and_return = ->
+  $('#hackathon').fadeOut {
+    duration : 400, complete : load_main_page
+  }
+
+produce_schedule = (items) ->
+  # make schedule item start a jsdatetime
+  if items? and items.length != 0
+    items.map (i) -> i.start_time = new Date(i.start_time)
+    items.sort (a,b) ->
+      a.start_time - b.start_time
+    for item,i in items
+      symbol = produce_schedule_icon item, i
+      if i != (items.length - 1)
+        symbol.data 'duration', (items[i+1].start_time.getTime() -
+          item.start_time - 400)
+      symbol.data {
+        id : i, next : items[i+1], prev : items[i-1]
+        start : item.start_time
+      }
+      symbol.appendTo $('#schedule-view')
+      symbol.css('left','120%')
+      item.avatar = symbol
+      item.line_up = ->
+        @avatar.animate {
+          left : '90%', opacity : 1
+        }, { duration : window.schedule_tween }
+      item.leave_center = ->
+        @avatar.removeClass 'active'
+        @avatar.find('label').fadeOut()
+        @avatar.animate {
+          left : '10%'
+        }, { duration : window.schedule_tween }
+        if (prev = @avatar.data('prev'))?
+          prev.exit()
+      item.exit = ->
+        @avatar.animate {
+          left : '-20%', opacity : 0
+        }, { duration : window.schedule_tween }
+      item.take_center = ->
+        offset = @avatar.data('offset') + @avatar.data('duration')
+        if offset < 0
+          @exit 
+          @avatar.data('next').avatar.data 'offset', offset
+          @avatar.data('next').take_center()
+        else
+          @avatar.addClass 'active' 
+          if @avatar.data('prev')?
+            @avatar.data('prev').leave_center()
+          if !@avatar.data('next')?
+            @avatar.find('label').delay(300).animate { opacity : 1 }, {
+              duration : 600
+            }
+            @avatar.animate {
+              left : '50%'
+            }, { duration : window.schedule_tween } 
+            if (p = @avatar.data('prev'))?
+              p.exit()  
+          else
+            @avatar.data('next').line_up()
+            @avatar.find('label').delay(300).animate { opacity : 1 }, {
+              duration : 600
+            }
+            @avatar.animate {
+              left : '50%'
+            }, { 
+              duration : window.schedule_tween, complete : ->
+                $(this).animate {
+                  left : '50%'
+                }, {
+                  easing : 'easeOutExpo'
+                  duration : 400
+                  #duration : offset/2 
+                  complete : ->
+                    # comment out the below & above to
+                    # use animated motion into middle
+                    next = $(this).data('next')
+                    next.avatar.data('offset',offset)
+                    setTimeout(( -> 
+                      next.take_center()), offset)
+                    ###$(this).animate {
+                      left : '50%'
+                    }, { duration : offset/2 
+                    easing : 'easeInExpo', complete : ->
+                        next = $(this).data('next')
+                        next.avatar.data('offset',offset)
+                        next.take_center()
+                    }###
+                }
+            }
+    initial_offset = items[0].start_time.getTime() - 
+      (new Date()).getTime()
+    items[0].avatar.data('offset',initial_offset)
+    items[0].take_center()
+  else $('#schedule-view').hide()
+
+produce_schedule_icon = (item,i) ->
+  icon = $('<i/>').addClass(item.icon_class)
+  label = $('<label/ class="schedule-label">').html item.label
+  $("<a/ id=\"#{i}\">").addClass('schedule-item').append icon, label
+
 
 #///////////////////////////////////////////////////////////////////
 # Reuseable Partials
 #///////////////////////////////////////////////////////////////////
 
-generate_hackathon_table = ->
+generate_hackathon_table = (callback,force_reload) ->
 
   setup_hackathon_table_links = ->
     $('#hackathon-table .minor').each ->
       $(this).click (e) ->
-        id = $(this).attr('hack-id')
-        $('#hackathon-table').fadeOut {
-          duration : 300, complete: ->
+        console.log 'Clicked'
+        id = $(this).attr('hack-eid')
+        $('#main-page').fadeOut {
+          duration : 400, complete: ->
             $('#hackathon-table').html('')
             load_hackathon_view(id)
         }
-  get 'attending_events', (response) ->
+  get 'attending_events', ((response) ->
     eids = (r.eid for r in response)
     get 'user', (user) ->
       request = {
@@ -475,8 +586,10 @@ generate_hackathon_table = ->
           eids = []
           $('#hackathon-table tr[class="minor"]').each ->
             eids.push @.getAttribute 'hack-eid'
-          #if $('#hackathon-table tbody').attr('needs-update') is 'true'
-          update_rails_hackathons(eids) 
+          if $('#hackathon-table tbody').attr('needs-update') is 'true'
+            update_rails_hackathons(eids) 
+          setup_hackathon_table_links()
+          if callback? then callback() ), force_reload
 
 ask_for_sign_up = (user) ->
   if user.signed_up?
@@ -556,8 +669,6 @@ add_hackathon = (hack,in_situ,callback) ->
 
   FB.api "/#{hack.eid}/invited", (r) ->
     users = r.data
-    console.log typeof (new Date(hack.start_time))
-    console.log typeof 'hey'
     post_to_rails 0, users
 
 update_rails_hackathons = (eids) ->

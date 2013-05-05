@@ -1,4 +1,4 @@
-.jumbotron{:style => 'height:170px'}
+.jumbotron{:style => 'height:170px;margin-top:10px'}
   %h1#jumbo_header
     = @hackathon.name.split(/ /)[0]
   .span12
@@ -14,6 +14,6 @@
         Teams and Proposals
   .tab-content.text-center
     .tab-pane.active{:id => "hack-stats"}
-      Hack stats
+      = render 'hack_stats'
     .tab-pane{:id => "teams-and-proposals"}
       Teams and proposals

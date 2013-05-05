@@ -4,6 +4,7 @@ class CreateScheduleItems < ActiveRecord::Migration
       t.string :label
       t.references :hackathon
       t.datetime :start_time
+      t.icon_class :icon_class
 
       t.timestamps
     end

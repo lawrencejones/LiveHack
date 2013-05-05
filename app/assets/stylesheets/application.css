@@ -23,7 +23,7 @@
 
 [class^="icon-"], [class*=" icon-"]{  /*fixes font-awesome duplication*/
     background:none !important;
-  }
+}
 
 .no-margin {
 	margin : 0px 0px 0px 0px;
