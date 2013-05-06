@@ -325,9 +325,9 @@ setup_new_modal_link = ->
       console.log item.start
       $('#sch-item-row-template .time').html \
         '<b>' + s.format('HH:mm') + ' on ' + s.format('dddd, Do') + '</b>'
-      $('#sch-item-row-template .font').html item.font_class
+      $('#sch-item-row-template .font').html item.icon_class
       $('#sch-item-row-template .font').append \
-        $("<i/ class=\"#{item.font_class}\">").css 'margin-left', '15px'
+        $("<i/ class=\"#{item.icon_class}\">").css 'margin-left', '15px'
       $('#sch-item-row-template').clone().attr('id','')
         .appendTo $('#sch-item-table')
 
