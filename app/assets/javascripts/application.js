@@ -10,11 +10,11 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require fb_init
 //= require jquery.min
 //= require jquery_ujs
 //= require jquery_easing.min
 //= require fb
-//= require fb_init
 //= require bootstrap.min
 //= require moment.min
 //= require cache 
