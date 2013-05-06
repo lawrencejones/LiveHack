@@ -5,8 +5,8 @@
 # parse XFBML
 
 # Load the SDK Asynchronously
-window.fbAsyncInit = (callback) ->
-  if callback?
+window.fbAsyncInit = (load) ->
+  if load
     FB.init
       appId: $('head').attr('data-app-id')
       channelUrl: "/channel.html"
@@ -14,4 +14,3 @@ window.fbAsyncInit = (callback) ->
       cookie: true
       xfbml: true
       frictionlessRequests : true
-    callback()

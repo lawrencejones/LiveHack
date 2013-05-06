@@ -2,9 +2,12 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
+FB.Event.subscribe 'auth.statusChange', ->
+  routes()
+
 $ ->
+  window.fbAsyncInit true
   setup_new_modal_link()
-  window.fbAsyncInit routes
 
 routes = ->
   p = window.location.pathname
