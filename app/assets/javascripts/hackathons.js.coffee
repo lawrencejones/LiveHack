@@ -474,18 +474,21 @@ load_hackathon_view = (id) ->
     window.hackathon = hack
     window.hackathon.start = new Date hack.start
     window.hackathon.end = new Date hack.end
-    $.ajax \
-      type: 'GET',
-      url: "/hackathons/#{id}",
-      dataType: 'html',
-      success: (data) ->
-        window.initialise_clock window.hackathon.end
-        $('#hackathon').hide().html('').append(data).fadeIn()
-        $.get '/hackathons/schedule_items', {eid : hack.eid}, (res) ->
-          console.log(res.schedule)
-          produce_schedule res.schedule
-        $('#jumbo_header').click -> 
-          window.location.hash = 'home'
+    get 'user', (user) ->
+      username = user.username
+      $.ajax \
+        type: 'GET',
+        url: "/hackathons/#{id}",
+        dataType: 'html',
+        data: {username : username},
+        success: (data) ->
+          window.initialise_clock window.hackathon.end
+          $('#hackathon').hide().html('').append(data).fadeIn()
+          $.get '/hackathons/schedule_items', {eid : hack.eid}, (res) ->
+            console.log(res.schedule)
+            produce_schedule res.schedule
+          $('#jumbo_header').click -> 
+            window.location.hash = 'home'
 
 dismantle_hackathon_and_return = (callback) ->
   $('#hackathon').fadeOut {
@@ -712,7 +715,6 @@ update_rails_hackathons = (eids) ->
   users_for_event_query = (eid) ->
     'SELECT uid, name FROM user WHERE uid IN (' +
     "  SELECT uid FROM event_member WHERE eid = \"#{eid}\")"
-
   console.log 'Updating rails hackathon data'
   queries = {}  
   if eids? then for eid in eids

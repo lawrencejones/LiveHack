@@ -4,7 +4,6 @@ window.initialise_clock = (end_time) ->
     $("#year_header").html timeLeft
     hourDifference = timeLeft.getHours()
     minuteDifference = timeLeft.getMinutes()
-
     secondDifference = timeLeft.getSeconds()
     timeCase = 0
     if hourDifference > 0

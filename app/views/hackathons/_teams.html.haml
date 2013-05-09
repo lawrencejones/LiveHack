@@ -1,0 +1,15 @@
+.container
+  .row#my-info
+  .row
+    .span3
+      .well.team-well
+        %ul.nav.nav-list{:style => 'text-align:left'}
+          %li.nav-header
+            = if !@my_team.nil? then 'Your Team' else "You're not in a team!" end
+          = if !@my_team.nil? then '<li>' + @my_team.name + '</li>' end
+          %li.nav-header Other Teams
+          - @hackathon.teams.each do |team|
+            %li{:'team-id' => team.id} team.name
+    .span9
+      - @hackathon.teams.each do |team|
+        = render :partial => 'teams/team'

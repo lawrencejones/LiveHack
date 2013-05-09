@@ -15,6 +15,14 @@ class HackathonsController < ApplicationController
   # GET /hackathons/1.json
   def show
     @hackathon = Hackathon.find_by_eid(params[:id])
+    @my_team = nil
+    @hackathon.teams.each do |team|
+      if @my_team.nil?
+        if !team.users.find_by_username(params[:username]).blank?
+          @my_team = team
+        end
+      end
+    end
     respond_to do |format|
       format.html { render :hackathon_body, :layout => false }
       format.json { render json: @hackathon }

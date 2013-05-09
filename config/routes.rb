@@ -12,7 +12,10 @@ LiveHack::Application.routes.draw do
     get 'delete_all', :on => :collection
   end
 
-  resources :teams
+  resources :teams do
+    get 'teams_for_hack', :on => :collection
+  end
+  
   resources :proposals
   resources :schedule_items
 

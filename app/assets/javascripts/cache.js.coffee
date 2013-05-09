@@ -1,5 +1,6 @@
 cache = cache_timeouts = {
-  user : null, invitees : null, attending_events : null
+  user : null, invitees : null, attending_events : null, user_friends : null
+  teams : null
 }
 
 cache_times = {   # in seconds
@@ -7,6 +8,7 @@ cache_times = {   # in seconds
   invitees         : 30*60*1000  # 30 minutes
   attending_events :  5*60*1000  # 5 minutes
   user_friends     : 15*60*1000  # 15 minutes
+  teams            :  1*60*1000  # 1 minute
 }
 
 cache_getters = {
@@ -30,6 +32,16 @@ cache_getters = {
     cache.user_friends = {v:v, time:time}
     #console.log "CACHE - DONE user_friends"
     cb v
+  teams : (cb) -> 
+    $.ajax { 
+      type : 'GET'
+      url : '/teams_for_hack'
+      data : {eid : window.hackathon.eid} 
+      success : (v) ->
+        time = new Date
+        cache.teams = {v:v, time:time}
+        cb v
+    }
 }
 
 make_timeout_f = (key) ->
