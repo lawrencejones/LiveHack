@@ -9,13 +9,14 @@ $ ->
   window.fbAsyncInit true
   setup_new_modal_link()
   $(window).on 'hashchange', ->
+    window.hash ?= '#'
     if window.hash is '#newhack'
       dismantle_new_hack_and_return()
-    else if /#hash_.*/.test window.hash
-      dismantle_hackathon_and_return(routes)
-    else if window.hash is '#home' then routes()
-
-
+    else if window.hash is '#home' 
+      routes()
+    else if /^\d+$/.test window.hash[1..]
+      if window.location.hash is '#home'
+        dismantle_hackathon_and_return process_home
     window.hash = window.location.hash
   window.location.hash = 'home'
 
@@ -23,10 +24,13 @@ routes = ->
   h = window.location.hash
   if h == '' or h == '#home'
     process_home()
-  else if h == '#newhack'
+  else if h is '#newhack'
     $('#new-hack-modal').trigger 'click'
-
-
+  else if /^\d+$/.test h[1..]  # if a hackathon
+    window.eid = h[1..]
+    fade_home_page ->
+      $('#hackathon-table').html('')
+      load_hackathon_view window.eid
 
 #///////////////////////////////////////////////////////////////////
 # New Hackathon Control Flow
@@ -433,8 +437,12 @@ process_home = ->
       placement : 'left'
       title : "Skills such as 'java', 'coffeescript', 'ios'"
     }
-  # Deal with the login
-  initiate_login()
+
+  if $('#main-page').css('display') != 'none'
+    initiate_login()
+  else $('#main-page').fadeIn {
+    complete : initiate_login
+  }
 
 load_main_page = (callback) ->
   $('#logged-in-subheading').show()
@@ -450,6 +458,12 @@ logged_in = ->
   get 'user', (user) ->
     add_user user, ask_for_sign_up
 
+fade_home_page = (callback) ->
+  $('#main-page').fadeOut {
+    complete : ->
+      if callback? then callback()
+  }
+  
 
 #///////////////////////////////////////////////////////////////////
 # A Hackathon View Control Flow
@@ -465,17 +479,18 @@ load_hackathon_view = (id) ->
       url: "/hackathons/#{id}",
       dataType: 'html',
       success: (data) ->
+        window.initialise_clock window.hackathon.end
         $('#hackathon').hide().html('').append(data).fadeIn()
         $.get '/hackathons/schedule_items', {eid : hack.eid}, (res) ->
           console.log(res.schedule)
           produce_schedule res.schedule
-        window.initialise_clock window.hackathon.end
-        $('#jumbo_header').click dismantle_hackathon_and_return process_home
+        $('#jumbo_header').click -> 
+          window.location.hash = 'home'
 
 dismantle_hackathon_and_return = (callback) ->
   $('#hackathon').fadeOut {
-    duration : 400, complete : (cb) ->
-      if cb? then cb()
+    duration : 400, complete : ->
+      if callback? then callback()
   }
 
 produce_schedule = (items) ->
@@ -584,13 +599,14 @@ generate_hackathon_table = (callback,force_reload) ->
   setup_hackathon_table_links = ->
     $('#hackathon-table .minor').each ->
       $(this).click (e) ->
-        console.log 'Clicked'
-        id = $(this).attr('hack-eid')
-        $('#main-page').fadeOut {
-          duration : 400, complete: ->
-            $('#hackathon-table').html('')
-            load_hackathon_view(id)
-        }
+        e.preventDefault()
+        window.eid = $(this).attr 'hack-eid'
+        window.location.hash = window.eid
+        fade_home_page ->
+          id = window.eid
+          $('#hackathon-table').html('')
+          load_hackathon_view(id)
+
   get 'attending_events', ((response) ->
     eids = (r.eid for r in response)
     get 'user', (user) ->
