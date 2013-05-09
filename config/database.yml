@@ -46,3 +46,11 @@ test:
   username: LiveHack
   password:
 
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: LiveHack_development
+  pool: 5
+  username: LiveHack
+  password:
+

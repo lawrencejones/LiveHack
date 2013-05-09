@@ -8,11 +8,24 @@ FB.Event.subscribe 'auth.statusChange', ->
 $ ->
   window.fbAsyncInit true
   setup_new_modal_link()
+  $(window).on 'hashchange', ->
+    if window.hash is '#newhack'
+      dismantle_new_hack_and_return()
+    else if /#hash_.*/.test window.hash
+      dismantle_hackathon_and_return(routes)
+    else if window.hash is '#home' then routes()
+
+
+    window.hash = window.location.hash
+  window.location.hash = 'home'
 
 routes = ->
-  p = window.location.pathname
-  if p == '/hackathons' or p == '/'
+  h = window.location.hash
+  if h == '' or h == '#home'
     process_home()
+  else if h == '#newhack'
+    $('#new-hack-modal').trigger 'click'
+
 
 
 #///////////////////////////////////////////////////////////////////
@@ -20,13 +33,15 @@ routes = ->
 #///////////////////////////////////////////////////////////////////
 
 dismantle_new_hack_and_return = (callback) ->
-  $('#new-hack-modal-content').animate {opacity : 0, duration : 300}, \
+  $('#new-hack-modal-content').animate {opacity : 0}, {
+    duration : 400
     complete : -> 
       $('#new-hack-modal-content').remove()
       $('.modal-backdrop').remove()
       $('.datetimepicker').remove()
       $('.subs').hide()
       load_main_page callback
+    }
 
 show_new_hackathon_summary = (event_details) ->
   goback = $('<a href="#">Go Back</a>').click (e) ->
@@ -336,14 +351,16 @@ setup_new_modal_link = ->
   # Initiate the first get for the new hack partial
   get_partial = (callback) ->
     $('#new-hack-modal').click (e) ->
-      e.preventDefault()
-      if $('#new-hack-container')?
-        $('#hackathon-table').fadeOut 200, ->
+      if $('#new-hack-container')? and not window.active
+        window.active = true
+        $('#hackathon-table').fadeOut 300, ->
           $.ajax \
             type: "GET",
             url: "/hackathons/new",
             success: (data) ->
+              window.active = false
               $('.container').append(data)
+              $('#new-hack-modal-content').hide().fadeIn(400)
               console.log 'Appended new hack setup'
               callback()
 
@@ -453,11 +470,12 @@ load_hackathon_view = (id) ->
           console.log(res.schedule)
           produce_schedule res.schedule
         window.initialise_clock window.hackathon.end
-        $('#jumbo_header').click dismantle_hackathon_and_return
+        $('#jumbo_header').click dismantle_hackathon_and_return process_home
 
-dismantle_hackathon_and_return = ->
+dismantle_hackathon_and_return = (callback) ->
   $('#hackathon').fadeOut {
-    duration : 400, complete : load_main_page
+    duration : 400, complete : (cb) ->
+      if cb? then cb()
   }
 
 produce_schedule = (items) ->
