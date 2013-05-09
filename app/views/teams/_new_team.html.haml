@@ -1,0 +1,43 @@
+#new-team.hide
+  .span9.stage-1
+    %h2
+      Create a Team
+    %form
+      %fieldset
+        %label Team Name
+        %input.team-name{:type => :text, :placeholder => 'Enter name...'}
+        %label Team Description
+        %textarea.team-desc{:rows => 6, :placeholder => 'A description of what you want to achieve as a team...'}
+      %form.form-inline
+        %button.btn.btn-primary#create-team{:style => 'width:80px'} Next
+        %button.pad-btn.btn#cancel-team{:style => 'width:80px'} Cancel
+  .span9.stage-2.hide
+    %h2
+      Team
+    %form.form-inline
+      %input.user-name{:type => :text, :placeholder => 'Joe Bloggs'}
+      %label Search for hackathon attendees
+    %table.table.table-bordered
+      %tr
+        %th.add-members-name Name
+        %th Skills
+    %form.form-inline
+      %button.btn.btn-primary#finish-adding-members Next
+    
+
+  .span9.stage-3.hide
+    %form
+      %fieldtext
+        %label Create team with proposal?
+        %input.create-with-proposal{:type => :checkbox}
+        %label Proposal Title
+        %input.proposal-title{:type => :text, :placeholder => 'A proposal title...'}
+        %label Proposal Description
+        %textarea.proposal-desc{:rows => 6, :placeholder => 'Proposal plan...'}
+        %label Skill Tags
+        %input#skills-in{:type => 'text', :placeholder => 'Enter skills needed...'}
+        #skills{:style => 'height:45px;'}
+
+
+#skill-badge-template.hide
+  %span.skill-badge.badge.badge-info{:style => 'display:inline;'}

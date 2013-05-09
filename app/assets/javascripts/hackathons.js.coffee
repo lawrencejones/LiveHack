@@ -50,7 +50,7 @@ dismantle_new_hack_and_return = (callback) ->
 show_new_hackathon_summary = (event_details) ->
   goback = $('<a href="#">Go Back</a>').click (e) ->
     e.preventDefault()
-    get 'attending_events', (-> dismantle_new_hack_and_return()), true
+    get 'attending_events', (-> window.location.hash = 'home'), true
   $('#processing-progress').hide()
   $('#form-tabs a:eq(2)').append $('<i/ class="icon-check">')
   $('#stage3-header').html('All done! ').append goback
@@ -483,6 +483,9 @@ load_hackathon_view = (id) ->
         data: {username : username},
         success: (data) ->
           window.initialise_clock window.hackathon.end
+          $('#form-tabs').click ->
+            console.log 'clicked'
+            refresh_team_view()
           $('#hackathon').hide().html('').append(data).fadeIn()
           $.get '/hackathons/schedule_items', {eid : hack.eid}, (res) ->
             console.log(res.schedule)
@@ -592,6 +595,60 @@ produce_schedule_icon = (item,i) ->
   label = $('<label/ class="schedule-label">').html item.label
   $("<a/ id=\"#{i}\">").addClass('schedule-item').append icon, label
 
+
+#///////////////////////////////////////////////////////////////////
+# Teams
+#///////////////////////////////////////////////////////////////////
+
+refresh_team_view = ->
+
+  update_selection = (myteam,teams) ->
+    $('#nav-teams-user,#nav-teams-others').html('')
+    populate_user_team_pane myteam
+    if myteam?
+      $('#nav-teams-user').append \
+        $('<li/>').html(myteam.name).attr 'href', myteam.id
+    for team in teams
+      $('#nav-teams-others').append \
+        $('<li/>').html(team.name).attr 'href', team.id
+    $('#nav-teams-user,#nav-teams-others li').click (e) ->
+      e.preventDefault()
+      display_team $(this).attr('href')
+      $('#teams-nav li').removeClass 'active'
+      $(this).addClass 'active'
+
+  populate_user_team_pane = (team) ->
+    view = $('#user-team-pane')
+    if team?
+      view.find('.team-title').html 'Team ' + team.name
+      view.find('.team-desc').html team.description
+    else
+      view.find('.team-title').html \
+        'You are currently teamless'
+      view.find('.team-desc').html \
+        'Either make your own team or join one by exploring the other ' +
+        'teams listed on the left.'
+
+  display_team = (id) ->
+    
+    render_team = (team_date) ->
+      $('#team-view-pane').remove()
+      [team, users, proposals] =
+      [team_data.team, team_data.users, team.proposals]
+      view = $('#team-view-pane-template').clone()
+      view.attr 'id', 'team-view-pane'
+      view.find('#team-title').html team.name
+      view.find('#team-desc').html team.description
+
+    $.ajax \
+      type: 'GET',
+      url: '/teams/' + id,
+      success: (team_data) ->
+        window.current_team = team_data
+        render_team team_data
+
+  get 'teams_for_hack', (teams) ->
+    console.log teams
 
 #///////////////////////////////////////////////////////////////////
 # Reuseable Partials

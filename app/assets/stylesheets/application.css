@@ -25,6 +25,10 @@
     background:none !important;
 }
 
+.pad-btn {
+	margin-left : 10px;
+}
+
 .no-margin {
 	margin : 0px 0px 0px 0px;
 } 

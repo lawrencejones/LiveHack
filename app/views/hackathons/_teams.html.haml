@@ -1,15 +1,17 @@
-.container
+.container{:style => 'text-align:left'}
   .row#my-info
   .row
     .span3
       .well.team-well
-        %ul.nav.nav-list{:style => 'text-align:left'}
-          %li.nav-header
-            = if !@my_team.nil? then 'Your Team' else "You're not in a team!" end
-          = if !@my_team.nil? then '<li>' + @my_team.name + '</li>' end
+        %ul#teams-nav.nav.nav-list{:style => 'text-align:left'}
+          %li.nav-header Your Team
+          #nav-teams-user
           %li.nav-header Other Teams
-          - @hackathon.teams.each do |team|
-            %li{:'team-id' => team.id} team.name
+          #nav-teams-others
     .span9
-      - @hackathon.teams.each do |team|
+      #user-team-pane
         = render :partial => 'teams/team'
+      #team-view-pane.hide
+      #team-view-pane-template.hide
+        = render :partial => 'teams/team'
+      = render :partial => 'teams/new_team'
